@@ -3,9 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/drawable/background.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/drawable/ic_launcher_background.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout-land/activity_je_suis.xml" value="0.21164021164021163" />
         <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout-land/activity_main.xml" value="0.21164021164021163" />
-        <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout/activity_je_suis.xml" value="0.264" />
+        <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout/activity_je_suis.xml" value="0.25" />
         <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout/activity_mon_coeur.xml" value="0.25" />
         <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout/activity_mon_coeur2.xml" value="0.25" />

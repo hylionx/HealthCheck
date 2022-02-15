@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Gesundheitskontrolle</string>
     <string name="your_name">Dein name</string>
     <string name="name">Name</string>
     <string name="start_test">starten Sie die Prüfung</string>
@@ -15,4 +14,6 @@
     <string name="question1">Haben Sie ein Herzleiden?</string>
     <string name="my_profile">MEIN PROFIL</string>
     <string name="question2">Sind Sie Diabetiker?</string>
+    <string name="titre_main">Wie geht es deinem Herzen?</string>
+    <string name="text_main">10 Minuten und 8 Themen zum Entdecken!</string>
 </resources>

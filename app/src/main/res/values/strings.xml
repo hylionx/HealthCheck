@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">HealthCheck</string>
-    <string name="logo" translatable="false">logo</string>
+    <string name="app_name" translatable="false">HealthCheck</string>
     <string name="your_name">Your name</string>
     <string name="name">Name</string>
     <string name="start_test">START TEST</string>
@@ -21,4 +20,6 @@
     <string name="question1">Do you have a heart condition?</string>
     <string name="my_profile">MY PROFILE</string>
     <string name="question2">Are you diabetic?</string>
+    <string name="titre_main">How is your heart?</string>
+    <string name="text_main">10 minutes and 8 subjects to discover!</string>
 </resources>
