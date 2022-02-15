@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Bilan Santé</string>
+    <string name="your_name">Votre nom</string>
+    <string name="name">Nom</string>
+    <string name="start_test">Commencer le test</string>
+    <string name="my_heart">Mon Coeur</string>
+    <string name="your_age">Votre age</string>
+    <string name="other">Autre</string>
+    <string name="man">Homme</string>
+    <string name="woman">Femme</string>
+    <string name="you_are">Vous êtes</string>
+    <string name="previous_step">Etape précédente</string>
+    <string name="next_step">Etape suivante</string>
+    <string name="question1">Avez-vous un problème cardiaque?</string>
+    <string name="my_profile">MON PROFIL</string>
+    <string name="question2">Etes-vous diabétique?</string>
+</resources>
