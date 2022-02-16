@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E8426E"
+    android:visibility="visible"
+    tools:context=".MyHeart">
+
+    <TextView
+        android:id="@+id/titre_mon_coeur"
+        android:layout_width="205dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/my_heart"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/my_heart_img"
+        app:layout_constraintStart_toStartOf="@+id/my_heart_img"
+        app:layout_constraintTop_toBottomOf="@+id/my_heart_img" />
+
+    <ImageView
+        android:id="@+id/my_heart_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/my_heart"
+        android:src="@drawable/moncoeur"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="366dp"
+        android:layout_height="396dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/titre_mon_coeur"
+        app:layout_constraintStart_toStartOf="@+id/titre_mon_coeur"
+        app:layout_constraintTop_toBottomOf="@+id/titre_mon_coeur"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/q1_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:contentDescription="@string/question1"
+                android:text="@string/question1"
+                android:textColor="#FFFFFF"
+                tools:ignore="TextContrastCheck" />
+
+            <Spinner
+                android:id="@+id/sp_q1"
+                android:layout_width="337dp"
+                android:layout_height="48dp"
+                android:layout_marginBottom="68dp"
+                android:background="#28871176"
+                android:backgroundTint="#FBFBFB"
+                android:backgroundTintMode="multiply"
+                android:popupBackground="@android:color/black"
+                android:spinnerMode="dialog"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/q2_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginBottom="20dp"
+                android:contentDescription="@string/question2"
+                android:text="@string/question2"
+                android:textColor="#FFFFFF"
+                tools:ignore="TextContrastCheck" />
+
+            <Spinner
+                android:id="@+id/sp_q2"
+                android:layout_width="337dp"
+                android:layout_height="48dp"
+                android:layout_marginBottom="104dp"
+                android:background="#28871176"
+                android:backgroundTint="#FBFBFB"
+                android:backgroundTintMode="multiply"
+                android:popupBackground="@android:color/black"
+                android:spinnerMode="dialog"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="216dp"
+                android:layout_height="wrap_content"
+                android:text="@string/sp_q4"
+                tools:ignore="TextContrastCheck" />
+
+            <Spinner
+                android:id="@+id/spinner2"
+                android:layout_width="314dp"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="216dp"
+                android:layout_height="wrap_content"
+                android:text="@string/sp_q3"
+                tools:ignore="TextContrastCheck" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="313dp"
+                android:layout_height="40dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_suivant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:text="@string/next_step"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.68"
+        app:layout_constraintStart_toEndOf="@+id/button_pre" />
+
+    <Button
+        android:id="@+id/button_pre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="28dp"
+        android:text="@string/previous_step"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
