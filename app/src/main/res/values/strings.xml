@@ -22,6 +22,8 @@
     <string name="question2">Are you diabetic?</string>
     <string name="titre_main">How is your heart?</string>
     <string name="text_main">10 minutes and 8 subjects to discover!</string>
-    <string name="sp_q3">TextView</string>
-    <string name="sp_q4">TextView</string>
+    <string name="sp_q3" translatable="false">TextView</string>
+    <string name="sp_q4" translatable="false">TextView</string>
+    <string name="button_suppl" translatable="false">Button</string>
+    <string name="save" translatable="false">Save</string>
 </resources>

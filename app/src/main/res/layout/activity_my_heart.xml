@@ -34,113 +34,153 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
-        android:layout_width="366dp"
-        android:layout_height="396dp"
+        android:layout_width="417dp"
+        android:layout_height="757dp"
         android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/titre_mon_coeur"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="@+id/titre_mon_coeur"
         app:layout_constraintTop_toBottomOf="@+id/titre_mon_coeur"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="SpeakableTextPresentCheck">
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/q1_txt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
+                android:layout_marginTop="32dp"
                 android:contentDescription="@string/question1"
                 android:text="@string/question1"
                 android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="TextContrastCheck" />
 
             <Spinner
                 android:id="@+id/sp_q1"
                 android:layout_width="337dp"
                 android:layout_height="48dp"
-                android:layout_marginBottom="68dp"
+                android:layout_marginTop="24dp"
                 android:background="#28871176"
                 android:backgroundTint="#FBFBFB"
                 android:backgroundTintMode="multiply"
                 android:popupBackground="@android:color/black"
                 android:spinnerMode="dialog"
+                app:layout_constraintEnd_toEndOf="@+id/q1_txt"
+                app:layout_constraintStart_toStartOf="@+id/q1_txt"
+                app:layout_constraintTop_toBottomOf="@+id/q1_txt"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <TextView
                 android:id="@+id/q2_txt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="48dp"
-                android:layout_marginBottom="20dp"
+                android:layout_marginTop="32dp"
                 android:contentDescription="@string/question2"
                 android:text="@string/question2"
                 android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="@+id/sp_q1"
+                app:layout_constraintStart_toStartOf="@+id/sp_q1"
+                app:layout_constraintTop_toBottomOf="@+id/sp_q1"
                 tools:ignore="TextContrastCheck" />
 
             <Spinner
                 android:id="@+id/sp_q2"
-                android:layout_width="337dp"
+                android:layout_width="264dp"
                 android:layout_height="48dp"
-                android:layout_marginBottom="104dp"
+                android:layout_marginTop="24dp"
                 android:background="#28871176"
                 android:backgroundTint="#FBFBFB"
                 android:backgroundTintMode="multiply"
                 android:popupBackground="@android:color/black"
                 android:spinnerMode="dialog"
+                app:layout_constraintEnd_toEndOf="@+id/q2_txt"
+                app:layout_constraintStart_toStartOf="@+id/q2_txt"
+                app:layout_constraintTop_toBottomOf="@+id/q2_txt"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="216dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
                 android:text="@string/sp_q4"
+                app:layout_constraintEnd_toEndOf="@+id/sp_q2"
+                app:layout_constraintStart_toStartOf="@+id/sp_q2"
+                app:layout_constraintTop_toBottomOf="@+id/sp_q2"
                 tools:ignore="TextContrastCheck" />
 
             <Spinner
                 android:id="@+id/spinner2"
                 android:layout_width="314dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
                 android:minHeight="48dp"
+                app:layout_constraintEnd_toEndOf="@+id/textView3"
+                app:layout_constraintStart_toStartOf="@+id/textView3"
+                app:layout_constraintTop_toBottomOf="@+id/textView3"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <TextView
                 android:id="@+id/textView4"
                 android:layout_width="216dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
                 android:text="@string/sp_q3"
+                app:layout_constraintEnd_toEndOf="@+id/spinner2"
+                app:layout_constraintStart_toStartOf="@+id/spinner2"
+                app:layout_constraintTop_toBottomOf="@+id/spinner2"
                 tools:ignore="TextContrastCheck" />
 
             <Spinner
                 android:id="@+id/spinner"
                 android:layout_width="313dp"
-                android:layout_height="40dp" />
+                android:layout_height="48dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintEnd_toEndOf="@+id/textView4"
+                app:layout_constraintStart_toStartOf="@+id/textView4"
+                app:layout_constraintTop_toBottomOf="@+id/textView4"
+                tools:ignore="SpeakableTextPresentCheck" />
 
-        </LinearLayout>
+            <Button
+                android:id="@+id/btn_suivant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/next_step"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+            <Button
+                android:id="@+id/button_pre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/previous_step"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btn_suivant"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="500dp"
+                android:text="@string/button_suppl"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_pre" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
-
-    <Button
-        android:id="@+id/btn_suivant"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="28dp"
-        android:text="@string/next_step"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.68"
-        app:layout_constraintStart_toEndOf="@+id/button_pre" />
-
-    <Button
-        android:id="@+id/button_pre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="28dp"
-        android:text="@string/previous_step"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="TouchTargetSizeCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

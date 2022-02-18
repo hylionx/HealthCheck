@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.widget.Button;
 
 public class MyHeart extends AppCompatActivity {
+    public static final String APP_TAG = "MyHeartApp";
+
     Button button_pre;
     Button btn_suivant;
 
