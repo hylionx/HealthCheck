@@ -72,4 +72,6 @@
     <string name="txtMyHeartQ5">"Herz-Kreislauf-Vorgeschichte: Haben Sie einen Verwandten ersten Grades (Vater, Mutter, Bruder oder Schwester), der vor dem 55. Lebensjahr bei einem Mann oder vor dem 65. Lebensjahr bei einer Frau Herzprobleme (Herzinfarkt, Schlaganfall, plötzlicher Tod) hatte? "</string>
     <string name="txtMyHeartQ4" translatable="false">"Hast du Bluthochdruck ? "</string>
     <string name="txtMyHeartQ3">"Haben Sie ein Cholesterinproblem? "</string>
+    <string name="txt_IDontKnow">ich weiß nicht</string>
+    <string name="txtMyHeartQ6">"Kennen Sie Ihren Body-Mass-Index (BMI)? "</string>
 </resources>

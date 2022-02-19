@@ -70,12 +70,13 @@
                 android:background="#80FFFFFF"
                 android:backgroundTint="#FBFBFB"
                 android:backgroundTintMode="multiply"
+                android:entries="@array/array_answer_question_1_2_3_4"
                 android:popupBackground="@color/black"
-                android:spinnerMode="dialog"
+                android:spinnerMode="dropdown"
                 app:layout_constraintEnd_toEndOf="@+id/txtMyHeartQ1"
                 app:layout_constraintStart_toStartOf="@+id/txtMyHeartQ1"
                 app:layout_constraintTop_toBottomOf="@+id/txtMyHeartQ1"
-                tools:ignore="SpeakableTextPresentCheck" />
+                tools:ignore="SpeakableTextPresentCheck,DuplicateSpeakableTextCheck" />
 
             <TextView
                 android:id="@+id/txtMyHeartTitleQ2"
@@ -92,18 +93,19 @@
 
             <Spinner
                 android:id="@+id/spinnerMyHeartRepQ2"
-                android:layout_width="264dp"
+                android:layout_width="337dp"
                 android:layout_height="48dp"
                 android:layout_marginTop="24dp"
                 android:background="#80FFFFFF"
                 android:backgroundTint="#FBFBFB"
                 android:backgroundTintMode="multiply"
+                android:entries="@array/array_answer_question_1_2_3_4"
                 android:popupBackground="@android:color/black"
-                android:spinnerMode="dialog"
+                android:spinnerMode="dropdown"
                 app:layout_constraintEnd_toEndOf="@+id/txtMyHeartTitleQ2"
                 app:layout_constraintStart_toStartOf="@+id/txtMyHeartTitleQ2"
                 app:layout_constraintTop_toBottomOf="@+id/txtMyHeartTitleQ2"
-                tools:ignore="SpeakableTextPresentCheck" />
+                tools:ignore="SpeakableTextPresentCheck,DuplicateSpeakableTextCheck" />
 
             <TextView
                 android:id="@+id/txtMyHeartTitleQ3"
@@ -119,15 +121,16 @@
 
             <Spinner
                 android:id="@+id/spinnerMyHeartRepQ3"
-                android:layout_width="314dp"
-                android:layout_height="wrap_content"
+                android:layout_width="337dp"
+                android:layout_height="48dp"
                 android:layout_marginTop="24dp"
                 android:background="#80FFFFFF"
+                android:entries="@array/array_answer_question_1_2_3_4"
                 android:minHeight="48dp"
                 app:layout_constraintEnd_toEndOf="@+id/txtMyHeartTitleQ3"
                 app:layout_constraintStart_toStartOf="@+id/txtMyHeartTitleQ3"
                 app:layout_constraintTop_toBottomOf="@+id/txtMyHeartTitleQ3"
-                tools:ignore="SpeakableTextPresentCheck" />
+                tools:ignore="SpeakableTextPresentCheck,DuplicateSpeakableTextCheck" />
 
             <TextView
                 android:id="@+id/txtMyHeartTitleQ4"
@@ -143,10 +146,11 @@
 
             <Spinner
                 android:id="@+id/spinnerMyHeartRepQ4"
-                android:layout_width="313dp"
+                android:layout_width="337dp"
                 android:layout_height="48dp"
                 android:layout_marginTop="24dp"
                 android:background="#80FFFFFF"
+                android:entries="@array/array_answer_question_1_2_3_4"
                 app:layout_constraintEnd_toEndOf="@+id/txtMyHeartTitleQ4"
                 app:layout_constraintStart_toStartOf="@+id/txtMyHeartTitleQ4"
                 app:layout_constraintTop_toBottomOf="@+id/txtMyHeartTitleQ4"
@@ -156,11 +160,11 @@
                 android:id="@+id/btnMyHeartNExt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="37dp"
-                android:layout_marginEnd="8dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="16dp"
                 android:text="@string/btnNext"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/spinner" />
+                app:layout_constraintTop_toBottomOf="@+id/spinner2" />
 
             <Button
                 android:id="@+id/btnMyHeartPrec"
@@ -186,14 +190,38 @@
 
             <Spinner
                 android:id="@+id/spinner"
-                android:layout_width="326dp"
-                android:layout_height="37dp"
+                android:layout_width="337dp"
+                android:layout_height="48dp"
                 android:layout_marginTop="24dp"
                 android:background="#80FFFFFF"
+                android:entries="@array/array_answer_question_5_6"
                 app:layout_constraintEnd_toEndOf="@+id/txtMyHeartQ5"
                 app:layout_constraintStart_toStartOf="@+id/txtMyHeartQ5"
                 app:layout_constraintTop_toBottomOf="@+id/txtMyHeartQ5"
                 tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/txtMyHeartQ6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/txtMyHeartQ6"
+                android:textColor="#FDFCFC"
+                app:layout_constraintEnd_toEndOf="@+id/spinner"
+                app:layout_constraintStart_toStartOf="@+id/spinner"
+                app:layout_constraintTop_toBottomOf="@+id/spinner"
+                tools:ignore="TextContrastCheck" />
+
+            <Spinner
+                android:id="@+id/spinner2"
+                android:layout_width="337dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="32dp"
+                android:background="#80FFFFFF"
+                android:entries="@array/array_answer_question_5_6"
+                app:layout_constraintEnd_toEndOf="@+id/txtMyHeartQ6"
+                app:layout_constraintStart_toStartOf="@+id/txtMyHeartQ6"
+                app:layout_constraintTop_toBottomOf="@+id/txtMyHeartQ6" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
