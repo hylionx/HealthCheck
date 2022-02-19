@@ -8,20 +8,20 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/txtMainYourName"
+        android:id="@+id/tvName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="104dp"
-        android:labelFor="@id/editMainYourName"
+        android:layout_marginTop="100dp"
+        android:labelFor="@id/etName"
         android:text="@string/txtMainYourName"
         android:textColor="#F5F5F5"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/txtMain"
-        app:layout_constraintStart_toStartOf="@+id/txtMain"
-        app:layout_constraintTop_toBottomOf="@+id/txtMain" />
+        app:layout_constraintEnd_toEndOf="@+id/tvMainSubtitle"
+        app:layout_constraintStart_toStartOf="@+id/tvMainSubtitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvMainSubtitle" />
 
     <EditText
-        android:id="@+id/editMainYourName"
+        android:id="@+id/etName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -30,14 +30,14 @@
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:textColor="#F3EFEF"
-        app:layout_constraintEnd_toEndOf="@+id/txtMainYourName"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="@+id/txtMainYourName"
-        app:layout_constraintTop_toBottomOf="@+id/txtMainYourName"
+        app:layout_constraintEnd_toEndOf="@+id/tvName"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/tvName"
+        app:layout_constraintTop_toBottomOf="@+id/tvName"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
 
     <TextView
-        android:id="@+id/mainTitle"
+        android:id="@+id/tvMainTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="76dp"
@@ -62,16 +62,16 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/txtMain"
+        android:id="@+id/tvMainSubtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:text="@string/txtMain"
         android:textColor="@color/white"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/mainTitle"
-        app:layout_constraintStart_toStartOf="@+id/mainTitle"
-        app:layout_constraintTop_toBottomOf="@+id/mainTitle"
+        app:layout_constraintEnd_toEndOf="@+id/tvMainTitle"
+        app:layout_constraintStart_toStartOf="@+id/tvMainTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvMainTitle"
         tools:ignore="TextContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

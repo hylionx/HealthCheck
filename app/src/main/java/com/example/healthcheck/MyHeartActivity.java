@@ -9,11 +9,8 @@ import android.util.Log;
 import android.widget.Button;
 import android.widget.Spinner;
 
-public class MyHeartActivity extends AppCompatActivity {
+public class MyHeartActivity extends BaseActivity {
     public static final String APP_TAG = "MyHeartApp";
-
-    Person person;
-    SharedPreferences preferences;
 
     Button button_pre;
     Button btn_suivant;
@@ -24,18 +21,18 @@ public class MyHeartActivity extends AppCompatActivity {
         setContentView(R.layout.activity_my_heart);
 
         button_pre = findViewById(R.id.btnMyHeartPrec);
-        button_pre.setOnClickListener(view -> onClickButtonPrecedent());
+        button_pre.setOnClickListener(view -> gotoPreviousActivity());
 
-        Intent intent = getIntent();
-        person = intent.getParcelableExtra("Person");
+        getPersonByIntent();
 
-        Log.i(APP_TAG, "person sexe : " + person.getSexe() + ", person age : " + person.getAge());
+        Log.i(APP_TAG, "Received person sexe : " + person.getSexe() + ", person age : " + person.getAge());
     }
 
+    @Override
+    protected boolean validateWidgetsAndAffectPersonDatas() {
 
 
 
-    public void onClickButtonPrecedent(){
-        finish();
+        return true;
     }
-    }
+}

@@ -1,23 +1,16 @@
 package com.example.healthcheck;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
+import android.text.TextUtils;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
     // in Logcat : (MainApp)|(IAMApp)|(MyHeartApp)
     public static final String APP_TAG = "MainApp";
 
-    private Person person;
-    private EditText edit_name;
-    private Button btn_start;
-    private SharedPreferences sharedPreferences;
+    private EditText editName;
+    private Button btnStart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,34 +18,27 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         init();
-
     }
 
     private void init() {
         person = new Person();
-        btn_start = findViewById(R.id.btnStartTest);
-        edit_name = findViewById(R.id.editMainYourName);
+        btnStart = findViewById(R.id.btnStartTest);
+        editName = findViewById(R.id.etName);
         sharedPreferences = getSharedPreferences("Shared_PREF", MODE_PRIVATE);
 
-        btn_start.setOnClickListener(view -> onClickButtonStart());
+        btnStart.setOnClickListener(view -> gotoNextActivity(IAmActivity.class));
 
     }
 
-    public void onClickButtonStart(){
-
-        String name = edit_name.getText().toString();
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString("NAME", name);
-        editor.apply();
-
+    @Override
+    protected boolean validateWidgetsAndAffectPersonDatas() {
+        // check name
+        String name = editName.getText().toString();
+        if(TextUtils.isEmpty(name)) {
+            return handleError("this can't be empty", editName);
+        }
         person.setName(name);
-
-        Toast.makeText(MainActivity.this, "Information Saved", Toast.LENGTH_SHORT).show();
-        // Log.v(MainActivity.APP_TAG,"Entete section: " + edit_name.getText());
-        Intent intent = new Intent (MainActivity.this, IAmActivity.class);
-        intent.putExtra("Person", person);
-        Log.i(APP_TAG, "Parcelable Person put");
-        startActivity(intent);
+        return true;
     }
 
 }

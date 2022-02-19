@@ -9,7 +9,7 @@
     tools:context=".MyHeartActivity">
 
     <TextView
-        android:id="@+id/txtMyHeartTitle"
+        android:id="@+id/tvMyHeart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -17,12 +17,12 @@
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/imgMyHeart"
-        app:layout_constraintStart_toStartOf="@+id/imgMyHeart"
-        app:layout_constraintTop_toBottomOf="@+id/imgMyHeart" />
+        app:layout_constraintEnd_toEndOf="@+id/ivMyHeart"
+        app:layout_constraintStart_toStartOf="@+id/ivMyHeart"
+        app:layout_constraintTop_toBottomOf="@+id/ivMyHeart" />
 
     <ImageView
-        android:id="@+id/imgMyHeart"
+        android:id="@+id/ivMyHeart"
         android:layout_width="120dp"
         android:layout_height="70dp"
         android:layout_marginTop="32dp"
@@ -41,7 +41,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtMyHeartTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvMyHeart"
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="SpeakableTextPresentCheck">
 
@@ -68,11 +68,8 @@
                 android:layout_height="48dp"
                 android:layout_marginTop="24dp"
                 android:background="#80FFFFFF"
-                android:backgroundTint="#FBFBFB"
-                android:backgroundTintMode="multiply"
                 android:entries="@array/array_answer_question_1_2_3_4"
-                android:popupBackground="@color/black"
-                android:spinnerMode="dropdown"
+
                 app:layout_constraintEnd_toEndOf="@+id/txtMyHeartQ1"
                 app:layout_constraintStart_toStartOf="@+id/txtMyHeartQ1"
                 app:layout_constraintTop_toBottomOf="@+id/txtMyHeartQ1"
@@ -97,11 +94,7 @@
                 android:layout_height="48dp"
                 android:layout_marginTop="24dp"
                 android:background="#80FFFFFF"
-                android:backgroundTint="#FBFBFB"
-                android:backgroundTintMode="multiply"
                 android:entries="@array/array_answer_question_1_2_3_4"
-                android:popupBackground="@android:color/black"
-                android:spinnerMode="dropdown"
                 app:layout_constraintEnd_toEndOf="@+id/txtMyHeartTitleQ2"
                 app:layout_constraintStart_toStartOf="@+id/txtMyHeartTitleQ2"
                 app:layout_constraintTop_toBottomOf="@+id/txtMyHeartTitleQ2"
