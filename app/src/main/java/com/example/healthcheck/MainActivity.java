@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -31,8 +30,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void init() {
         person = new Person();
-        btn_start = findViewById(R.id.btn_start);
-        edit_name = findViewById(R.id.edit_name);
+        btn_start = findViewById(R.id.btnStartTest);
+        edit_name = findViewById(R.id.editMainYourName);
         sharedPreferences = getSharedPreferences("Shared_PREF", MODE_PRIVATE);
 
         btn_start.setOnClickListener(view -> onClickButtonStart());
@@ -50,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
 
         Toast.makeText(MainActivity.this, "Information Saved", Toast.LENGTH_SHORT).show();
         Log.v(MainActivity.APP_TAG,"Entete section: " + edit_name.getText());
-        Intent intent = new Intent (MainActivity.this, IAm.class);
+        Intent intent = new Intent (MainActivity.this, IAmActivity.class);
         intent.putExtra("Person", person);
         Log.i(APP_TAG, "Parcelable Person put");
         startActivity(intent);

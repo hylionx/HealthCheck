@@ -8,20 +8,20 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/name_txt"
+        android:id="@+id/txtMainYourName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="104dp"
-        android:labelFor="@id/edit_name"
-        android:text="@string/your_name"
+        android:labelFor="@id/editMainYourName"
+        android:text="@string/txtMainYourName"
         android:textColor="#F5F5F5"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView2"
-        app:layout_constraintStart_toStartOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintEnd_toEndOf="@+id/txtMain"
+        app:layout_constraintStart_toStartOf="@+id/txtMain"
+        app:layout_constraintTop_toBottomOf="@+id/txtMain" />
 
     <EditText
-        android:id="@+id/edit_name"
+        android:id="@+id/editMainYourName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -30,18 +30,18 @@
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:textColor="#F3EFEF"
-        app:layout_constraintEnd_toEndOf="@+id/name_txt"
+        app:layout_constraintEnd_toEndOf="@+id/txtMainYourName"
         app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="@+id/name_txt"
-        app:layout_constraintTop_toBottomOf="@+id/name_txt"
+        app:layout_constraintStart_toStartOf="@+id/txtMainYourName"
+        app:layout_constraintTop_toBottomOf="@+id/txtMainYourName"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/mainTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="76dp"
-        android:text="@string/titre_main"
+        android:text="@string/txtMainTitle"
         android:textAlignment="center"
         android:textColor="#F8ECEC"
         android:textSize="34sp"
@@ -50,28 +50,28 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btn_start"
+        android:id="@+id/btnStartTest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         android:background="#000000"
-        android:text="@string/start_test"
+        android:text="@string/btnStartTest"
         android:textColor="#FBF4F4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/txtMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:text="@string/text_main"
+        android:text="@string/txtMain"
         android:textColor="@color/white"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="@+id/mainTitle"
+        app:layout_constraintStart_toStartOf="@+id/mainTitle"
+        app:layout_constraintTop_toBottomOf="@+id/mainTitle"
         tools:ignore="TextContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

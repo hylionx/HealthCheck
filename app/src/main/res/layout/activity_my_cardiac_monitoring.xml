@@ -12,9 +12,9 @@
         android:layout_width="120dp"
         android:layout_height="70dp"
         android:layout_marginTop="32dp"
-        android:contentDescription="cardiac_img"
+        android:contentDescription="@string/cardiac_img"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/suivicardiaque"
@@ -24,26 +24,107 @@
         android:id="@+id/my_cardiac_monitoring_title"
         android:layout_width="223dp"
         android:layout_height="64dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="24dp"
         android:text="@string/my_cardiac_monitoring_title"
         android:textAlignment="center"
         android:textColor="#FDFDFD"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/my_cardiac_monitoring_img"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="@+id/my_cardiac_monitoring_img"
         app:layout_constraintTop_toBottomOf="@+id/my_cardiac_monitoring_img"
         tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/txtCardiacMonitoringQ1"
+        android:layout_width="328dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="52dp"
+        android:text="@string/txtCardiacMonitoringQ1"
+        android:textAlignment="inherit"
+        android:textColor="#FDFDFD"
+        app:layout_constraintEnd_toStartOf="@+id/checkBoxCardiacMonitoringQ1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_cardiac_monitoring_title"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/txtCardiacMonitoringQ2"
+        android:layout_width="328dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/txtCardiacMonitoringQ2"
+        android:textAlignment="inherit"
+        android:textColor="#FDFDFD"
+        app:layout_constraintEnd_toStartOf="@+id/checkBoxCardiacMonitoringQ2"
+        app:layout_constraintHorizontal_bias="0.368"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCardiacMonitoringQ1"
+        tools:ignore="TextContrastCheck" />
+
+    <CheckBox
+        android:id="@+id/checkBoxCardiacMonitoringQ1"
+        android:layout_width="36dp"
+        android:layout_height="41dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="#F8F2F2"
+        app:layout_constraintBottom_toBottomOf="@+id/txtCardiacMonitoringQ1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtCardiacMonitoringQ1"
+        tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
+
+    <CheckBox
+        android:id="@+id/checkBoxCardiacMonitoringQ2"
+        android:layout_width="35dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtCardiacMonitoringQ2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtCardiacMonitoringQ2"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/txtCardiacMonitoringQ3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:text="TextView"
-        android:textColor="#FDFDFD"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/txtCardiacMonitoringQ3"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/my_cardiac_monitoring_title" />
+        app:layout_constraintTop_toBottomOf="@+id/txtCardiacMonitoringQ2"
+        tools:ignore="TextContrastCheck,TextContrastCheck" />
+
+    <CheckBox
+        android:id="@+id/checkBoxCardiacMonitoringQ3"
+        android:layout_width="33dp"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtCardiacMonitoringQ3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.685"
+        app:layout_constraintStart_toEndOf="@+id/txtCardiacMonitoringQ3"
+        app:layout_constraintTop_toTopOf="@+id/txtCardiacMonitoringQ3"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/button_prec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/btnPrec"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button_suiv"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/button_suiv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/btnNext"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextContrastCheck" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

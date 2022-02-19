@@ -5,15 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#B8A5D0"
-    android:contentDescription="@string/my_profile"
-    tools:context=".IAm">
+    android:contentDescription="@string/txtMyProfilTitle"
+    tools:context=".IAmActivity">
 
     <TextView
-        android:id="@+id/txt_you_are"
+        android:id="@+id/txtMyProfilQ1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:text="@string/you_are"
+        android:text="@string/txtMyProfilQ1"
         android:textColor="#0277BD"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,51 +25,51 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
-        app:layout_constraintEnd_toEndOf="@+id/titre_je_suis"
-        app:layout_constraintStart_toStartOf="@+id/titre_je_suis"
-        app:layout_constraintTop_toBottomOf="@+id/titre_je_suis">
+        app:layout_constraintEnd_toEndOf="@+id/txtMyProfilTitle"
+        app:layout_constraintStart_toStartOf="@+id/txtMyProfilTitle"
+        app:layout_constraintTop_toBottomOf="@+id/txtMyProfilTitle">
 
         <RadioButton
-            android:id="@+id/rb_woman"
+            android:id="@+id/rbWoman"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/woman"
+            android:text="@string/rbWoman"
             android:textColor="#FFFFFF"
             tools:ignore="TextContrastCheck" />
 
         <RadioButton
-            android:id="@+id/rb_man"
+            android:id="@+id/rbMan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/man"
+            android:text="@string/rbMan"
             android:textColor="#FFFFFF"
             tools:ignore="TextContrastCheck,TextContrastCheck" />
 
         <RadioButton
-            android:id="@+id/rb_other"
+            android:id="@+id/rbOther"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:minHeight="48dp"
-            android:text="@string/other"
+            android:text="@string/rbOther"
             android:textColor="#FFFFFF"
             tools:ignore="TextContrastCheck" />
     </RadioGroup>
 
     <TextView
-        android:id="@+id/age_txt"
+        android:id="@+id/txtMyProfilQ2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:labelFor="@id/edit_age"
-        android:text="@string/your_age"
+        android:labelFor="@id/editMyProfilQ2"
+        android:text="@string/txtMyProfilQ2"
         android:textColor="#0277BD"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/edit_age"
+        app:layout_constraintBottom_toBottomOf="@+id/editMyProfilQ2"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="TextContrastCheck" />
 
     <EditText
-        android:id="@+id/edit_age"
+        android:id="@+id/editMyProfilQ2"
         android:layout_width="144dp"
         android:layout_height="44dp"
         android:layout_marginTop="84dp"
@@ -83,46 +83,46 @@
         tools:ignore="DuplicateSpeakableTextCheck,TouchTargetSizeCheck" />
 
     <Button
-        android:id="@+id/btn_prec"
+        android:id="@+id/btnPrec"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:text="@string/previous_step"
+        android:text="@string/btnPrec"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btn_suiv"
+        app:layout_constraintTop_toTopOf="@+id/btnNext"
         tools:ignore="TextContrastCheck" />
 
     <Button
-        android:id="@+id/btn_suiv"
+        android:id="@+id/btnNext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="32dp"
-        android:text="@string/next_step"
+        android:text="@string/btnNext"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="TextContrastCheck" />
 
     <TextView
-        android:id="@+id/titre_je_suis"
+        android:id="@+id/txtMyProfilTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="@string/my_profile"
+        android:text="@string/txtMyProfilTitle"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/profil"
-        app:layout_constraintStart_toStartOf="@+id/profil"
-        app:layout_constraintTop_toBottomOf="@+id/profil"
+        app:layout_constraintEnd_toEndOf="@+id/imgProfill"
+        app:layout_constraintStart_toStartOf="@+id/imgProfill"
+        app:layout_constraintTop_toBottomOf="@+id/imgProfill"
         tools:ignore="TextContrastCheck" />
 
     <ImageView
-        android:id="@+id/profil"
+        android:id="@+id/imgProfill"
         android:layout_width="120dp"
         android:layout_height="70dp"
         android:layout_marginTop="32dp"
-        android:contentDescription="@string/my_profile"
+        android:contentDescription="@string/txtMyProfilTitle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"

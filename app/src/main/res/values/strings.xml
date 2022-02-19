@@ -2,31 +2,87 @@
     <string name="app_name" translatable="false">HealthCheck</string>
 
     <!-- Main activity> -->
-    <string name="titre_main">How is your heart?</string>
-    <string name="text_main">10 minutes and 8 subjects to discover!</string>
-    <string name="your_name">Your name</string>
-    <string name="name">Name</string>
-    <string name="start_test">START TEST</string>
+    <string name="txtMainTitle">How is your heart?</string>
+    <string name="txtMain">10 minutes and 8 subjects to discover!</string>
+    <string name="txtMainYourName">Your name</string>
+    <string name="txtMainName">Name</string>
+    <string name="btnStartTest">Start Test</string>
 
     <!-- My Profile activity> -->
-    <string name="my_profile">MY PROFILE</string>
-    <string name="you_are">You are</string>
-    <string name="woman">Woman</string>
-    <string name="man">Man</string>
-    <string name="other">Other</string>
-    <string name="your_age">Your age</string>
+    <string name="txtMyProfilTitle">My profile</string>
+    <string name="txtMyProfilQ1">You are</string>
+    <string name="rbWoman">Woman</string>
+    <string name="rbMan">Man</string>
+    <string name="rbOther">Other</string>
+    <string name="txtMyProfilQ2">Your age</string>
 
     <!-- My Heart activity> -->
-    <string name="my_heart">My Heart</string>
-    <string name="question1">Do you have a heart condition?</string>
-    <string name="question2">Are you diabetic?</string>
-    <string name="sp_q3" translatable="false">TextView</string>
-    <string name="sp_q4" translatable="false">TextView</string>
+    <string name="txtMyHeartTitle">My Heart</string>
+    <string name="txtMyHeartQ1">Do you have a heart condition?</string>
+    <string name="txtMyHeartQ2">Are you diabetic?</string>
+    <string name="txtMyHeartQ4">"Do you have high blood pressure ? "</string>
+    <string name="txtMyHeartQ3">"Do you have a cholesterol problem? "</string>
 
     <!-- Common -->
-    <string name="previous_step">previous step</string>
-    <string name="next_step">next step</string>
-
+    <string name="btnPrec">previous step</string>
+    <string name="btnNext">next step</string>
+    <string name="my_cardiac_monitoring_title">My cardiac monitoring</string>
+    <string name="txtCardiacMonitoringQ1">Have you ever checked with your doctor about your cardiovascular risk?</string>
+    <string name="cardiac_img">cardiac_img</string>
+    <string name="txtCardiacMonitoringQ2">Have you ever had a heart checkup done?</string>
+    <string name="txtCardiacMonitoringQ3">Have you ever consulted a cardiologist?</string>
+    <string name="my_diet_img" translatable="false">my_diet_img</string>
+    <string name="my_diet_title">My diet</string>
+    <string name="txtMyDietQ1">Do you start your day with breakfast?</string>
+    <string name="txtMyDietQ2">Do you eat fruits and vegetables every day?</string>
+    <string name="txtMyDietQ3">At home, do you eat most often?</string>
+    <string name="txtMyDietQ4">Do you resalez your dishes?</string>
+    <string name="txtMyDietQ5">Do you regularly eat charcuterie?</string>
+    <string name="txtMyDietQ6">Do you know the Nutri-Score?</string>
+    <string name="txtMyDietRep1Q3">Commercial ready meals</string>
+    <string name="txtMyDietRep2Q3">Home cooked meals</string>
+    <string name="txtMyDietRep3Q3">Cans</string>
+    <string name="myPhysicalActivityTitle">My Physical Activity</string>
+    <string name="txtMyPhysicalActivityQ1">Do you walk briskly every day?</string>
+    <string name="txtMyPhysicalActivityQ2">How many times a week do you do physical activity for at least 30 minutes?</string>
+    <string name="txt_Never">Never</string>
+    <string name="txtMyPhysicalActivityRep2Q2" translatable="false">1</string>
+    <string name="txtMyPhysicalActivityRep3Q2" translatable="false">2</string>
+    <string name="txtMyPhysicalActivityRep4Q2">3 and +</string>
+    <string name="txtMyPhysicalActivityQ3">Do you know your heart rate not to exceed during an effort?</string>
+    <string name="txtMyPhysicalActivityQ4">Regarding your sporting profile, would you say that:</string>
+    <string name="txtMyPhysicalActivityRep1Q4">You have never played sports</string>
+    <string name="txtMyPhysicalActivityRep2Q4">You have exercised and have not exercised for a year or more</string>
+    <string name="txtMyPhysicalActivityRep3Q4">You exercise regularly</string>
+    <string name="txtMyPhysicalActivityRep4Q4">You play sports from time to time (on vacation for example)</string>
+    <string name="txtMyPhysicalActivityQ5">Which of the following activities would you do most easily during your weekends?</string>
+    <string name="txtMyPhysicalActivityRep1Q5">Watch television</string>
+    <string name="txtMyPhysicalActivityRep2Q5">Take a walk</string>
+    <string name="txtMyPhysicalActivityRep3Q5">Play video games</string>
+    <string name="txtMyPhysicalActivityRep4Q5">Play sports</string>
+    <string name="myTobaccoConsumptionTitle">My Tobacco Consumption</string>
+    <string name="txtMyTobaccoConsumptionQ1">Do you smoke at least once a day?</string>
+    <string name="txtMyTobaccoConsumptionQ2">Are you a former smoker (you quit less than 5 years ago)?</string>
+    <string name="txtMyTobaccoConsumptionQ3">Does one or more people smoke in your home?</string>
+    <string name="myStressManagementTitle">My Stress Management</string>
+    <string name="txtMyStressManagementQ1">Do you feel stressed or anxious?</string>
+    <string name="txt_Yes">Yes</string>
+    <string name="txt_No">No</string>
+    <string name="txtMyStressManagementRep2Q1">From time to time</string>
+    <string name="txtMyStressManagementRep3Q1">All the time</string>
+    <string name="txtMyStressManagementQ2">Are you prone to anger?</string>
+    <string name="txtMyStressManagementRep2Q2">Little</string>
+    <string name="txtMyStressManagementRep3Q2">Frequently</string>
+    <string name="txtMyStressManagementRep4Q2">Very frequently</string>
+    <string name="txtMyStressManagementQ3">Do you take antidepressants, anxiolytics or hypnotics?</string>
+    <string name="txtMyStressManagementQ4">Do you manage your family environment alone?</string>
+    <string name="myHygieneOfLifeTitle">My Hygiene of life</string>
+    <string name="txtMyHygieneOfLifeQ1">Do you ever drink more than 3 glasses of alcohol during the day once or twice a week (wine and beer included)?</string>
+    <string name="txtMyHygieneOfLifeQ2">Do you ever drink energy drinks?</string>
+    <string name="txtMyHygieneOfLifeQ3">Do you sleep more than 7 hours per night?</string>
+    <string name="txtMyHygieneOfLifeQ4">Are you prone to sleep disturbances?</string>
+    <string name="btnValidate">Validate</string>
+    <string name="txtMyHeartQ5">Cardiovascular history: Do you have a first-degree relative (father, mother, brother or sister) who had heart problems (heart attack, stroke, sudden death) before the age of 55 for a man or before the age of 65 for a woman?</string>
 
 
     <!-- Strings used for fragments for navigation

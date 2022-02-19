@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
 
-public class MyHeart extends AppCompatActivity {
+public class MyHeartActivity extends AppCompatActivity {
     public static final String APP_TAG = "MyHeartApp";
 
     Button button_pre;
@@ -16,7 +16,7 @@ public class MyHeart extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_heart);
 
-        button_pre = findViewById(R.id.button_pre);
+        button_pre = findViewById(R.id.btnMyHeartPrec);
         button_pre.setOnClickListener(view -> onClickButtonPrecedent());
     }
 
