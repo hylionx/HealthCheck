@@ -16,12 +16,13 @@
         android:text="@string/txtMyProfilQ1"
         android:textColor="#0277BD"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rgSexe"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/rg_selection"
+        app:layout_constraintTop_toTopOf="@+id/rgSexe"
         tools:ignore="TextContrastCheck" />
 
     <RadioGroup
-        android:id="@+id/rg_selection"
+        android:id="@+id/rgSexe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
@@ -60,16 +61,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:labelFor="@id/editMyProfilQ2"
+        android:labelFor="@id/numberAge"
         android:text="@string/txtMyProfilQ2"
         android:textColor="#0277BD"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/editMyProfilQ2"
+        app:layout_constraintBottom_toBottomOf="@+id/numberAge"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/numberAge"
         tools:ignore="TextContrastCheck" />
 
     <EditText
-        android:id="@+id/editMyProfilQ2"
+        android:id="@+id/numberAge"
         android:layout_width="144dp"
         android:layout_height="44dp"
         android:layout_marginTop="84dp"
@@ -77,9 +79,9 @@
         android:importantForAutofill="no"
         android:inputType="number"
         android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="@+id/rg_selection"
-        app:layout_constraintStart_toStartOf="@+id/rg_selection"
-        app:layout_constraintTop_toBottomOf="@+id/rg_selection"
+        app:layout_constraintEnd_toEndOf="@+id/rgSexe"
+        app:layout_constraintStart_toStartOf="@+id/rgSexe"
+        app:layout_constraintTop_toBottomOf="@+id/rgSexe"
         tools:ignore="DuplicateSpeakableTextCheck,TouchTargetSizeCheck" />
 
     <Button

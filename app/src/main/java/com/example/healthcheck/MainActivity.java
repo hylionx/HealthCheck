@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         person.setName(name);
 
         Toast.makeText(MainActivity.this, "Information Saved", Toast.LENGTH_SHORT).show();
-        Log.v(MainActivity.APP_TAG,"Entete section: " + edit_name.getText());
+        // Log.v(MainActivity.APP_TAG,"Entete section: " + edit_name.getText());
         Intent intent = new Intent (MainActivity.this, IAmActivity.class);
         intent.putExtra("Person", person);
         Log.i(APP_TAG, "Parcelable Person put");
