@@ -1,30 +1,35 @@
 <resources>
     <string name="app_name" translatable="false">HealthCheck</string>
+
+    <!-- Main activity> -->
+    <string name="titre_main">How is your heart?</string>
+    <string name="text_main">10 minutes and 8 subjects to discover!</string>
     <string name="your_name">Your name</string>
     <string name="name">Name</string>
     <string name="start_test">START TEST</string>
-    <string name="my_heart">My Heart</string>
-    <!-- Strings used for fragments for navigation
-    <string name="">First Fragment</string>
-    <string name="">Second Fragment</string> -->
 
+    <!-- My Profile activity> -->
+    <string name="my_profile">MY PROFILE</string>
     <string name="you_are">You are</string>
     <string name="woman">Woman</string>
     <string name="man">Man</string>
     <string name="other">Other</string>
     <string name="your_age">Your age</string>
-    <string name="profil_img" translatable="false">Profil_img</string>
-    <string name="previous_step">previous step</string>
-    <string name="next_step">next step</string>
-    <string name="coeur_img" translatable="false">coeur_img</string>
+
+    <!-- My Heart activity> -->
+    <string name="my_heart">My Heart</string>
     <string name="question1">Do you have a heart condition?</string>
-    <string name="my_profile">My profil</string>
     <string name="question2">Are you diabetic?</string>
-    <string name="titre_main">How is your heart?</string>
-    <string name="text_main">10 minutes and 8 subjects to discover!</string>
     <string name="sp_q3" translatable="false">TextView</string>
     <string name="sp_q4" translatable="false">TextView</string>
-    <string name="button_suppl" translatable="false">Button</string>
-    <string name="save" translatable="false">Save</string>
-    <string name="my_cardiac_monitoring_title">My cardiac monitoring</string>
+
+    <!-- Common -->
+    <string name="previous_step">previous step</string>
+    <string name="next_step">next step</string>
+
+
+
+    <!-- Strings used for fragments for navigation
+    <string name="">First Fragment</string>
+    <string name="">Second Fragment</string> -->
 </resources>

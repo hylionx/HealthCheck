@@ -5,9 +5,7 @@ import android.os.Parcelable;
 
 public class Person implements Parcelable {
 
-    public Person() {
 
-    }
 
     public enum SexeEnum {
         MALE,
@@ -19,7 +17,9 @@ public class Person implements Parcelable {
     private int age;
     private SexeEnum sexe;
 
+    public Person() {
 
+    }
 
     public String getName() {
         return name;
