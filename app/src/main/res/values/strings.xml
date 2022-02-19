@@ -18,7 +18,7 @@
     <string name="next_step">next step</string>
     <string name="coeur_img" translatable="false">coeur_img</string>
     <string name="question1">Do you have a heart condition?</string>
-    <string name="my_profile">MY PROFILE</string>
+    <string name="my_profile">My profil</string>
     <string name="question2">Are you diabetic?</string>
     <string name="titre_main">How is your heart?</string>
     <string name="text_main">10 minutes and 8 subjects to discover!</string>
@@ -26,4 +26,5 @@
     <string name="sp_q4" translatable="false">TextView</string>
     <string name="button_suppl" translatable="false">Button</string>
     <string name="save" translatable="false">Save</string>
+    <string name="my_cardiac_monitoring_title">My cardiac monitoring</string>
 </resources>

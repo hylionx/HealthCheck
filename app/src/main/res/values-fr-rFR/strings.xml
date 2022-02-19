@@ -12,8 +12,9 @@
     <string name="previous_step">Etape précédente</string>
     <string name="next_step">Etape suivante</string>
     <string name="question1">Avez-vous un problème cardiaque?</string>
-    <string name="my_profile">MON PROFIL</string>
+    <string name="my_profile">Mon profil</string>
     <string name="question2">Etes-vous diabétique?</string>
     <string name="titre_main">Comment va votre coeur?</string>
     <string name="text_main">10 minutes et 8 thématiques à savoir!</string>
+    <string name="my_cardiac_monitoring_title">Mon suivi cardiaque</string>
 </resources>

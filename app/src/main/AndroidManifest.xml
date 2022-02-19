@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HealthCheck">
         <activity
+            android:name=".MyCardiacMonitoringActivity"
+            android:exported="false" />
+        <activity
             android:name=".AutreActivite"
             android:exported="false" />
         <activity
