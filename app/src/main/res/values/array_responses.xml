@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="array_answer_question_1_2_3_4">
+        <item>@string/txt_No</item>
+        <item>@string/txt_Yes</item>
+    </string-array>
+
+    <string-array name="array_answer_question_5_6">
+        <item>@string/txt_No</item>
+        <item>@string/txt_Yes</item>
+        <item>@string/txt_IDontKnow</item>
+    </string-array>
+
+
+</resources>

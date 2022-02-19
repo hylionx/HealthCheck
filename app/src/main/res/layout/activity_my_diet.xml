@@ -21,10 +21,16 @@
         tools:ignore="ImageContrastCheck" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/my_diet_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="165dp"
-        tools:layout_editor_absoluteY="124dp" />
+        android:layout_marginTop="24dp"
+        android:text="@string/my_diet_title"
+        android:textColor="#F3F3F3"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/my_diet_img"
+        app:layout_constraintStart_toStartOf="@+id/my_diet_img"
+        app:layout_constraintTop_toBottomOf="@+id/my_diet_img"
+        tools:ignore="TextContrastCheck" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

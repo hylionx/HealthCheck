@@ -83,6 +83,8 @@
     <string name="txtMyHygieneOfLifeQ4">Are you prone to sleep disturbances?</string>
     <string name="btnValidate">Validate</string>
     <string name="txtMyHeartQ5">Cardiovascular history: Do you have a first-degree relative (father, mother, brother or sister) who had heart problems (heart attack, stroke, sudden death) before the age of 55 for a man or before the age of 65 for a woman?</string>
+    <string name="txt_IDontKnow">I dont know</string>
+    <string name="txtMyHeartQ6">Do you know your body mass index (BMI)?</string>
 
 
     <!-- Strings used for fragments for navigation

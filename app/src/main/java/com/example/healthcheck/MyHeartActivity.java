@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
+import android.widget.Spinner;
 
 public class MyHeartActivity extends AppCompatActivity {
     public static final String APP_TAG = "MyHeartApp";
@@ -37,4 +38,4 @@ public class MyHeartActivity extends AppCompatActivity {
     public void onClickButtonPrecedent(){
         finish();
     }
-}
+    }

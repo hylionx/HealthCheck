@@ -72,4 +72,6 @@
     <string name="txtMyHeartQ3" translatable="false">Avez-vous un problème de cholestérol ?</string>
     <string name="txtMyHeartQ4" translatable="false">Avez vous de l\'hypertension?</string>
     <string name="txtMyHeartQ5">Antécédents cardiovasculaires : Avez-vous un parent du premier degré (père, mère, frère ou sœur) qui a eu des problèmes cardiaques (infarctus, AVC, mort subite) avant 55 ans pour un homme ou avant 65 ans chez une femme ?</string>
+    <string name="txt_IDontKnow">"Je ne sais pas "</string>
+    <string name="txtMyHeartQ6">"  Connaissez-vous votre indice de masse corporelle (IMC) ?"</string>
 </resources>
