@@ -32,7 +32,6 @@ public abstract class BaseActivity extends AppCompatActivity {
             Intent intent = new Intent(this, cls );
             intent.putExtra(EXTRA_PERSON, person);
             startActivity(intent);
-
         }
     }
 
