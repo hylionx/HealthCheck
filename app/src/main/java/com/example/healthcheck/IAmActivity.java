@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.RadioGroup;
 
 public class IAmActivity extends BaseActivity {
@@ -14,7 +15,7 @@ public class IAmActivity extends BaseActivity {
     RadioGroup rgSexe;
     EditText numberAge;
 
-    Button btn_suiv;
+    ImageButton btn_suiv;
     Button btn_prec;
 
     @Override

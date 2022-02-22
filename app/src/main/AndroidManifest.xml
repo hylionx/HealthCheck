@@ -3,6 +3,7 @@
     package="com.example.healthcheck">
 
     <uses-permission android:name="android.permission.VIBRATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,6 +11,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HealthCheck">
+        <activity
+            android:name=".MyHygieneOfLigeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MyStressManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MyTobaccoConsumptionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MyPhysicalActivityActivity"
+            android:exported="false" />
         <activity
             android:name=".MyDietActivity"
             android:exported="false" />

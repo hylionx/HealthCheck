@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#AE9C2B"
+    tools:context=".MyHygieneOfLigeActivity">
+
+    <ImageView
+        android:id="@+id/imgHygieneOfLife"
+        android:layout_width="120dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/myHygieneOfLifeTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/dodo"
+        tools:ignore="ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/myHygieneOfLifeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/myHygieneOfLifeTitle"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/imgHygieneOfLife"
+        app:layout_constraintStart_toStartOf="@+id/imgHygieneOfLife"
+        app:layout_constraintTop_toBottomOf="@+id/imgHygieneOfLife"
+        tools:ignore="TextContrastCheck" />
+
+    <ScrollView
+        android:layout_width="409dp"
+        android:layout_height="571dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myHygieneOfLifeTitle"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchMyHygieneOfLifeQ1"
+                android:layout_width="379dp"
+                android:layout_height="58dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/txtMyHygieneOfLifeQ1"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="TextContrastCheck" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchMyHygieneOfLifeQ2"
+                android:layout_width="379dp"
+                android:layout_height="58dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="44dp"
+                android:text="@string/txtMyHygieneOfLifeQ2"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/switchMyHygieneOfLifeQ1"
+                tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch4"
+                android:layout_width="379dp"
+                android:layout_height="58dp"
+                android:layout_marginTop="44dp"
+                android:minHeight="48dp"
+                android:text="@string/txtMyHygieneOfLifeQ4"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/switchMyHygieneOfLifeQ3"
+                app:layout_constraintStart_toStartOf="@+id/switchMyHygieneOfLifeQ3"
+                app:layout_constraintTop_toBottomOf="@+id/switchMyHygieneOfLifeQ3"
+                tools:ignore="TextContrastCheck" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchMyHygieneOfLifeQ3"
+                android:layout_width="379dp"
+                android:layout_height="58dp"
+                android:layout_marginTop="44dp"
+                android:minHeight="48dp"
+                android:text="@string/txtMyHygieneOfLifeQ3"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/switchMyHygieneOfLifeQ2"
+                app:layout_constraintStart_toStartOf="@+id/switchMyHygieneOfLifeQ2"
+                app:layout_constraintTop_toBottomOf="@+id/switchMyHygieneOfLifeQ2"
+                tools:ignore="TextContrastCheck" />
+
+            <Button
+                android:id="@+id/btnValidate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="64dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/btnValidate"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/switch4" />
+
+            <Button
+                android:id="@+id/btnMyHygieneOfLifePrec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="32dp"
+                android:text="@string/btnPrec"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btnValidate"
+                app:layout_constraintVertical_bias="0.0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

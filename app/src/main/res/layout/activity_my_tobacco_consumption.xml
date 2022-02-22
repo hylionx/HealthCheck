@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#37B39B"
+    tools:context=".MyTobaccoConsumptionActivity">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="120dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/myTobaccoConsumptionTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/tabac"
+        tools:ignore="ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/myTobaccoConsumptionTitle"
+        android:layout_width="222dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/myTobaccoConsumptionTitle"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/txtMyTobaccoConsumptionQ1"
+        android:layout_width="272dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/txtMyTobaccoConsumptionQ1"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/checkBoxMyTobaccoQ1"
+        app:layout_constraintTop_toBottomOf="@+id/myTobaccoConsumptionTitle"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/txtMyTobaccoConsumptionQ2"
+        android:layout_width="272dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/txtMyTobaccoConsumptionQ2"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/txtMyTobaccoConsumptionQ1"
+        app:layout_constraintStart_toStartOf="@+id/txtMyTobaccoConsumptionQ1"
+        app:layout_constraintTop_toBottomOf="@+id/txtMyTobaccoConsumptionQ1"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/txtMyTobaccoConsumptionQ3"
+        android:layout_width="272dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/txtMyTobaccoConsumptionQ3"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/txtMyTobaccoConsumptionQ2"
+        app:layout_constraintStart_toStartOf="@+id/txtMyTobaccoConsumptionQ2"
+        app:layout_constraintTop_toBottomOf="@+id/txtMyTobaccoConsumptionQ2"
+        tools:ignore="TextContrastCheck" />
+
+    <CheckBox
+        android:id="@+id/checkBoxMyTobaccoQ1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtMyTobaccoConsumptionQ1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtMyTobaccoConsumptionQ1"
+        tools:ignore="DuplicateSpeakableTextCheck,DuplicateClickableBoundsCheck" />
+
+    <CheckBox
+        android:id="@+id/checkBoxMyTobaccoQ2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtMyTobaccoConsumptionQ2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtMyTobaccoConsumptionQ2" />
+
+    <CheckBox
+        android:id="@+id/checkBoxMyTobaccoQ3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtMyTobaccoConsumptionQ3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtMyTobaccoConsumptionQ3" />
+
+    <Button
+        android:id="@+id/btnPreviousMyTobaccoConsumption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/btnPrec"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnNextMyTobaccoConsumption"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/btnNextMyTobaccoConsumption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/btnNext"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="TextContrastCheck" />
+</androidx.constraintlayout.widget.ConstraintLayout>

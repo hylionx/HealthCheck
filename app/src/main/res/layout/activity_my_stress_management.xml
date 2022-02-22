@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E15778"
+    tools:context=".MyStressManagementActivity">
+
+    <ImageView
+        android:id="@+id/imgStressMngmt"
+        android:layout_width="120dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/myStressManagementTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/stress" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/myStressManagementTitle"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/imgStressMngmt"
+        app:layout_constraintStart_toStartOf="@+id/imgStressMngmt"
+        app:layout_constraintTop_toBottomOf="@+id/imgStressMngmt" />
+
+    <TextView
+        android:id="@+id/txtMyStressManagementQ1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/txtMyStressManagementQ1"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/txtMyStressManagementQ2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/txtMyStressManagementQ2"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerMyStressManagementRepQ1"
+        app:layout_constraintStart_toStartOf="@+id/spinnerMyStressManagementRepQ1"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerMyStressManagementRepQ1"
+        tools:ignore="TextContrastCheck" />
+
+    <Spinner
+        android:id="@+id/spinnerMyStressManagementRepQ1"
+        android:layout_width="338dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:background="#F4C0D9"
+        app:layout_constraintEnd_toEndOf="@+id/txtMyStressManagementQ1"
+        app:layout_constraintStart_toStartOf="@+id/txtMyStressManagementQ1"
+        app:layout_constraintTop_toBottomOf="@+id/txtMyStressManagementQ1"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Spinner
+        android:id="@+id/spinnerMyStressManagementRepQ2"
+        android:layout_width="338dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="24dp"
+        android:background="#F4C0D9"
+        app:layout_constraintEnd_toEndOf="@+id/txtMyStressManagementQ2"
+        app:layout_constraintHorizontal_bias="0.614"
+        app:layout_constraintStart_toStartOf="@+id/txtMyStressManagementQ2"
+        app:layout_constraintTop_toBottomOf="@+id/txtMyStressManagementQ2"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switchMyStressManagementQ3"
+        android:layout_width="338dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/txtMyStressManagementQ3"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerMyStressManagementRepQ2"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="@+id/spinnerMyStressManagementRepQ2"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerMyStressManagementRepQ2"
+        tools:ignore="TextContrastCheck" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switchMyStressManagementQ4"
+        android:layout_width="338dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/txtMyStressManagementQ4"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/switchMyStressManagementQ3"
+        app:layout_constraintStart_toStartOf="@+id/switchMyStressManagementQ3"
+        app:layout_constraintTop_toBottomOf="@+id/switchMyStressManagementQ3"
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+    <Button
+        android:id="@+id/btnMyStressManagmentPrec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/btnPrec"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnMyStressManagmentNext"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnMyStressManagmentNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/btnNext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switchMyStressManagementQ4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

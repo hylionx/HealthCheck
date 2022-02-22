@@ -21,7 +21,10 @@ public class MyHeartActivity extends BaseActivity {
         setContentView(R.layout.activity_my_heart);
 
         button_pre = findViewById(R.id.btnMyHeartPrec);
+        btn_suivant = findViewById(R.id.btnMyHeartNExt);
+
         button_pre.setOnClickListener(view -> gotoPreviousActivity());
+        btn_suivant.setOnClickListener(view -> gotoNextActivity(MyCardiacMonitoringActivity.class));
 
         getPersonByIntent();
 

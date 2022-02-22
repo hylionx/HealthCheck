@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/txtMyPhysicalActivityQ2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EB605A"
+    tools:context=".MyPhysicalActivityActivity">
+
+    <ImageView
+        android:id="@+id/myphysicalActivityImg"
+        android:layout_width="120dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/myPhysicalActivityTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/basket" />
+
+    <TextView
+        android:id="@+id/myPhysicalActivityTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/myPhysicalActivityTitle"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/myphysicalActivityImg"
+        app:layout_constraintStart_toStartOf="@+id/myphysicalActivityImg"
+        app:layout_constraintTop_toBottomOf="@+id/myphysicalActivityImg" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="410dp"
+        android:layout_height="561dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myPhysicalActivityTitle"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:id="@+id/txtMyPhysicalActivityQ1"
+                android:layout_width="300dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/txtMyPhysicalActivityQ1"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="TextContrastCheck" />
+
+            <CheckBox
+                android:id="@+id/checkBoxMyPhysicalActivityQ1"
+                android:layout_width="36dp"
+                android:layout_height="41dp"
+                android:buttonTint="@color/white"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/txtMyPhysicalActivityQ1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/txtMyPhysicalActivityQ1"
+                tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
+
+            <TextView
+                android:id="@+id/txtMyPhysicalActivityQ"
+                android:layout_width="300dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="80dp"
+                android:text="@string/txtMyPhysicalActivityQ2"
+                android:textAlignment="gravity"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/txtMyPhysicalActivityQ1"
+                app:layout_constraintHorizontal_bias="0.488"
+                app:layout_constraintStart_toStartOf="@+id/txtMyPhysicalActivityQ1"
+                app:layout_constraintTop_toBottomOf="@+id/txtMyPhysicalActivityQ1"
+                tools:ignore="TextContrastCheck" />
+
+            <Spinner
+                android:id="@+id/spinnerMyPhisicalActivityRepQ2"
+                android:layout_width="300dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="16dp"
+                android:alwaysDrawnWithCache="false"
+                android:background="#D88787"
+                android:backgroundTint="#D88787"
+                android:entries="@array/myPhysicalActivity_answer_question_2"
+                app:layout_constraintEnd_toEndOf="@+id/txtMyPhysicalActivityQ"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/txtMyPhysicalActivityQ"
+                app:layout_constraintTop_toBottomOf="@+id/txtMyPhysicalActivityQ"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/txtMyPhysicalActivityQ3"
+                android:layout_width="300dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="80dp"
+                android:text="@string/txtMyPhysicalActivityQ3"
+                android:textAlignment="gravity"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/spinnerMyPhisicalActivityRepQ2"
+                app:layout_constraintStart_toStartOf="@+id/spinnerMyPhisicalActivityRepQ2"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerMyPhisicalActivityRepQ2"
+                tools:ignore="TextContrastCheck" />
+
+            <CheckBox
+                android:id="@+id/checkBoxMyPhysicalActivityQ3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/white"
+                android:checked="false"
+                app:layout_constraintBottom_toBottomOf="@+id/txtMyPhysicalActivityQ3"
+                app:layout_constraintEnd_toEndOf="@+id/checkBoxMyPhysicalActivityQ1"
+                app:layout_constraintStart_toStartOf="@+id/checkBoxMyPhysicalActivityQ1"
+                app:layout_constraintTop_toTopOf="@+id/txtMyPhysicalActivityQ3"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/txtMyPhysicalActivityQ4"
+                android:layout_width="300dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="80dp"
+                android:text="@string/txtMyPhysicalActivityQ4"
+                android:textAlignment="gravity"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/txtMyPhysicalActivityQ3"
+                app:layout_constraintStart_toStartOf="@+id/txtMyPhysicalActivityQ3"
+                app:layout_constraintTop_toBottomOf="@+id/txtMyPhysicalActivityQ3"
+                tools:ignore="TextContrastCheck" />
+
+            <Spinner
+                android:id="@+id/spinnerMyPhisicalActivityRepQ4"
+                android:layout_width="300dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="16dp"
+                android:background="#D88787"
+                android:entries="@array/myPhysicalActivity_answer_question_4"
+                app:layout_constraintEnd_toEndOf="@+id/txtMyPhysicalActivityQ4"
+                app:layout_constraintStart_toStartOf="@+id/txtMyPhysicalActivityQ4"
+                app:layout_constraintTop_toBottomOf="@+id/txtMyPhysicalActivityQ4"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/txtMyPhysicalActivityQ5"
+                android:layout_width="300dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="80dp"
+                android:text="@string/txtMyPhysicalActivityQ5"
+                android:textAlignment="gravity"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/spinnerMyPhisicalActivityRepQ4"
+                app:layout_constraintStart_toStartOf="@+id/spinnerMyPhisicalActivityRepQ4"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerMyPhisicalActivityRepQ4"
+                tools:ignore="TextContrastCheck" />
+
+            <Spinner
+                android:id="@+id/spinnerMyPhisicalActivityRepQ5"
+                android:layout_width="300dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="16dp"
+                android:background="#D88787"
+                android:entries="@array/myPhysicalActivity_answer_question_5"
+                app:layout_constraintEnd_toEndOf="@+id/txtMyPhysicalActivityQ5"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/txtMyPhysicalActivityQ5"
+                app:layout_constraintTop_toBottomOf="@+id/txtMyPhysicalActivityQ5"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/btnNextMyPhisicalActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="32dp"
+                android:text="@string/btnNext"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerMyPhisicalActivityRepQ5"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/btnPreviousMyPhisicalActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/btnPrec"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btnNextMyPhisicalActivity" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,15 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="array_answer_question_1_2_3_4">
+    <string-array name="myHeart_answer_question_1_2_3_4">
         <item>@string/txt_No</item>
         <item>@string/txt_Yes</item>
     </string-array>
 
-    <string-array name="array_answer_question_5_6">
+    <string-array name="myHeart_answer_question_5_6">
         <item>@string/txt_No</item>
         <item>@string/txt_Yes</item>
         <item>@string/txt_IDontKnow</item>
     </string-array>
 
+
+    <string-array name="myPhysicalActivity_answer_question_2">
+        <item>@string/txt_Never</item>
+        <item>@string/txtMyPhysicalActivityRep2Q2</item>
+        <item>@string/txtMyPhysicalActivityRep3Q2</item>
+        <item>@string/txtMyPhysicalActivityRep4Q2</item>
+    </string-array>
+
+    <string-array name="myPhysicalActivity_answer_question_4">
+        <item>@string/txtMyPhysicalActivityRep1Q4</item>
+        <item>@string/txtMyPhysicalActivityRep2Q4</item>
+        <item>@string/txtMyPhysicalActivityRep3Q4</item>
+        <item>@string/txtMyPhysicalActivityRep4Q4</item>
+    </string-array>
+
+
+    <string-array name="myPhysicalActivity_answer_question_5">
+        <item>@string/txtMyPhysicalActivityRep1Q5</item>
+        <item>@string/txtMyPhysicalActivityRep2Q5</item>
+        <item>@string/txtMyPhysicalActivityRep3Q5</item>
+        <item>@string/txtMyPhysicalActivityRep4Q5</item>
+    </string-array>
 
 </resources>
