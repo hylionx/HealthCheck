@@ -49,7 +49,7 @@
             <TextView
                 android:id="@+id/txtMyPhysicalActivityQ1"
                 android:layout_width="300dp"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="32dp"
                 android:text="@string/txtMyPhysicalActivityQ1"
@@ -74,7 +74,7 @@
             <TextView
                 android:id="@+id/txtMyPhysicalActivityQ"
                 android:layout_width="300dp"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="80dp"
                 android:text="@string/txtMyPhysicalActivityQ2"
                 android:textAlignment="gravity"
@@ -127,7 +127,7 @@
             <TextView
                 android:id="@+id/txtMyPhysicalActivityQ4"
                 android:layout_width="300dp"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="80dp"
                 android:text="@string/txtMyPhysicalActivityQ4"
                 android:textAlignment="gravity"
@@ -152,7 +152,7 @@
             <TextView
                 android:id="@+id/txtMyPhysicalActivityQ5"
                 android:layout_width="300dp"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="80dp"
                 android:text="@string/txtMyPhysicalActivityQ5"
                 android:textAlignment="gravity"

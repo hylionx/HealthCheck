@@ -16,7 +16,7 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     private static final String EXTRA_PERSON = "com.example.extras.EXTRA_PERSON";
     protected Person person;
-    protected SharedPreferences sharedPreferences;
+    protected SharedPreferences sharedPref;
 
 
     protected void getPersonByIntent() {
@@ -71,6 +71,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     }
 
     protected boolean handleError(String msg){
+
         return handleError(msg, null);
     }
 

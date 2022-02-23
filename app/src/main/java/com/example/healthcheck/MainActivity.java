@@ -1,44 +1,42 @@
 package com.example.healthcheck;
 
 import android.os.Bundle;
-import android.text.TextUtils;
-import android.widget.Button;
-import android.widget.EditText;
+import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
+import android.os.Handler;
 
 public class MainActivity extends BaseActivity {
-    // in Logcat : (MainApp)|(IAMApp)|(MyHeartApp)
-    public static final String APP_TAG = "MainApp";
+    public static final String APP_TAG = "APPActivity";
 
-    private EditText editName;
-    private Button btnStart;
+    ImageView imageView;
+    Animation topaniAnimation, bottoAnimation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
+        imageView = findViewById(R.id.logo);
+        topaniAnimation = AnimationUtils.loadAnimation(this, R.anim.animation_top);
+        bottoAnimation = AnimationUtils.loadAnimation(this, R.anim.animation_bottom);
+        imageView.setAnimation(topaniAnimation);
 
-        init();
-    }
 
-    private void init() {
-        person = new Person();
-        btnStart = findViewById(R.id.btnStartTest);
-        editName = findViewById(R.id.etName);
-        sharedPreferences = getSharedPreferences("Shared_PREF", MODE_PRIVATE);
 
-        btnStart.setOnClickListener(view -> gotoNextActivity(IAmActivity.class));
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                gotoNextActivity(NameActivity.class);
+            }
+        }, 3000);
+
 
     }
 
     @Override
     protected boolean validateWidgetsAndAffectPersonDatas() {
-        // check name
-        String name = editName.getText().toString();
-        if(TextUtils.isEmpty(name)) {
-            return handleError("this can't be empty", editName);
-        }
-        person.setName(name);
         return true;
     }
-
 }

@@ -52,8 +52,10 @@
             <TextView
                 android:id="@+id/txtMyHeartQ1"
                 android:layout_width="wrap_content"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="32dp"
+                android:layout_marginEnd="16dp"
                 android:contentDescription="@string/txtMyHeartQ1"
                 android:text="@string/txtMyHeartQ1"
                 android:textColor="#FFFFFF"
@@ -78,7 +80,7 @@
             <TextView
                 android:id="@+id/txtMyHeartTitleQ2"
                 android:layout_width="wrap_content"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:contentDescription="@string/txtMyHeartQ2"
                 android:text="@string/txtMyHeartQ2"
@@ -103,7 +105,7 @@
             <TextView
                 android:id="@+id/txtMyHeartTitleQ3"
                 android:layout_width="wrap_content"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:text="@string/txtMyHeartQ3"
                 android:textColor="#FAF8F8"
@@ -128,7 +130,7 @@
             <TextView
                 android:id="@+id/txtMyHeartTitleQ4"
                 android:layout_width="wrap_content"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:text="@string/txtMyHeartQ4"
                 android:textColor="#F4F1F1"
@@ -173,8 +175,8 @@
 
             <TextView
                 android:id="@+id/txtMyHeartQ5"
-                android:layout_width="356dp"
-                android:layout_height="0dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:text="@string/txtMyHeartQ5"
                 android:textColor="#F1E8E8"
@@ -184,7 +186,7 @@
                 tools:ignore="TextContrastCheck" />
 
             <Spinner
-                android:id="@+id/spinner"
+                android:id="@+id/spinnerMyHeartRepQ5"
                 android:layout_width="337dp"
                 android:layout_height="48dp"
                 android:layout_marginTop="24dp"
@@ -198,13 +200,13 @@
             <TextView
                 android:id="@+id/txtMyHeartQ6"
                 android:layout_width="wrap_content"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:text="@string/txtMyHeartQ6"
                 android:textColor="#FDFCFC"
-                app:layout_constraintEnd_toEndOf="@+id/spinner"
-                app:layout_constraintStart_toStartOf="@+id/spinner"
-                app:layout_constraintTop_toBottomOf="@+id/spinner"
+                app:layout_constraintEnd_toEndOf="@+id/spinnerMyHeartRepQ5"
+                app:layout_constraintStart_toStartOf="@+id/spinnerMyHeartRepQ5"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerMyHeartRepQ5"
                 tools:ignore="TextContrastCheck" />
 
             <Spinner

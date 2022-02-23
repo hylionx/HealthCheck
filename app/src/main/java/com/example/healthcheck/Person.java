@@ -4,49 +4,6 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class Person implements Parcelable {
-/*
-    public enum SexeEnum {
-        MALE,
-        FEMALE,
-        OTHER
-    }
-
-    public enum AnswerEnum {
-        YES,
-        NO,
-        DONT_KNOW
-    }
-
-    public enum mostEatenEnum {
-        Commercial,
-        HOME,
-        TIN_CANS
-    }
-
-    public enum physicalActivityPerWeekEnum {
-        NEVER,
-        NOT_FOR_A_YEAR_OR_MORE,
-        REGULARLY,
-        SOMETIMES
-    }
-
-    public enum sportingProfileEnum {
-        WATCH_TV,
-        WALK,
-        VIDEO_GAMES,
-        SPORT
-    }
-
-    public enum weekendActivityEnum {
-        NEVER,
-        ONE,
-        TWO,
-        THREE_AND_PLUS
-    }
-
-*/
-
-
 
     // MAIN
     private String name;
@@ -56,47 +13,49 @@ public class Person implements Parcelable {
     private int sexe;
 
     // MON CŒUR
-    private boolean heartProblem;
-    private boolean cholesterolProblem;
-    private boolean diabetic;
-    private boolean highBloodPressure;
-    private int parentHeartProblem;
-    private boolean IMC;
+    private String heartProblem;
+    private String cholesterolProblem;
+    private String diabetic;
+    private String highBloodPressure;
+    private String parentHeartProblem;
+    private String IMC;
+    private int pos;
 
     // MON SUIVI CARDIAQUE
     private boolean cardiovascularRiskCheck;
     private boolean heartCheckup;
     private boolean cardiologistConsulted;
+    private String val;
 
     // MON ALIMENTATION
-    private boolean startDayWithBreakfast;
-    private boolean fruitsAndVegetables;
+    private int startDayWithBreakfast;
+    private int fruitsAndVegetables;
     private int mostEaten;
-    private boolean resaltFood ;
-    private boolean coldMeats ;
-    private boolean knownNutriScore;
-    private boolean walkEveryDay;
+    private int resaltFood ;
+    private int coldMeats ;
+    private int knownNutriScore;
+    private int walkEveryDay;
     private int physicalActivityPerWeek;
-    private boolean knownHeartRateLimit;
+    private int knownHeartRateLimit;
     private int sportingProfile;
     private int weekendActivity;
 
     // MA CONSOMMATION DE TABAC
-    private boolean smokeOnceADay;
-    private boolean exSmoker;
-    private boolean peopleSmokeInHome;
+    private int smokeOnceADay;
+    private int exSmoker;
+    private int peopleSmokeInHome;
 
     // MA GESTION DU STRESS
     private int feelStressedAnxious;
     private int anger;
-    private boolean antidepressantsAnxiolyticsHypnotics;
-    private boolean aloneFamultManage;
+    private int antidepressantsAnxiolyticsHypnotics;
+    private int aloneFamultManage;
 
     // MON HYGIÈNE DE VIE
-    private boolean drinkAlcohol;
-    private boolean energyDrinks;
-    private boolean sleep7Hours;
-    private boolean sleepDisturbances;
+    private int drinkAlcohol;
+    private int energyDrinks;
+    private int sleep7Hours;
+    private int sleepDisturbances;
 
     public Person() {
 
@@ -107,38 +66,39 @@ public class Person implements Parcelable {
         name = in.readString();
         age = in.readInt();
         sexe = in.readInt();
-        heartProblem = in.readByte() != 0;
-        cholesterolProblem = in.readByte() != 0;
-        diabetic = in.readByte() != 0;
-        highBloodPressure = in.readByte() != 0;
-        parentHeartProblem = in.readInt();
-        IMC = in.readByte() != 0;
+        heartProblem = in.readString();
+        cholesterolProblem = in.readString();
+        diabetic = in.readString();
+        highBloodPressure = in.readString();
+        parentHeartProblem = in.readString();
+        IMC = in.readString();
         cardiovascularRiskCheck = in.readByte() != 0;
         heartCheckup = in.readByte() != 0;
         cardiologistConsulted = in.readByte() != 0;
-        startDayWithBreakfast = in.readByte() != 0;
-        fruitsAndVegetables = in.readByte() != 0;
+        startDayWithBreakfast = in.readInt();
+        fruitsAndVegetables = in.readInt();
         mostEaten = in.readInt();
-        resaltFood = in.readByte() != 0;
-        coldMeats = in.readByte() != 0;
-        knownNutriScore = in.readByte() != 0;
-        walkEveryDay = in.readByte() != 0;
+        resaltFood = in.readInt();
+        coldMeats = in.readInt();
+        knownNutriScore = in.readInt();
+        walkEveryDay = in.readInt();
         physicalActivityPerWeek = in.readInt();
-        knownHeartRateLimit = in.readByte() != 0;
+        knownHeartRateLimit = in.readInt();
         sportingProfile = in.readInt();
         weekendActivity = in.readInt();
-        smokeOnceADay = in.readByte() != 0;
-        exSmoker = in.readByte() != 0;
-        peopleSmokeInHome = in.readByte() != 0;
+        smokeOnceADay = in.readInt();
+        exSmoker = in.readInt();
+        peopleSmokeInHome = in.readInt();
         feelStressedAnxious = in.readInt();
         anger = in.readInt();
-        antidepressantsAnxiolyticsHypnotics = in.readByte() != 0;
-        aloneFamultManage = in.readByte() != 0;
-        drinkAlcohol = in.readByte() != 0;
-        energyDrinks = in.readByte() != 0;
-        sleep7Hours = in.readByte() != 0;
-        sleepDisturbances = in.readByte() != 0;
+        antidepressantsAnxiolyticsHypnotics = in.readInt();
+        aloneFamultManage = in.readInt();
+        drinkAlcohol = in.readInt();
+        energyDrinks = in.readInt();
+        sleep7Hours = in.readInt();
+        sleepDisturbances = in.readInt();
     }
+
 
     public static final Creator<Person> CREATOR = new Creator<Person>() {
         @Override
@@ -156,275 +116,272 @@ public class Person implements Parcelable {
         return name;
     }
 
-    public int getAge() {
-        return age;
-    }
-
-    public int getSexe() {
-        return sexe;
-    }
-
-    public boolean isHeartProblem() {
-        return heartProblem;
-    }
-
-    public boolean isCholesterolProblem() {
-        return cholesterolProblem;
-    }
-
-    public boolean isDiabetic() {
-        return diabetic;
-    }
-
-    public boolean isHighBloodPressure() {
-        return highBloodPressure;
-    }
-
-    public int getParentHeartProblem() {
-        return parentHeartProblem;
-    }
-
-    public boolean isIMC() {
-        return IMC;
-    }
-
-    public boolean isCardiovascularRiskCheck() {
-        return cardiovascularRiskCheck;
-    }
-
-    public boolean isHeartCheckup() {
-        return heartCheckup;
-    }
-
-    public boolean isCardiologistConsulted() {
-        return cardiologistConsulted;
-    }
-
-    public boolean isStartDayWithBreakfast() {
-        return startDayWithBreakfast;
-    }
-
-    public boolean isFruitsAndVegetables() {
-        return fruitsAndVegetables;
-    }
-
-    public int getMostEaten() {
-        return mostEaten;
-    }
-
-    public boolean isResaltFood() {
-        return resaltFood;
-    }
-
-    public boolean isColdMeats() {
-        return coldMeats;
-    }
-
-    public boolean isKnownNutriScore() {
-        return knownNutriScore;
-    }
-
-    public boolean isWalkEveryDay() {
-        return walkEveryDay;
-    }
-
-    public int getPhysicalActivityPerWeek() {
-        return physicalActivityPerWeek;
-    }
-
-    public boolean isKnownHeartRateLimit() {
-        return knownHeartRateLimit;
-    }
-
-    public int getSportingProfile() {
-        return sportingProfile;
-    }
-
-    public int getWeekendActivity() {
-        return weekendActivity;
-    }
-
-    public boolean isSmokeOnceADay() {
-        return smokeOnceADay;
-    }
-
-    public boolean isExSmoker() {
-        return exSmoker;
-    }
-
-    public boolean isPeopleSmokeInHome() {
-        return peopleSmokeInHome;
-    }
-
-    public int getFeelStressedAnxious() {
-        return feelStressedAnxious;
-    }
-
-    public int getAnger() {
-        return anger;
-    }
-
-    public boolean isAntidepressantsAnxiolyticsHypnotics() {
-        return antidepressantsAnxiolyticsHypnotics;
-    }
-
-    public boolean isAloneFamultManage() {
-        return aloneFamultManage;
-    }
-
-    public boolean isDrinkAlcohol() {
-        return drinkAlcohol;
-    }
-
-    public boolean isEnergyDrinks() {
-        return energyDrinks;
-    }
-
-    public boolean isSleep7Hours() {
-        return sleep7Hours;
-    }
-
-    public boolean isSleepDisturbances() {
-        return sleepDisturbances;
-    }
-
-
-
-
-
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getAge() {
+        return age;
     }
 
     public void setAge(int age) {
         this.age = age;
     }
 
+    public int getSexe() {
+        return sexe;
+    }
+
     public void setSexe(int sexe) {
         this.sexe = sexe;
     }
 
-    public void setHeartProblem(boolean heartProblem) {
-        this.heartProblem = heartProblem;
+    public String getHeartProblem() {
+        return heartProblem;
     }
 
-    public void setCholesterolProblem(boolean cholesterolProblem) {
+    public void setHeartProblem(String heartProblem, int pos) {
+        this.heartProblem = heartProblem;
+        this.pos = pos;
+    }
+
+    public String getCholesterolProblem() {
+        return cholesterolProblem;
+    }
+
+    public void setCholesterolProblem(String cholesterolProblem, int pos) {
         this.cholesterolProblem = cholesterolProblem;
     }
 
-    public void setDiabetic(boolean diabetic) {
+    public String getDiabetic() {
+        return diabetic;
+    }
+
+    public void setDiabetic(String diabetic, int pos) {
         this.diabetic = diabetic;
     }
 
-    public void setHighBloodPressure(boolean highBloodPressure) {
+    public String getHighBloodPressure() {
+        return highBloodPressure;
+    }
+
+    public void setHighBloodPressure(String highBloodPressure, int pos) {
         this.highBloodPressure = highBloodPressure;
     }
 
-    public void setParentHeartProblem(int parentHeartProblem) {
+    public String getParentHeartProblem() {
+        return parentHeartProblem;
+    }
+
+    public void setParentHeartProblem(String parentHeartProblem) {
         this.parentHeartProblem = parentHeartProblem;
     }
 
-    public void setIMC(boolean IMC) {
+    public String getIMC() {
+        return IMC;
+    }
+
+    public void setIMC(String IMC, int pos) {
         this.IMC = IMC;
     }
 
-    public void setCardiovascularRiskCheck(boolean cardiovascularRiskCheck) {
+    public boolean getCardiovascularRiskCheck() {
+        return cardiovascularRiskCheck;
+    }
+
+    public void setCardiovascularRiskCheck(boolean cardiovascularRiskCheck, String val) {
         this.cardiovascularRiskCheck = cardiovascularRiskCheck;
     }
 
-    public void setHeartCheckup(boolean heartCheckup) {
+    public boolean getHeartCheckup() {
+        return heartCheckup;
+    }
+
+    public void setHeartCheckup(boolean heartCheckup, String val) {
         this.heartCheckup = heartCheckup;
     }
 
-    public void setCardiologistConsulted(boolean cardiologistConsulted) {
+    public boolean getCardiologistConsulted() {
+        return  cardiologistConsulted;
+    }
+
+    public void setCardiologistConsulted(boolean cardiologistConsulted, String val) {
         this.cardiologistConsulted = cardiologistConsulted;
     }
 
-    public void setStartDayWithBreakfast(boolean startDayWithBreakfast) {
+    public int getStartDayWithBreakfast() {
+        return startDayWithBreakfast;
+    }
+
+    public void setStartDayWithBreakfast(int startDayWithBreakfast) {
         this.startDayWithBreakfast = startDayWithBreakfast;
     }
 
-    public void setFruitsAndVegetables(boolean fruitsAndVegetables) {
+    public int getFruitsAndVegetables() {
+        return fruitsAndVegetables;
+    }
+
+    public void setFruitsAndVegetables(int fruitsAndVegetables) {
         this.fruitsAndVegetables = fruitsAndVegetables;
+    }
+
+    public int getMostEaten() {
+        return mostEaten;
     }
 
     public void setMostEaten(int mostEaten) {
         this.mostEaten = mostEaten;
     }
 
-    public void setResaltFood(boolean resaltFood) {
+    public int getResaltFood() {
+        return resaltFood;
+    }
+
+    public void setResaltFood(int resaltFood) {
         this.resaltFood = resaltFood;
     }
 
-    public void setColdMeats(boolean coldMeats) {
+    public int getColdMeats() {
+        return coldMeats;
+    }
+
+    public void setColdMeats(int coldMeats) {
         this.coldMeats = coldMeats;
     }
 
-    public void setKnownNutriScore(boolean knownNutriScore) {
+    public int getKnownNutriScore() {
+        return knownNutriScore;
+    }
+
+    public void setKnownNutriScore(int knownNutriScore) {
         this.knownNutriScore = knownNutriScore;
     }
 
-    public void setWalkEveryDay(boolean walkEveryDay) {
+    public int getWalkEveryDay() {
+        return walkEveryDay;
+    }
+
+    public void setWalkEveryDay(int walkEveryDay) {
         this.walkEveryDay = walkEveryDay;
+    }
+
+    public int getPhysicalActivityPerWeek() {
+        return physicalActivityPerWeek;
     }
 
     public void setPhysicalActivityPerWeek(int physicalActivityPerWeek) {
         this.physicalActivityPerWeek = physicalActivityPerWeek;
     }
 
-    public void setKnownHeartRateLimit(boolean knownHeartRateLimit) {
+    public int getKnownHeartRateLimit() {
+        return knownHeartRateLimit;
+    }
+
+    public void setKnownHeartRateLimit(int knownHeartRateLimit) {
         this.knownHeartRateLimit = knownHeartRateLimit;
+    }
+
+    public int getSportingProfile() {
+        return sportingProfile;
     }
 
     public void setSportingProfile(int sportingProfile) {
         this.sportingProfile = sportingProfile;
     }
 
+    public int getWeekendActivity() {
+        return weekendActivity;
+    }
+
     public void setWeekendActivity(int weekendActivity) {
         this.weekendActivity = weekendActivity;
     }
 
-    public void setSmokeOnceADay(boolean smokeOnceADay) {
+    public int getSmokeOnceADay() {
+        return smokeOnceADay;
+    }
+
+    public void setSmokeOnceADay(int smokeOnceADay) {
         this.smokeOnceADay = smokeOnceADay;
     }
 
-    public void setExSmoker(boolean exSmoker) {
+    public int getExSmoker() {
+        return exSmoker;
+    }
+
+    public void setExSmoker(int exSmoker) {
         this.exSmoker = exSmoker;
     }
 
-    public void setPeopleSmokeInHome(boolean peopleSmokeInHome) {
+    public int getPeopleSmokeInHome() {
+        return peopleSmokeInHome;
+    }
+
+    public void setPeopleSmokeInHome(int peopleSmokeInHome) {
         this.peopleSmokeInHome = peopleSmokeInHome;
+    }
+
+    public int getFeelStressedAnxious() {
+        return feelStressedAnxious;
     }
 
     public void setFeelStressedAnxious(int feelStressedAnxious) {
         this.feelStressedAnxious = feelStressedAnxious;
     }
 
+    public int getAnger() {
+        return anger;
+    }
+
     public void setAnger(int anger) {
         this.anger = anger;
     }
 
-    public void setAntidepressantsAnxiolyticsHypnotics(boolean antidepressantsAnxiolyticsHypnotics) {
+    public int getAntidepressantsAnxiolyticsHypnotics() {
+        return antidepressantsAnxiolyticsHypnotics;
+    }
+
+    public void setAntidepressantsAnxiolyticsHypnotics(int antidepressantsAnxiolyticsHypnotics) {
         this.antidepressantsAnxiolyticsHypnotics = antidepressantsAnxiolyticsHypnotics;
     }
 
-    public void setAloneFamultManage(boolean aloneFamultManage) {
+    public int getAloneFamultManage() {
+        return aloneFamultManage;
+    }
+
+    public void setAloneFamultManage(int aloneFamultManage) {
         this.aloneFamultManage = aloneFamultManage;
     }
 
-    public void setDrinkAlcohol(boolean drinkAlcohol) {
+    public int getDrinkAlcohol() {
+        return drinkAlcohol;
+    }
+
+    public void setDrinkAlcohol(int drinkAlcohol) {
         this.drinkAlcohol = drinkAlcohol;
     }
 
-    public void setEnergyDrinks(boolean energyDrinks) {
+    public int getEnergyDrinks() {
+        return energyDrinks;
+    }
+
+    public void setEnergyDrinks(int energyDrinks) {
         this.energyDrinks = energyDrinks;
     }
 
-    public void setSleep7Hours(boolean sleep7Hours) {
+    public int getSleep7Hours() {
+        return sleep7Hours;
+    }
+
+    public void setSleep7Hours(int sleep7Hours) {
         this.sleep7Hours = sleep7Hours;
     }
 
-    public void setSleepDisturbances(boolean sleepDisturbances) {
+    public int getSleepDisturbances() {
+        return sleepDisturbances;
+    }
+
+    public void setSleepDisturbances(int sleepDisturbances) {
         this.sleepDisturbances = sleepDisturbances;
     }
 
@@ -438,36 +395,36 @@ public class Person implements Parcelable {
         parcel.writeString(name);
         parcel.writeInt(age);
         parcel.writeInt(sexe);
-        parcel.writeByte((byte) (heartProblem ? 1 : 0));
-        parcel.writeByte((byte) (cholesterolProblem ? 1 : 0));
-        parcel.writeByte((byte) (diabetic ? 1 : 0));
-        parcel.writeByte((byte) (highBloodPressure ? 1 : 0));
-        parcel.writeInt(parentHeartProblem);
-        parcel.writeByte((byte) (IMC ? 1 : 0));
+        parcel.writeString(heartProblem);
+        parcel.writeString(cholesterolProblem);
+        parcel.writeString(diabetic);
+        parcel.writeString(highBloodPressure);
+        parcel.writeString(parentHeartProblem);
+        parcel.writeString(IMC);
         parcel.writeByte((byte) (cardiovascularRiskCheck ? 1 : 0));
         parcel.writeByte((byte) (heartCheckup ? 1 : 0));
         parcel.writeByte((byte) (cardiologistConsulted ? 1 : 0));
-        parcel.writeByte((byte) (startDayWithBreakfast ? 1 : 0));
-        parcel.writeByte((byte) (fruitsAndVegetables ? 1 : 0));
+        parcel.writeInt(startDayWithBreakfast);
+        parcel.writeInt(fruitsAndVegetables);
         parcel.writeInt(mostEaten);
-        parcel.writeByte((byte) (resaltFood ? 1 : 0));
-        parcel.writeByte((byte) (coldMeats ? 1 : 0));
-        parcel.writeByte((byte) (knownNutriScore ? 1 : 0));
-        parcel.writeByte((byte) (walkEveryDay ? 1 : 0));
+        parcel.writeInt(resaltFood);
+        parcel.writeInt(coldMeats);
+        parcel.writeInt(knownNutriScore);
+        parcel.writeInt(walkEveryDay);
         parcel.writeInt(physicalActivityPerWeek);
-        parcel.writeByte((byte) (knownHeartRateLimit ? 1 : 0));
+        parcel.writeInt(knownHeartRateLimit);
         parcel.writeInt(sportingProfile);
         parcel.writeInt(weekendActivity);
-        parcel.writeByte((byte) (smokeOnceADay ? 1 : 0));
-        parcel.writeByte((byte) (exSmoker ? 1 : 0));
-        parcel.writeByte((byte) (peopleSmokeInHome ? 1 : 0));
+        parcel.writeInt(smokeOnceADay);
+        parcel.writeInt(exSmoker);
+        parcel.writeInt(peopleSmokeInHome);
         parcel.writeInt(feelStressedAnxious);
         parcel.writeInt(anger);
-        parcel.writeByte((byte) (antidepressantsAnxiolyticsHypnotics ? 1 : 0));
-        parcel.writeByte((byte) (aloneFamultManage ? 1 : 0));
-        parcel.writeByte((byte) (drinkAlcohol ? 1 : 0));
-        parcel.writeByte((byte) (energyDrinks ? 1 : 0));
-        parcel.writeByte((byte) (sleep7Hours ? 1 : 0));
-        parcel.writeByte((byte) (sleepDisturbances ? 1 : 0));
+        parcel.writeInt(antidepressantsAnxiolyticsHypnotics);
+        parcel.writeInt(aloneFamultManage);
+        parcel.writeInt(drinkAlcohol);
+        parcel.writeInt(energyDrinks);
+        parcel.writeInt(sleep7Hours);
+        parcel.writeInt(sleepDisturbances);
     }
 }

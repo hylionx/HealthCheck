@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HealthCheck">
         <activity
+            android:name=".NameActivity"
+            android:exported="false" />
+        <activity
             android:name=".MyHygieneOfLigeActivity"
             android:exported="false" />
         <activity

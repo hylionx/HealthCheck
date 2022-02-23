@@ -34,4 +34,19 @@
         <item>@string/txtMyPhysicalActivityRep4Q5</item>
     </string-array>
 
+
+    <string-array name="myStressManagment_answer_question_1">
+        <item>@string/txt_Never</item>
+        <item>@string/txtMyStressManagementRep2Q1</item>
+        <item>@string/txtMyStressManagementRep2Q1</item>
+    </string-array>
+
+
+
+    <string-array name="myStressManagment_answer_question_2">
+        <item>@string/txt_Never</item>
+        <item>@string/txtMyStressManagementRep2Q2</item>
+        <item>@string/txtMyStressManagementRep3Q2</item>
+        <item>@string/txtMyStressManagementRep4Q2</item>
+    </string-array>
 </resources>
