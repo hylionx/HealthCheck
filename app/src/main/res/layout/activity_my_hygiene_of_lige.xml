@@ -33,11 +33,15 @@
         tools:ignore="TextContrastCheck" />
 
     <ScrollView
-        android:layout_width="409dp"
-        android:layout_height="571dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/myHygieneOfLifeTitle"
+        app:layout_constraintVertical_bias="1.0"
         tools:ignore="SpeakableTextPresentCheck">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -46,53 +50,57 @@
 
             <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/switchMyHygieneOfLifeQ1"
-                android:layout_width="379dp"
-                android:layout_height="58dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="16dp"
+                android:minHeight="50dp"
                 android:text="@string/txtMyHygieneOfLifeQ1"
                 android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="TextContrastCheck" />
 
             <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/switchMyHygieneOfLifeQ2"
-                android:layout_width="379dp"
-                android:layout_height="58dp"
-                android:layout_marginStart="16dp"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:layout_marginTop="44dp"
+                android:minHeight="50dp"
                 android:text="@string/txtMyHygieneOfLifeQ2"
                 android:textColor="@color/white"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/switchMyHygieneOfLifeQ1"
+                app:layout_constraintStart_toStartOf="@+id/switchMyHygieneOfLifeQ1"
                 app:layout_constraintTop_toBottomOf="@+id/switchMyHygieneOfLifeQ1"
                 tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
             <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/switch4"
-                android:layout_width="379dp"
-                android:layout_height="58dp"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:layout_marginTop="44dp"
-                android:minHeight="48dp"
+                android:minHeight="50dp"
                 android:text="@string/txtMyHygieneOfLifeQ4"
                 android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="@+id/switchMyHygieneOfLifeQ3"
                 app:layout_constraintStart_toStartOf="@+id/switchMyHygieneOfLifeQ3"
                 app:layout_constraintTop_toBottomOf="@+id/switchMyHygieneOfLifeQ3"
-                tools:ignore="TextContrastCheck" />
+                tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
 
             <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/switchMyHygieneOfLifeQ3"
-                android:layout_width="379dp"
-                android:layout_height="58dp"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:layout_marginTop="44dp"
-                android:minHeight="48dp"
+                android:minHeight="50dp"
                 android:text="@string/txtMyHygieneOfLifeQ3"
                 android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="@+id/switchMyHygieneOfLifeQ2"
                 app:layout_constraintStart_toStartOf="@+id/switchMyHygieneOfLifeQ2"
                 app:layout_constraintTop_toBottomOf="@+id/switchMyHygieneOfLifeQ2"
-                tools:ignore="TextContrastCheck" />
+                tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
 
             <Button
                 android:id="@+id/btnValidate"
@@ -101,8 +109,10 @@
                 android:layout_marginTop="64dp"
                 android:layout_marginEnd="16dp"
                 android:text="@string/btnValidate"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/switch4" />
+                app:layout_constraintTop_toBottomOf="@+id/switch4"
+                tools:ignore="TextContrastCheck" />
 
             <Button
                 android:id="@+id/btnMyHygieneOfLifePrec"

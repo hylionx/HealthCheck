@@ -33,39 +33,42 @@
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="410dp"
-        android:layout_height="561dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/myPhysicalActivityTitle"
         tools:ignore="SpeakableTextPresentCheck">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp">
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/txtMyPhysicalActivityQ1"
                 android:layout_width="300dp"
                 android:layout_height="0dp"
+                android:layout_marginStart="32dp"
                 android:layout_marginTop="32dp"
                 android:text="@string/txtMyPhysicalActivityQ1"
                 android:textColor="@color/white"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/checkBoxMyPhysicalActivityQ1"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="TextContrastCheck" />
 
             <CheckBox
                 android:id="@+id/checkBoxMyPhysicalActivityQ1"
-                android:layout_width="36dp"
-                android:layout_height="41dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:buttonTint="@color/white"
                 android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="@+id/txtMyPhysicalActivityQ1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/txtMyPhysicalActivityQ1"
+                app:layout_constraintVertical_bias="0.5"
                 tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
 
             <TextView
@@ -105,8 +108,8 @@
                 android:text="@string/txtMyPhysicalActivityQ3"
                 android:textAlignment="gravity"
                 android:textColor="@color/white"
-                app:layout_constraintEnd_toEndOf="@+id/spinnerMyPhisicalActivityRepQ2"
-                app:layout_constraintStart_toStartOf="@+id/spinnerMyPhisicalActivityRepQ2"
+                app:layout_constraintEnd_toStartOf="@+id/checkBoxMyPhysicalActivityQ3"
+                app:layout_constraintStart_toStartOf="@+id/txtMyPhysicalActivityQ1"
                 app:layout_constraintTop_toBottomOf="@+id/spinnerMyPhisicalActivityRepQ2"
                 tools:ignore="TextContrastCheck" />
 
@@ -118,7 +121,6 @@
                 android:checked="false"
                 app:layout_constraintBottom_toBottomOf="@+id/txtMyPhysicalActivityQ3"
                 app:layout_constraintEnd_toEndOf="@+id/checkBoxMyPhysicalActivityQ1"
-                app:layout_constraintStart_toStartOf="@+id/checkBoxMyPhysicalActivityQ1"
                 app:layout_constraintTop_toTopOf="@+id/txtMyPhysicalActivityQ3"
                 tools:ignore="TouchTargetSizeCheck" />
 
@@ -184,13 +186,13 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/spinnerMyPhisicalActivityRepQ5"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintVertical_bias="0.50" />
 
             <Button
                 android:id="@+id/btnPreviousMyPhisicalActivity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="16dp"
                 android:text="@string/btnPrec"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/btnNextMyPhisicalActivity" />
