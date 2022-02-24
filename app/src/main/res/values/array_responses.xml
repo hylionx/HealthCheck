@@ -49,4 +49,11 @@
         <item>@string/txtMyStressManagementRep3Q2</item>
         <item>@string/txtMyStressManagementRep4Q2</item>
     </string-array>
+
+
+    <string-array name="myDiet_answer_question_2">
+        <item>@string/txtMyDietRep1Q3</item>
+        <item>@string/txtMyDietRep2Q3</item>
+        <item>@string/txtMyDietRep3Q3</item>
+    </string-array>
 </resources>

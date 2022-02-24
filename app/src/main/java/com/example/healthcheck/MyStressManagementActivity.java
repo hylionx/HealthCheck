@@ -6,8 +6,8 @@ import android.widget.Button;
 public class MyStressManagementActivity extends BaseActivity {
     public static final String APP_TAG = "MyStressManagementActivityApp";
 
-    Button btnMyStressManagmentPrec;
-    Button btnMyStressManagmentNext;
+    Button btnPrevMyStressManagment;
+    Button btnNextMyStressManagment;
 
 
     @Override
@@ -15,11 +15,11 @@ public class MyStressManagementActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_stress_management);
 
-        btnMyStressManagmentPrec = findViewById(R.id.btnMyStressManagmentPrec);
-        btnMyStressManagmentNext = findViewById(R.id.btnMyStressManagmentNext);
+        btnPrevMyStressManagment = findViewById(R.id.btnPrevMyStressManagment);
+        btnNextMyStressManagment = findViewById(R.id.btnNextMyStressManagment);
 
-        btnMyStressManagmentPrec.setOnClickListener(view -> gotoPreviousActivity());
-        btnMyStressManagmentNext.setOnClickListener(view -> gotoNextActivity(MyHygieneOfLifeActivity.class));
+        btnPrevMyStressManagment.setOnClickListener(view -> gotoPreviousActivity());
+        btnNextMyStressManagment.setOnClickListener(view -> gotoNextActivity(MyHygieneOfLifeActivity.class));
 
         getPersonByIntent();
         questions = new String[]{"f6_q1", "f6_q2", "f6_q3"};

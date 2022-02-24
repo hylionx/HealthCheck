@@ -74,4 +74,7 @@
     <string name="txtMyHeartQ5">Antécédents cardiovasculaires : Avez-vous un parent du premier degré (père, mère, frère ou sœur) qui a eu des problèmes cardiaques (infarctus, AVC, mort subite) avant 55 ans pour un homme ou avant 65 ans chez une femme ?</string>
     <string name="txt_IDontKnow">Je ne sais pas</string>
     <string name="txtMyHeartQ6">Connaissez-vous votre indice de masse corporelle (IMC) ?</string>
+    <string name="rbUnder40">Moins de 40 ans</string>
+    <string name="rbBetween40and60">Entre 40 et 60 ans</string>
+    <string name="rbOver60">"Plus de 60 ans "</string>
 </resources>

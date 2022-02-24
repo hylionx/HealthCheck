@@ -9,7 +9,7 @@
     tools:context=".MyHeartActivity">
 
     <TextView
-        android:id="@+id/tvMyHeart"
+        android:id="@+id/txtMyHeart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -41,7 +41,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvMyHeart"
+        app:layout_constraintTop_toBottomOf="@+id/txtMyHeart"
         app:layout_constraintVertical_bias="1.0"
         tools:ignore="SpeakableTextPresentCheck">
 
@@ -152,25 +152,25 @@
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <Button
-                android:id="@+id/btnMyHeartNExt"
+                android:id="@+id/btnNextMyHeart"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="16dp"
-                android:layout_marginBottom="32dp"
+                android:layout_marginBottom="16dp"
                 android:text="@string/btnNext"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/spinnerMyHeartRepQ6" />
 
             <Button
-                android:id="@+id/btnMyHeartPrec"
+                android:id="@+id/btnPrevMyHeart"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:text="@string/btnPrec"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/btnMyHeartNExt"
+                app:layout_constraintTop_toTopOf="@+id/btnNextMyHeart"
                 tools:ignore="TouchTargetSizeCheck" />
 
             <TextView
@@ -199,7 +199,7 @@
 
             <TextView
                 android:id="@+id/txtMyHeartQ6"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:text="@string/txtMyHeartQ6"

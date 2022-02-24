@@ -6,7 +6,7 @@ import android.widget.Button;
 public class MyTobaccoConsumptionActivity extends BaseActivity {
     public static final String APP_TAG = "MyTobaccoConsumptionActivityApp";
 
-    Button btnPreviousMyTobaccoConsumption;
+    Button btnPrevMyTobaccoConsumption;
     Button btnNextMyTobaccoConsumption;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,10 +15,10 @@ public class MyTobaccoConsumptionActivity extends BaseActivity {
 
 
 
-        btnPreviousMyTobaccoConsumption = findViewById(R.id.btnPreviousMyTobaccoConsumption);
+        btnPrevMyTobaccoConsumption = findViewById(R.id.btnPrevMyTobaccoConsumption);
         btnNextMyTobaccoConsumption = findViewById(R.id.btnNextMyTobaccoConsumption);
 
-        btnPreviousMyTobaccoConsumption.setOnClickListener(view -> gotoPreviousActivity());
+        btnPrevMyTobaccoConsumption.setOnClickListener(view -> gotoPreviousActivity());
         btnNextMyTobaccoConsumption.setOnClickListener(view -> gotoNextActivity(MyStressManagementActivity.class));
 
         getPersonByIntent();

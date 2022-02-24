@@ -2,19 +2,17 @@ package com.example.healthcheck;
 
 
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Button;
 import android.widget.CheckBox;
 
 import java.util.ArrayList;
-import java.util.List;
 
 
 public class MyCardiacMonitoringActivity extends BaseActivity {
     public static final String APP_TAG = "MyCardiacMonitoringActivityApp";
 
-    private Button button_prec;
-    private Button button_suiv;
+    private Button btnPrevMyCardiacMonitoring;
+    private Button btnNextMyCardiacMonitoring;
     private CheckBox checkBoxCardiacMonitoringQ1;
     private CheckBox checkBoxCardiacMonitoringQ2;
     private CheckBox checkBoxCardiacMonitoringQ3;
@@ -30,11 +28,11 @@ public class MyCardiacMonitoringActivity extends BaseActivity {
 
 
     private void init(){
-        button_prec = findViewById(R.id.button_prec);
-        button_suiv = findViewById(R.id.button_suiv);
+        btnPrevMyCardiacMonitoring = findViewById(R.id.btnPrevMyCardiacMonitoring);
+        btnNextMyCardiacMonitoring = findViewById(R.id.btnNextMyCardiacMonitoring);
 
-        button_prec.setOnClickListener(view -> gotoPreviousActivity());
-        button_suiv.setOnClickListener(view -> gotoNextActivity(MyDietActivity.class));
+        btnPrevMyCardiacMonitoring.setOnClickListener(view -> gotoPreviousActivity());
+        btnNextMyCardiacMonitoring.setOnClickListener(view -> gotoNextActivity(MyDietActivity.class));
 
         checkBoxCardiacMonitoringQ1 = findViewById(R.id.checkBoxCardiacMonitoringQ1);
         checkBoxCardiacMonitoringQ2 = findViewById(R.id.checkBoxCardiacMonitoringQ2);

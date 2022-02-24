@@ -48,7 +48,7 @@
             <TextView
                 android:id="@+id/txtMyStressManagementQ1"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="16dp"
@@ -68,17 +68,18 @@
                 android:layout_marginEnd="16dp"
                 android:background="#F4C0D9"
                 android:entries="@array/myStressManagment_answer_question_1"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/txtMyStressManagementQ1"
+                app:layout_constraintStart_toStartOf="@+id/txtMyStressManagementQ1"
                 app:layout_constraintTop_toBottomOf="@+id/txtMyStressManagementQ1"
-                tools:ignore="SpeakableTextPresentCheck" />
+                tools:ignore="SpeakableTextPresentCheck,DuplicateSpeakableTextCheck" />
 
             <TextView
                 android:id="@+id/txtMyStressManagementQ2"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:text="@string/txtMyStressManagementQ2"
+                android:textAlignment="center"
                 android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="@+id/spinnerMyStressManagementRepQ1"
                 app:layout_constraintStart_toStartOf="@+id/spinnerMyStressManagementRepQ1"
@@ -99,21 +100,20 @@
 
             <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/switchMyStressManagementQ3"
-                android:layout_width="338dp"
-                android:layout_height="48dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:text="@string/txtMyStressManagementQ3"
                 android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="@+id/spinnerMyStressManagementRepQ2"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/spinnerMyStressManagementRepQ2"
                 app:layout_constraintTop_toBottomOf="@+id/spinnerMyStressManagementRepQ2"
                 tools:ignore="TextContrastCheck" />
 
             <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/switchMyStressManagementQ4"
-                android:layout_width="338dp"
-                android:layout_height="36dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:text="@string/txtMyStressManagementQ4"
                 android:textColor="@color/white"
@@ -123,18 +123,18 @@
                 tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
             <Button
-                android:id="@+id/btnMyStressManagmentPrec"
+                android:id="@+id/btnPrevMyStressManagment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:text="@string/btnPrec"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/btnMyStressManagmentNext"
+                app:layout_constraintTop_toTopOf="@+id/btnNextMyStressManagment"
                 app:layout_constraintVertical_bias="0.0" />
 
             <Button
-                android:id="@+id/btnMyStressManagmentNext"
+                android:id="@+id/btnNextMyStressManagment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"

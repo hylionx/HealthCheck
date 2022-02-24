@@ -23,7 +23,7 @@
     <TextView
         android:id="@+id/my_cardiac_monitoring_title"
         android:layout_width="223dp"
-        android:layout_height="64dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="@string/my_cardiac_monitoring_title"
         android:textAlignment="center"
@@ -37,20 +37,20 @@
 
 
     <Button
-        android:id="@+id/button_prec"
+        android:id="@+id/btnPrevMyCardiacMonitoring"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="16dp"
         android:text="@string/btnPrec"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/button_suiv"
+        app:layout_constraintTop_toTopOf="@+id/btnNextMyCardiacMonitoring"
         tools:ignore="TextContrastCheck" />
 
     <Button
-        android:id="@+id/button_suiv"
+        android:id="@+id/btnNextMyCardiacMonitoring"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:text="@string/btnNext"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -62,7 +62,7 @@
     <CheckBox
         android:id="@+id/checkBoxCardiacMonitoringQ1"
         android:layout_width="0dp"
-        android:layout_height="47dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="16dp"

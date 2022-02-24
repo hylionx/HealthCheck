@@ -6,7 +6,7 @@ import android.widget.Button;
 public class MyHygieneOfLifeActivity extends BaseActivity {
     public static final String APP_TAG = "MyHygieneOfLifeActivityApp";
 
-    Button btnMyHygieneOfLifePrec;
+    Button btnPrevMyHygieneOfLife;
     Button btnValidate;
 
 
@@ -15,9 +15,9 @@ public class MyHygieneOfLifeActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_hygiene_of_life);
 
-        btnMyHygieneOfLifePrec = findViewById(R.id.btnMyHygieneOfLifePrec);
+        btnPrevMyHygieneOfLife = findViewById(R.id.btnPrevMyHygieneOfLife);
 
-        btnMyHygieneOfLifePrec.setOnClickListener(view -> gotoPreviousActivity());
+        btnPrevMyHygieneOfLife.setOnClickListener(view -> gotoPreviousActivity());
 
         getPersonByIntent();
         questions = new String[]{"f7_q1", "f7_q2", "f7_q3", "f7_q4"};

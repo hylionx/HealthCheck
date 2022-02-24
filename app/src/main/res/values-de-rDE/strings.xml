@@ -74,4 +74,7 @@
     <string name="txtMyHeartQ3">"Haben Sie ein Cholesterinproblem ? "</string>
     <string name="txt_IDontKnow">ich weiß nicht</string>
     <string name="txtMyHeartQ6">"Kennen Sie Ihren Body-Mass-Index (BMI) ? "</string>
+    <string name="rbUnder40">Unter 40 Jahre alt</string>
+    <string name="rbBetween40and60">Zwischen 40 und 60 Jahre alt</string>
+    <string name="rbOver60">Über 60 Jahre alt</string>
 </resources>

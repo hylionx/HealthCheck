@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/btnNextIAm"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#B8A5D0"
@@ -16,9 +17,10 @@
         android:layout_marginBottom="32dp"
         android:background="@drawable/ic_action_name"
         android:backgroundTint="#FFFFFF"
+        android:contentDescription="@string/btnNext"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,ImageContrastCheck" />
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,ImageContrastCheck,DuplicateSpeakableTextCheck" />
 
     <TextView
         android:id="@+id/txtSexe"
@@ -26,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="@string/txtMyProfilQ1"
-        android:textColor="#0277BD"
+        android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/rgSexe"
         app:layout_constraintStart_toStartOf="parent"
@@ -46,6 +48,7 @@
             android:id="@+id/rbWoman"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:buttonTint="@color/white"
             android:text="@string/rbWoman"
             android:textColor="#FFFFFF"
             tools:ignore="TextContrastCheck" />
@@ -54,6 +57,7 @@
             android:id="@+id/rbMan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:buttonTint="@color/white"
             android:text="@string/rbMan"
             android:textColor="#FFFFFF"
             tools:ignore="TextContrastCheck,TextContrastCheck" />
@@ -62,6 +66,7 @@
             android:id="@+id/rbOther"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:buttonTint="@color/white"
             android:minHeight="48dp"
             android:text="@string/rbOther"
             android:textColor="#FFFFFF"
@@ -73,31 +78,55 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:labelFor="@id/etAge"
+        android:labelFor="@id/txtAge"
         android:text="@string/txtMyProfilQ2"
-        android:textColor="#0277BD"
+        android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/etAge"
+        app:layout_constraintBottom_toBottomOf="@+id/rgAge"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/etAge"
+        app:layout_constraintTop_toTopOf="@+id/rgAge"
         tools:ignore="TextContrastCheck" />
 
-    <EditText
-        android:id="@+id/etAge"
-        android:layout_width="144dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="84dp"
-        android:ems="10"
-        android:importantForAutofill="no"
-        android:inputType="number"
-        android:minHeight="48dp"
+    <RadioGroup
+        android:id="@+id/rgAge"
+        android:layout_width="150dp"
+        android:layout_height="152dp"
+        android:layout_marginTop="60dp"
         app:layout_constraintEnd_toEndOf="@+id/rgSexe"
+        app:layout_constraintHorizontal_bias="0.411"
         app:layout_constraintStart_toStartOf="@+id/rgSexe"
-        app:layout_constraintTop_toBottomOf="@+id/rgSexe"
-        tools:ignore="DuplicateSpeakableTextCheck,TouchTargetSizeCheck" />
+        app:layout_constraintTop_toBottomOf="@+id/rgSexe">
+
+        <RadioButton
+            android:id="@+id/rbUnder40"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/white"
+            android:text="@string/rbUnder40"
+            android:textColor="@color/white"
+            tools:ignore="TextContrastCheck" />
+
+        <RadioButton
+            android:id="@+id/rbBetween40and60"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/white"
+            android:text="@string/rbBetween40and60"
+            android:textColor="@color/white"
+            tools:ignore="TextContrastCheck" />
+
+        <RadioButton
+            android:id="@+id/rbOver60"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/white"
+            android:text="@string/rbOver60"
+            android:textColor="@color/white"
+            tools:ignore="TextContrastCheck" />
+    </RadioGroup>
 
     <Button
-        android:id="@+id/btnPrevious"
+        android:id="@+id/btnPrevIAm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"

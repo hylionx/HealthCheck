@@ -2,7 +2,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/txtMyPhysicalActivityQ2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#EB605A"
@@ -38,133 +37,118 @@
         android:layout_marginTop="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/myPhysicalActivityTitle"
+        app:layout_constraintVertical_bias="1.0"
         tools:ignore="SpeakableTextPresentCheck">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/txtMyPhysicalActivityQ1"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="32dp"
-                android:text="@string/txtMyPhysicalActivityQ1"
-                android:textColor="@color/white"
-                app:layout_constraintEnd_toStartOf="@+id/checkBoxMyPhysicalActivityQ1"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="TextContrastCheck" />
-
             <CheckBox
                 android:id="@+id/checkBoxMyPhysicalActivityQ1"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="16dp"
                 android:buttonTint="@color/white"
+                android:text="@string/txtMyPhysicalActivityQ1"
                 android:textColor="@color/white"
-                app:layout_constraintBottom_toBottomOf="@+id/txtMyPhysicalActivityQ1"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/txtMyPhysicalActivityQ1"
-                app:layout_constraintVertical_bias="0.5"
-                tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck,TextContrastCheck" />
 
             <TextView
-                android:id="@+id/txtMyPhysicalActivityQ"
-                android:layout_width="300dp"
+                android:id="@+id/txtMyPhysicalActivityQ2"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="80dp"
+                android:layout_marginTop="50dp"
                 android:text="@string/txtMyPhysicalActivityQ2"
                 android:textAlignment="gravity"
                 android:textColor="@color/white"
-                app:layout_constraintEnd_toEndOf="@+id/txtMyPhysicalActivityQ1"
-                app:layout_constraintHorizontal_bias="0.488"
-                app:layout_constraintStart_toStartOf="@+id/txtMyPhysicalActivityQ1"
-                app:layout_constraintTop_toBottomOf="@+id/txtMyPhysicalActivityQ1"
+                app:layout_constraintEnd_toEndOf="@+id/checkBoxMyPhysicalActivityQ1"
+                app:layout_constraintStart_toStartOf="@+id/checkBoxMyPhysicalActivityQ1"
+                app:layout_constraintTop_toBottomOf="@+id/checkBoxMyPhysicalActivityQ1"
                 tools:ignore="TextContrastCheck" />
 
             <Spinner
                 android:id="@+id/spinnerMyPhisicalActivityRepQ2"
-                android:layout_width="300dp"
+                android:layout_width="0dp"
                 android:layout_height="42dp"
                 android:layout_marginTop="16dp"
                 android:alwaysDrawnWithCache="false"
                 android:background="#D88787"
                 android:backgroundTint="#D88787"
                 android:entries="@array/myPhysicalActivity_answer_question_2"
-                app:layout_constraintEnd_toEndOf="@+id/txtMyPhysicalActivityQ"
+                app:layout_constraintEnd_toEndOf="@+id/txtMyPhysicalActivityQ2"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/txtMyPhysicalActivityQ"
-                app:layout_constraintTop_toBottomOf="@+id/txtMyPhysicalActivityQ"
+                app:layout_constraintStart_toStartOf="@+id/txtMyPhysicalActivityQ2"
+                app:layout_constraintTop_toBottomOf="@+id/txtMyPhysicalActivityQ2"
                 tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
-            <TextView
-                android:id="@+id/txtMyPhysicalActivityQ3"
-                android:layout_width="300dp"
-                android:layout_height="0dp"
-                android:layout_marginTop="80dp"
-                android:text="@string/txtMyPhysicalActivityQ3"
-                android:textAlignment="gravity"
-                android:textColor="@color/white"
-                app:layout_constraintEnd_toStartOf="@+id/checkBoxMyPhysicalActivityQ3"
-                app:layout_constraintStart_toStartOf="@+id/txtMyPhysicalActivityQ1"
-                app:layout_constraintTop_toBottomOf="@+id/spinnerMyPhisicalActivityRepQ2"
-                tools:ignore="TextContrastCheck" />
 
             <CheckBox
                 android:id="@+id/checkBoxMyPhysicalActivityQ3"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
                 android:buttonTint="@color/white"
                 android:checked="false"
-                app:layout_constraintBottom_toBottomOf="@+id/txtMyPhysicalActivityQ3"
-                app:layout_constraintEnd_toEndOf="@+id/checkBoxMyPhysicalActivityQ1"
-                app:layout_constraintTop_toTopOf="@+id/txtMyPhysicalActivityQ3"
-                tools:ignore="TouchTargetSizeCheck" />
+                android:text="@string/txtMyPhysicalActivityQ3"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/spinnerMyPhisicalActivityRepQ2"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/spinnerMyPhisicalActivityRepQ2"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerMyPhisicalActivityRepQ2"
+                tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
             <TextView
                 android:id="@+id/txtMyPhysicalActivityQ4"
-                android:layout_width="300dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="80dp"
+                android:layout_marginTop="60dp"
                 android:text="@string/txtMyPhysicalActivityQ4"
                 android:textAlignment="gravity"
                 android:textColor="@color/white"
-                app:layout_constraintEnd_toEndOf="@+id/txtMyPhysicalActivityQ3"
-                app:layout_constraintStart_toStartOf="@+id/txtMyPhysicalActivityQ3"
-                app:layout_constraintTop_toBottomOf="@+id/txtMyPhysicalActivityQ3"
+                app:layout_constraintEnd_toEndOf="@+id/checkBoxMyPhysicalActivityQ3"
+                app:layout_constraintHorizontal_bias="0.48"
+                app:layout_constraintStart_toStartOf="@+id/checkBoxMyPhysicalActivityQ3"
+                app:layout_constraintTop_toBottomOf="@+id/checkBoxMyPhysicalActivityQ3"
                 tools:ignore="TextContrastCheck" />
 
             <Spinner
                 android:id="@+id/spinnerMyPhisicalActivityRepQ4"
-                android:layout_width="300dp"
+                android:layout_width="0dp"
                 android:layout_height="42dp"
                 android:layout_marginTop="16dp"
                 android:background="#D88787"
                 android:entries="@array/myPhysicalActivity_answer_question_4"
                 app:layout_constraintEnd_toEndOf="@+id/txtMyPhysicalActivityQ4"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="@+id/txtMyPhysicalActivityQ4"
                 app:layout_constraintTop_toBottomOf="@+id/txtMyPhysicalActivityQ4"
                 tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
             <TextView
                 android:id="@+id/txtMyPhysicalActivityQ5"
-                android:layout_width="300dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="80dp"
+                android:layout_marginTop="60dp"
                 android:text="@string/txtMyPhysicalActivityQ5"
                 android:textAlignment="gravity"
                 android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="@+id/spinnerMyPhisicalActivityRepQ4"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/spinnerMyPhisicalActivityRepQ4"
                 app:layout_constraintTop_toBottomOf="@+id/spinnerMyPhisicalActivityRepQ4"
                 tools:ignore="TextContrastCheck" />
 
             <Spinner
                 android:id="@+id/spinnerMyPhisicalActivityRepQ5"
-                android:layout_width="300dp"
+                android:layout_width="0dp"
                 android:layout_height="42dp"
                 android:layout_marginTop="16dp"
                 android:background="#D88787"
@@ -176,7 +160,7 @@
                 tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
             <Button
-                android:id="@+id/btnNextMyPhisicalActivity"
+                android:id="@+id/btnNextMyPhysicalActivity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="50dp"
@@ -186,16 +170,16 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/spinnerMyPhisicalActivityRepQ5"
-                app:layout_constraintVertical_bias="0.50" />
+                app:layout_constraintVertical_bias="0.0" />
 
             <Button
-                android:id="@+id/btnPreviousMyPhisicalActivity"
+                android:id="@+id/btnPrevMyPhysicalActivity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:text="@string/btnPrec"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/btnNextMyPhisicalActivity" />
+                app:layout_constraintTop_toTopOf="@+id/btnNextMyPhysicalActivity" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 

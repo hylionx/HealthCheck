@@ -1,19 +1,14 @@
 package com.example.healthcheck;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Button;
 import android.widget.Spinner;
 
 public class MyHeartActivity extends BaseActivity {
     public static final String APP_TAG = "MyHeartActivityApp";
 
-    Button button_pre;
-    Button btn_suivant;
+    Button btnPrevMyHeart;
+    Button btnNextMyHeart;
     Spinner spinnerMyHeartRepQ1;
     Spinner spinnerMyHeartRepQ2;
     Spinner spinnerMyHeartRepQ3;
@@ -31,8 +26,8 @@ public class MyHeartActivity extends BaseActivity {
 
 
     private void init(){
-        button_pre = findViewById(R.id.btnMyHeartPrec);
-        btn_suivant = findViewById(R.id.btnMyHeartNExt);
+        btnPrevMyHeart = findViewById(R.id.btnPrevMyHeart);
+        btnNextMyHeart = findViewById(R.id.btnNextMyHeart);
         spinnerMyHeartRepQ1 = findViewById(R.id.spinnerMyHeartRepQ1);
         spinnerMyHeartRepQ2 = findViewById(R.id.spinnerMyHeartRepQ2);
         spinnerMyHeartRepQ3 = findViewById(R.id.spinnerMyHeartRepQ3);
@@ -40,8 +35,8 @@ public class MyHeartActivity extends BaseActivity {
         spinnerMyHeartRepQ5 = findViewById(R.id.spinnerMyHeartRepQ5);
         spinnerMyHeartRepQ6 = findViewById(R.id.spinnerMyHeartRepQ6);
 
-        button_pre.setOnClickListener(view -> gotoPreviousActivity());
-        btn_suivant.setOnClickListener(view -> gotoNextActivity(MyCardiacMonitoringActivity.class));
+        btnPrevMyHeart.setOnClickListener(view -> gotoPreviousActivity());
+        btnNextMyHeart.setOnClickListener(view -> gotoNextActivity(MyCardiacMonitoringActivity.class));
 
         getPersonByIntent();
         questions = new String[]{"f2_q1", "f2_q2", "f2_q3", "f2_q4", "f2_q5", "f2_q6"};
