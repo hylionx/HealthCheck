@@ -38,7 +38,7 @@
     <string-array name="myStressManagment_answer_question_1">
         <item>@string/txt_Never</item>
         <item>@string/txtMyStressManagementRep2Q1</item>
-        <item>@string/txtMyStressManagementRep2Q1</item>
+        <item>@string/txtMyStressManagementRep3Q1</item>
     </string-array>
 
 

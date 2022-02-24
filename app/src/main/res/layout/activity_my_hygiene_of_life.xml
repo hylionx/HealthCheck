@@ -77,7 +77,7 @@
                 tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
             <androidx.appcompat.widget.SwitchCompat
-                android:id="@+id/switch4"
+                android:id="@+id/switchMyHygieneOfLifeQ4"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="44dp"
@@ -103,7 +103,7 @@
                 tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
 
             <Button
-                android:id="@+id/btnValidateMyHygieneOfLife"
+                android:id="@+id/btnValidate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="64dp"
@@ -112,7 +112,7 @@
                 android:text="@string/btnValidate"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/switch4"
+                app:layout_constraintTop_toBottomOf="@+id/switchMyHygieneOfLifeQ4"
                 tools:ignore="TextContrastCheck" />
 
             <Button
@@ -123,7 +123,7 @@
                 android:text="@string/btnPrec"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/btnValidateMyHygieneOfLife"
+                app:layout_constraintTop_toTopOf="@+id/btnValidate"
                 app:layout_constraintVertical_bias="0.0" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
