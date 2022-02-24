@@ -16,7 +16,6 @@ public class MyCardiacMonitoringActivity extends BaseActivity {
     private CheckBox checkBoxCardiacMonitoringQ1;
     private CheckBox checkBoxCardiacMonitoringQ2;
     private CheckBox checkBoxCardiacMonitoringQ3;
-    private ArrayList <String> checkboxs;
 
 
     @Override
@@ -37,7 +36,6 @@ public class MyCardiacMonitoringActivity extends BaseActivity {
         checkBoxCardiacMonitoringQ1 = findViewById(R.id.checkBoxCardiacMonitoringQ1);
         checkBoxCardiacMonitoringQ2 = findViewById(R.id.checkBoxCardiacMonitoringQ2);
         checkBoxCardiacMonitoringQ3 = findViewById(R.id.checkBoxCardiacMonitoringQ3);
-        checkboxs = new ArrayList<>();
 
         getPersonByIntent();
         questions = new String[]{"f3_q1", "f3_q2", "f3_q3"};
