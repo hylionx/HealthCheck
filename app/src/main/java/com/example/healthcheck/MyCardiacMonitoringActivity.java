@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.CheckBox;
 
-import java.util.ArrayList;
 
 
 public class MyCardiacMonitoringActivity extends BaseActivity {

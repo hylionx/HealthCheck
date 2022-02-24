@@ -52,14 +52,14 @@
             android:layout_marginEnd="0dp">
 
             <CheckBox
-                android:id="@+id/txtMyDietQ1"
+                android:id="@+id/checkBoxMyDietQ1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="40dp"
                 android:layout_marginEnd="16dp"
                 android:text="@string/txtMyDietQ1"
-                android:textAlignment="center"
+                android:textAlignment="gravity"
                 android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -72,12 +72,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:text="@string/txtMyDietQ2"
-                android:textAlignment="center"
+                android:textAlignment="gravity"
                 android:textColor="@color/white"
-                app:layout_constraintEnd_toEndOf="@+id/txtMyDietQ1"
+                app:layout_constraintEnd_toEndOf="@+id/checkBoxMyDietQ1"
                 app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="@+id/txtMyDietQ1"
-                app:layout_constraintTop_toBottomOf="@+id/txtMyDietQ1"
+                app:layout_constraintStart_toStartOf="@+id/checkBoxMyDietQ1"
+                app:layout_constraintTop_toBottomOf="@+id/checkBoxMyDietQ1"
                 tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
             <TextView
@@ -86,7 +86,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:text="@string/txtMyDietQ3"
-                android:textAlignment="center"
+                android:textAlignment="gravity"
                 android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="@+id/checkBoxMyDietQ2"
                 app:layout_constraintHorizontal_bias="0.587"
@@ -108,12 +108,12 @@
                 tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
             <CheckBox
-                android:id="@+id/txtMyDietQ4"
+                android:id="@+id/checkBoxMyDietQ4"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:text="@string/txtMyDietQ4"
-                android:textAlignment="center"
+                android:textAlignment="gravity"
                 android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="@+id/spinnerMyDietRepQ3"
                 app:layout_constraintStart_toStartOf="@+id/spinnerMyDietRepQ3"
@@ -121,29 +121,29 @@
                 tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
             <CheckBox
-                android:id="@+id/txtMyDietQ5"
+                android:id="@+id/checkBoxMyDietQ5"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:text="@string/txtMyDietQ5"
-                android:textAlignment="center"
+                android:textAlignment="gravity"
                 android:textColor="@color/white"
-                app:layout_constraintEnd_toEndOf="@+id/txtMyDietQ4"
-                app:layout_constraintStart_toStartOf="@+id/txtMyDietQ4"
-                app:layout_constraintTop_toBottomOf="@+id/txtMyDietQ4"
+                app:layout_constraintEnd_toEndOf="@+id/checkBoxMyDietQ4"
+                app:layout_constraintStart_toStartOf="@+id/checkBoxMyDietQ4"
+                app:layout_constraintTop_toBottomOf="@+id/checkBoxMyDietQ4"
                 tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
             <CheckBox
-                android:id="@+id/txtMyDietQ6"
+                android:id="@+id/checkBoxMyDietQ6"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:text="@string/txtMyDietQ6"
-                android:textAlignment="center"
+                android:textAlignment="gravity"
                 android:textColor="@color/white"
-                app:layout_constraintEnd_toEndOf="@+id/txtMyDietQ5"
-                app:layout_constraintStart_toStartOf="@+id/txtMyDietQ5"
-                app:layout_constraintTop_toBottomOf="@+id/txtMyDietQ5"
+                app:layout_constraintEnd_toEndOf="@+id/checkBoxMyDietQ5"
+                app:layout_constraintStart_toStartOf="@+id/checkBoxMyDietQ5"
+                app:layout_constraintTop_toBottomOf="@+id/checkBoxMyDietQ5"
                 tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
             <Button
@@ -168,7 +168,7 @@
                 android:text="@string/btnNext"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtMyDietQ6"
+                app:layout_constraintTop_toBottomOf="@+id/checkBoxMyDietQ6"
                 app:layout_constraintVertical_bias="1.0"
                 tools:ignore="TextContrastCheck" />
 

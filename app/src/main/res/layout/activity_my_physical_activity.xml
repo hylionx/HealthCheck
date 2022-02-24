@@ -76,7 +76,7 @@
                 tools:ignore="TextContrastCheck" />
 
             <Spinner
-                android:id="@+id/spinnerMyPhisicalActivityRepQ2"
+                android:id="@+id/spinnerMyPhysicalActivityRepQ2"
                 android:layout_width="0dp"
                 android:layout_height="42dp"
                 android:layout_marginTop="16dp"
@@ -99,10 +99,10 @@
                 android:checked="false"
                 android:text="@string/txtMyPhysicalActivityQ3"
                 android:textColor="@color/white"
-                app:layout_constraintEnd_toEndOf="@+id/spinnerMyPhisicalActivityRepQ2"
+                app:layout_constraintEnd_toEndOf="@+id/spinnerMyPhysicalActivityRepQ2"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/spinnerMyPhisicalActivityRepQ2"
-                app:layout_constraintTop_toBottomOf="@+id/spinnerMyPhisicalActivityRepQ2"
+                app:layout_constraintStart_toStartOf="@+id/spinnerMyPhysicalActivityRepQ2"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerMyPhysicalActivityRepQ2"
                 tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
             <TextView
@@ -120,7 +120,7 @@
                 tools:ignore="TextContrastCheck" />
 
             <Spinner
-                android:id="@+id/spinnerMyPhisicalActivityRepQ4"
+                android:id="@+id/spinnerMyPhysicalActivityRepQ4"
                 android:layout_width="0dp"
                 android:layout_height="42dp"
                 android:layout_marginTop="16dp"
@@ -140,14 +140,14 @@
                 android:text="@string/txtMyPhysicalActivityQ5"
                 android:textAlignment="gravity"
                 android:textColor="@color/white"
-                app:layout_constraintEnd_toEndOf="@+id/spinnerMyPhisicalActivityRepQ4"
+                app:layout_constraintEnd_toEndOf="@+id/spinnerMyPhysicalActivityRepQ4"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/spinnerMyPhisicalActivityRepQ4"
-                app:layout_constraintTop_toBottomOf="@+id/spinnerMyPhisicalActivityRepQ4"
+                app:layout_constraintStart_toStartOf="@+id/spinnerMyPhysicalActivityRepQ4"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerMyPhysicalActivityRepQ4"
                 tools:ignore="TextContrastCheck" />
 
             <Spinner
-                android:id="@+id/spinnerMyPhisicalActivityRepQ5"
+                android:id="@+id/spinnerMyPhysicalActivityRepQ5"
                 android:layout_width="0dp"
                 android:layout_height="42dp"
                 android:layout_marginTop="16dp"
@@ -169,7 +169,7 @@
                 android:text="@string/btnNext"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/spinnerMyPhisicalActivityRepQ5"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerMyPhysicalActivityRepQ5"
                 app:layout_constraintVertical_bias="0.0" />
 
             <Button

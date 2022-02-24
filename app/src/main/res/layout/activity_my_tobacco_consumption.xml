@@ -49,25 +49,25 @@
             android:layout_marginStart="24dp">
 
             <CheckBox
-                android:id="@+id/checkBoxMyTobaccoConsumptionQ1"
+                android:id="@+id/checkBoxMyTobaccoConsumptionQ2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
-                android:text="@string/txtMyTobaccoConsumptionQ1"
+                android:text="@string/txtMyTobaccoConsumptionQ2"
                 android:textColor="@color/white"
-                app:layout_constraintEnd_toEndOf="@+id/checkBoxMyTobaccoConsumptionQ2"
-                app:layout_constraintStart_toStartOf="@+id/checkBoxMyTobaccoConsumptionQ2"
-                app:layout_constraintTop_toBottomOf="@+id/checkBoxMyTobaccoConsumptionQ2"
+                app:layout_constraintEnd_toEndOf="@+id/checkBoxMyTobaccoConsumptionQ1"
+                app:layout_constraintStart_toStartOf="@+id/checkBoxMyTobaccoConsumptionQ1"
+                app:layout_constraintTop_toBottomOf="@+id/checkBoxMyTobaccoConsumptionQ1"
                 tools:ignore="DuplicateSpeakableTextCheck,DuplicateClickableBoundsCheck,TextContrastCheck" />
 
             <CheckBox
-                android:id="@+id/checkBoxMyTobaccoConsumptionQ2"
+                android:id="@+id/checkBoxMyTobaccoConsumptionQ1"
                 android:layout_width="329dp"
-                android:layout_height="56dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="16dp"
-                android:text="@string/txtMyTobaccoConsumptionQ2"
+                android:text="@string/txtMyTobaccoConsumptionQ1"
                 android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -81,9 +81,9 @@
                 android:layout_marginTop="32dp"
                 android:text="@string/txtMyTobaccoConsumptionQ3"
                 android:textColor="@color/white"
-                app:layout_constraintEnd_toEndOf="@+id/checkBoxMyTobaccoConsumptionQ1"
-                app:layout_constraintStart_toStartOf="@+id/checkBoxMyTobaccoConsumptionQ1"
-                app:layout_constraintTop_toBottomOf="@+id/checkBoxMyTobaccoConsumptionQ1"
+                app:layout_constraintEnd_toEndOf="@+id/checkBoxMyTobaccoConsumptionQ2"
+                app:layout_constraintStart_toStartOf="@+id/checkBoxMyTobaccoConsumptionQ2"
+                app:layout_constraintTop_toBottomOf="@+id/checkBoxMyTobaccoConsumptionQ2"
                 tools:ignore="TextContrastCheck" />
 
             <Button
