@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.Spinner;
 
 public class MyHeartActivity extends BaseActivity {
-    public static final String APP_TAG = "MyHeartApp";
+    public static final String APP_TAG = "MyHeartActivityApp";
 
     Button button_pre;
     Button btn_suivant;

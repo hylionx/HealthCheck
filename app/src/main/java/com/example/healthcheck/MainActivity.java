@@ -1,5 +1,6 @@
 package com.example.healthcheck;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.WindowManager;
 import android.view.animation.Animation;
@@ -7,8 +8,10 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.os.Handler;
 
-public class MainActivity extends BaseActivity {
-    public static final String APP_TAG = "APPActivity";
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+    public static final String APP_TAG = "MainActivityApp";
 
     ImageView imageView;
     Animation topaniAnimation, bottoAnimation;
@@ -23,20 +26,12 @@ public class MainActivity extends BaseActivity {
         bottoAnimation = AnimationUtils.loadAnimation(this, R.anim.animation_bottom);
         imageView.setAnimation(topaniAnimation);
 
-
-
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                gotoNextActivity(NameActivity.class);
+                Intent intent = new Intent(MainActivity.this, NameActivity.class );
+                startActivity(intent);
             }
         }, 3000);
-
-
-    }
-
-    @Override
-    protected boolean validateWidgetsAndAffectPersonDatas() {
-        return true;
     }
 }

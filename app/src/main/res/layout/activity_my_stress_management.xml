@@ -32,12 +32,14 @@
         app:layout_constraintTop_toBottomOf="@+id/imgStressMngmt" />
 
     <ScrollView
-        android:layout_width="414dp"
-        android:layout_height="505dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="1.0">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -61,11 +63,13 @@
                 android:id="@+id/spinnerMyStressManagementRepQ1"
                 android:layout_width="338dp"
                 android:layout_height="48dp"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
                 android:background="#F4C0D9"
                 android:entries="@array/myStressManagment_answer_question_1"
-                app:layout_constraintEnd_toEndOf="@+id/txtMyStressManagementQ1"
-                app:layout_constraintStart_toStartOf="@+id/txtMyStressManagementQ1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txtMyStressManagementQ1"
                 tools:ignore="SpeakableTextPresentCheck" />
 

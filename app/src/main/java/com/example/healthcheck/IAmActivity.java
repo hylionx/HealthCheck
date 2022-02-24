@@ -10,7 +10,7 @@ import android.widget.ImageButton;
 import android.widget.RadioGroup;
 
 public class IAmActivity extends BaseActivity {
-    public static final String APP_TAG = "IAMApp";
+    public static final String APP_TAG = "IAmActivityApp";
 
     RadioGroup rgSexe;
     EditText numberAge;
@@ -22,10 +22,9 @@ public class IAmActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_i_am);
+
         init();
-
     }
-
 
     private void init() {
         rgSexe = findViewById(R.id.rgSexe);
@@ -39,7 +38,6 @@ public class IAmActivity extends BaseActivity {
         getPersonByIntent();
 
         Log.i(APP_TAG, "Received person name : " + person.getName());
-
     }
 
     @Override

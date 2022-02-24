@@ -12,19 +12,29 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+
 public abstract class BaseActivity extends AppCompatActivity {
 
     private static final String EXTRA_PERSON = "com.example.extras.EXTRA_PERSON";
     protected Person person;
-    protected SharedPreferences sharedPref;
+    protected SharedPreferences sharedPref; // = PreferenceManager.getDefaultSharedPreferences(this);
+    protected String postParams = "";
 
+
+    protected void addPostParams(String question, int value) {
+        try {
+            postParams += (postParams.isEmpty() ? "" : "&") + question + "=" + URLEncoder.encode("" + value , "UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+    }
 
     protected void getPersonByIntent() {
         Intent intent = getIntent();
         person = intent.getParcelableExtra(EXTRA_PERSON);
     }
-
-    protected abstract boolean validateWidgetsAndAffectPersonDatas();
 
     protected void gotoNextActivity(Class<?> cls) {
         if (validateWidgetsAndAffectPersonDatas()) {
@@ -74,5 +84,8 @@ public abstract class BaseActivity extends AppCompatActivity {
 
         return handleError(msg, null);
     }
+
+    protected abstract boolean validateWidgetsAndAffectPersonDatas();
+
 
 }

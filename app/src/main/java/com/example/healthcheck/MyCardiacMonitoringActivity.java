@@ -11,7 +11,7 @@ import java.util.List;
 
 
 public class MyCardiacMonitoringActivity extends BaseActivity {
-    public static final String APP_TAG = "MyCardiacMonitoringApp";
+    public static final String APP_TAG = "MyCardiacMonitoringActivityApp";
 
     private Button button_prec;
     private Button button_suiv;

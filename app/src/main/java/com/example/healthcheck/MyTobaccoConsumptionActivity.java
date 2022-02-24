@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.widget.Button;
 
 public class MyTobaccoConsumptionActivity extends BaseActivity {
+    public static final String APP_TAG = "MyTobaccoConsumptionActivityApp";
 
     Button btnPreviousMyTobaccoConsumption;
     Button btnNextMyTobaccoConsumption;

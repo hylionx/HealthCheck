@@ -1,11 +1,11 @@
 package com.example.healthcheck;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.widget.Button;
 
-public class MyHygieneOfLigeActivity extends BaseActivity {
+public class MyHygieneOfLifeActivity extends BaseActivity {
+    public static final String APP_TAG = "MyHygieneOfLifeActivityApp";
+
     Button btnMyHygieneOfLifePrec;
     Button btnValidate;
 
@@ -13,7 +13,7 @@ public class MyHygieneOfLigeActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my_hygiene_of_lige);
+        setContentView(R.layout.activity_my_hygiene_of_life);
 
         btnMyHygieneOfLifePrec = findViewById(R.id.btnMyHygieneOfLifePrec);
 

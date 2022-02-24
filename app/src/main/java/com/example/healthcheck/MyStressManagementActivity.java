@@ -1,11 +1,11 @@
 package com.example.healthcheck;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.widget.Button;
 
 public class MyStressManagementActivity extends BaseActivity {
+    public static final String APP_TAG = "MyStressManagementActivityApp";
+
     Button btnMyStressManagmentPrec;
     Button btnMyStressManagmentNext;
 
@@ -19,7 +19,7 @@ public class MyStressManagementActivity extends BaseActivity {
         btnMyStressManagmentNext = findViewById(R.id.btnMyStressManagmentNext);
 
         btnMyStressManagmentPrec.setOnClickListener(view -> gotoPreviousActivity());
-        btnMyStressManagmentNext.setOnClickListener(view -> gotoNextActivity(MyHygieneOfLigeActivity.class));
+        btnMyStressManagmentNext.setOnClickListener(view -> gotoNextActivity(MyHygieneOfLifeActivity.class));
     }
 
     @Override

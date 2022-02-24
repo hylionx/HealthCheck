@@ -9,7 +9,7 @@ import android.widget.EditText;
 
 public class NameActivity extends BaseActivity {
     // in Logcat : (MainApp)|(IAMApp)|(MyHeartApp)
-    public static final String APP_TAG = "NameApp";
+    public static final String APP_TAG = "NameActivityApp";
 
     private EditText editName;
     private Button btnStart;
@@ -29,7 +29,6 @@ public class NameActivity extends BaseActivity {
         sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
 
         btnStart.setOnClickListener(view -> gotoNextActivity(IAmActivity.class));
-
     }
 
     @Override

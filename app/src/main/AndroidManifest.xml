@@ -3,6 +3,7 @@
     package="com.example.healthcheck">
 
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -15,7 +16,7 @@
             android:name=".NameActivity"
             android:exported="false" />
         <activity
-            android:name=".MyHygieneOfLigeActivity"
+            android:name=".MyHygieneOfLifeActivity"
             android:exported="false" />
         <activity
             android:name=".MyStressManagementActivity"

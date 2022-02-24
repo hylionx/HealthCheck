@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.widget.Button;
 
 public class MyPhysicalActivityActivity extends BaseActivity{
+    public static final String APP_TAG = "MyPhysicalActivityActivityApp";
+
     Button btnPreviousMyPhisicalActivity;
     Button btnNextMyPhisicalActivity;
 
