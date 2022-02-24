@@ -77,4 +77,5 @@
     <string name="rbUnder40">Moins de 40 ans</string>
     <string name="rbBetween40and60">Entre 40 et 60 ans</string>
     <string name="rbOver60">"Plus de 60 ans "</string>
+    <string name="titreEnd">" Où souhaitez-vous consuler votre bilan?"</string>
 </resources>

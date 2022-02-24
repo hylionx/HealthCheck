@@ -2,7 +2,6 @@ package com.example.healthcheck;
 
 import android.os.Bundle;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -16,8 +15,8 @@ public class IAmActivity extends BaseActivity {
 
     TextView txtAge;
 
-    ImageButton btn_suiv;
-    Button btn_prec;
+    Button btnNextIAm;
+    Button btnPrevIAm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,10 +31,10 @@ public class IAmActivity extends BaseActivity {
         rgAge = findViewById(R.id.rgAge);
         txtAge = findViewById(R.id.txtAge);
 
-        btn_suiv = findViewById(R.id.btnNext);
-        btn_prec = findViewById(R.id.btnPrevIAm);
-        btn_suiv.setOnClickListener(view -> gotoNextActivity(MyHeartActivity.class));
-        btn_prec.setOnClickListener(view -> gotoPreviousActivity());
+        btnNextIAm = findViewById(R.id.btnNextIAm);
+        btnPrevIAm = findViewById(R.id.btnPrevIAm);
+        btnNextIAm.setOnClickListener(view -> gotoNextActivity(MyHeartActivity.class));
+        btnPrevIAm.setOnClickListener(view -> gotoPreviousActivity());
 
         getPersonByIntent();
         questions = new String[]{"f1_q1", "f1_q2"};
