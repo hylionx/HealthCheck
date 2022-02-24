@@ -26,7 +26,6 @@ public class MyCardiacMonitoringActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_cardiac_monitoring);
         init();
-
     }
 
 
@@ -35,7 +34,7 @@ public class MyCardiacMonitoringActivity extends BaseActivity {
         button_suiv = findViewById(R.id.button_suiv);
 
         button_prec.setOnClickListener(view -> gotoPreviousActivity());
-        button_suiv.setOnClickListener(view -> gotoNextActivity(MyPhysicalActivityActivity.class));
+        button_suiv.setOnClickListener(view -> gotoNextActivity(MyDietActivity.class));
 
         checkBoxCardiacMonitoringQ1 = findViewById(R.id.checkBoxCardiacMonitoringQ1);
         checkBoxCardiacMonitoringQ2 = findViewById(R.id.checkBoxCardiacMonitoringQ2);
@@ -43,13 +42,7 @@ public class MyCardiacMonitoringActivity extends BaseActivity {
         checkboxs = new ArrayList<>();
 
         getPersonByIntent();
-
-        Log.i(APP_TAG, "\n Received my heart problem : " + person.getHeartProblem()
-                + "\n my cholesterol problem : " + person.getCholesterolProblem()
-                + "\n my diabetic : " + person.getDiabetic()
-                + "\n my high blood pressure : " + person.getHighBloodPressure()
-                + "\n my parent heart problem : " + person.getParentHeartProblem()
-                + "\n my IMC : " + person.getIMC());
+        questions = new String[]{"f3_q1", "f3_q2", "f3_q3"};
     }
 
 
@@ -57,28 +50,35 @@ public class MyCardiacMonitoringActivity extends BaseActivity {
     @Override
     protected boolean validateWidgetsAndAffectPersonDatas() {
 
-                String repQ1 = checkBoxCardiacMonitoringQ1.getText().toString();
-                String repQ2 = checkBoxCardiacMonitoringQ2.getText().toString();
-                String repQ3 = checkBoxCardiacMonitoringQ3.getText().toString();
+        String repQ1 = checkBoxCardiacMonitoringQ1.getText().toString();
+        String repQ2 = checkBoxCardiacMonitoringQ2.getText().toString();
+        String repQ3 = checkBoxCardiacMonitoringQ3.getText().toString();
+
+        if(checkBoxCardiacMonitoringQ1.isChecked()){
+
+            //person.setCardiovascularRiskCheck(true, repQ1);
+            person.addQA(questions[0], repQ1, 1, "YES");
+        } else {
+            person.addQA(questions[0], repQ1, 0, "NO");
+        }
+
+        if(checkBoxCardiacMonitoringQ2.isChecked()){
+            //person.setHeartCheckup(true, repQ2);
+            person.addQA(questions[1], repQ2, 1, "YES");
+        } else {
+            person.addQA(questions[1], repQ2, 0, "NO");
+        }
 
 
-
-                if(checkBoxCardiacMonitoringQ1.isChecked()){
-
-                    person.setCardiovascularRiskCheck(true, repQ1);
-                }
-
-                if(checkBoxCardiacMonitoringQ2.isChecked()){
-                    person.setHeartCheckup(true, repQ2);
-                }
+        if(checkBoxCardiacMonitoringQ3.isChecked()){
+            //person.setCardiologistConsulted(true, repQ3);
+            person.addQA(questions[2], repQ3, 1, "YES");
+        } else {
+            person.addQA(questions[2], repQ3, 0, "NO");
+        }
 
 
-                if(checkBoxCardiacMonitoringQ3.isChecked()){
-                    person.setCardiologistConsulted(true, repQ3);
-                }
-
-
-                Log.i(APP_TAG, "repQ1 : " + repQ1 );
+        //Log.i(APP_TAG, "repQ1 : " + repQ1 );
 
 
         return true;

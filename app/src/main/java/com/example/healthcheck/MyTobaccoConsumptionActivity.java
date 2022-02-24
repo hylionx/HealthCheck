@@ -20,6 +20,9 @@ public class MyTobaccoConsumptionActivity extends BaseActivity {
 
         btnPreviousMyTobaccoConsumption.setOnClickListener(view -> gotoPreviousActivity());
         btnNextMyTobaccoConsumption.setOnClickListener(view -> gotoNextActivity(MyStressManagementActivity.class));
+
+        getPersonByIntent();
+        questions = new String[]{"f5_q1", "f5_q2", "f5_q3", "f5_q4", "f5_q5"};
     }
 
     @Override

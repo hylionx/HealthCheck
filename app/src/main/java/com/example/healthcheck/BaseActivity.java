@@ -18,9 +18,11 @@ import java.net.URLEncoder;
 public abstract class BaseActivity extends AppCompatActivity {
 
     private static final String EXTRA_PERSON = "com.example.extras.EXTRA_PERSON";
+    protected String questions[];
     protected Person person;
     protected SharedPreferences sharedPref; // = PreferenceManager.getDefaultSharedPreferences(this);
     protected String postParams = "";
+
 
 
     protected void addPostParams(String question, int value) {
@@ -34,6 +36,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected void getPersonByIntent() {
         Intent intent = getIntent();
         person = intent.getParcelableExtra(EXTRA_PERSON);
+        Log.d("Person", "Received " + person);
     }
 
     protected void gotoNextActivity(Class<?> cls) {

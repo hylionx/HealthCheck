@@ -18,6 +18,9 @@ public class MyPhysicalActivityActivity extends BaseActivity{
 
         btnPreviousMyPhisicalActivity.setOnClickListener(view -> gotoPreviousActivity());
         btnNextMyPhisicalActivity.setOnClickListener(view -> gotoNextActivity(MyTobaccoConsumptionActivity.class));
+
+        getPersonByIntent();
+        questions = new String[]{"f4_q1", "f4_q2", "f4_q3"};
     }
 
     @Override

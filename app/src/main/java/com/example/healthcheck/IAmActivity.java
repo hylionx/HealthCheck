@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 public class IAmActivity extends BaseActivity {
@@ -36,8 +37,7 @@ public class IAmActivity extends BaseActivity {
         btn_prec.setOnClickListener(view -> gotoPreviousActivity());
 
         getPersonByIntent();
-
-        Log.i(APP_TAG, "Received person name : " + person.getName());
+        questions = new String[]{"f1_q1", "f1_q2"};
     }
 
     @Override
@@ -47,10 +47,11 @@ public class IAmActivity extends BaseActivity {
         if (radioButtonID == -1) {
             return handleError("You must choose your sexe");
         }
-        View radioButton = rgSexe.findViewById(radioButtonID);
+        RadioButton radioButton = rgSexe.findViewById(radioButtonID);
         int idx = rgSexe.indexOfChild(radioButton);
-        Log.i(APP_TAG, "checked : " + idx);
-        person.setSexe(idx);
+        String value = radioButton.getText().toString();
+        person.addQA(questions[0], getString(R.string.txtMyProfilQ1), idx, value);
+
 
         // check numberAge
         int age;
@@ -59,7 +60,8 @@ public class IAmActivity extends BaseActivity {
         } catch (NumberFormatException e) {
             return handleError("You must select age", numberAge);
         }
-        person.setAge(age);
+        person.addQA(questions[1], getString(R.string.txtMyProfilQ2), age, "" + age); // TODO ******************* revoir
+
         return true;
     }
 }

@@ -19,6 +19,8 @@ public class MyHygieneOfLifeActivity extends BaseActivity {
 
         btnMyHygieneOfLifePrec.setOnClickListener(view -> gotoPreviousActivity());
 
+        getPersonByIntent();
+        questions = new String[]{"f7_q1", "f7_q2", "f7_q3", "f7_q4"};
 
     }
 

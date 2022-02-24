@@ -27,7 +27,6 @@ public class MyHeartActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_heart);
         init();
-
     }
 
 
@@ -45,9 +44,7 @@ public class MyHeartActivity extends BaseActivity {
         btn_suivant.setOnClickListener(view -> gotoNextActivity(MyCardiacMonitoringActivity.class));
 
         getPersonByIntent();
-
-        Log.i(APP_TAG, "Received person sexe : " + person.getSexe() + ", person age : " + person.getAge());
-
+        questions = new String[]{"f2_q1", "f2_q2", "f2_q3", "f2_q4", "f2_q5", "f2_q6"};
     }
     @Override
     protected boolean validateWidgetsAndAffectPersonDatas() {
@@ -59,21 +56,19 @@ public class MyHeartActivity extends BaseActivity {
         int posq5 = spinnerMyHeartRepQ5.getSelectedItemPosition();
         int posq6 = spinnerMyHeartRepQ6.getSelectedItemPosition();
 
+        String q1 =  spinnerMyHeartRepQ1.getSelectedItem().toString();
+        String q2 = spinnerMyHeartRepQ2.getSelectedItem().toString();
+        String q3 = spinnerMyHeartRepQ3.getSelectedItem().toString();
+        String q4 = spinnerMyHeartRepQ4.getSelectedItem().toString();
+        String q5 = spinnerMyHeartRepQ5.getSelectedItem().toString();
+        String q6 = spinnerMyHeartRepQ6.getSelectedItem().toString();
 
-       String q1 =  spinnerMyHeartRepQ1.getSelectedItem().toString();
-       String q2 = spinnerMyHeartRepQ2.getSelectedItem().toString();
-       String q3 = spinnerMyHeartRepQ3.getSelectedItem().toString();
-       String q4 = spinnerMyHeartRepQ4.getSelectedItem().toString();
-       String q5 = spinnerMyHeartRepQ5.getSelectedItem().toString();
-       String q6 = spinnerMyHeartRepQ6.getSelectedItem().toString();
-
-
-
-        person.setHeartProblem(q1, posq1);
-        person.setDiabetic(q2, posq2);
-        person.setCholesterolProblem(q3, posq3);
-        person.setHighBloodPressure(q4, posq4);
-        person.setIMC(q6, posq6);
+        person.addQA(questions[0], getString(R.string.txtMyHeartQ1), posq1, q1);
+        person.addQA(questions[1], getString(R.string.txtMyHeartQ2), posq2, q2);
+        person.addQA(questions[2], getString(R.string.txtMyHeartQ3), posq3, q3);
+        person.addQA(questions[3], getString(R.string.txtMyHeartQ4), posq4, q4);
+        person.addQA(questions[4], getString(R.string.txtMyHeartQ5), posq5, q5);
+        person.addQA(questions[5], getString(R.string.txtMyHeartQ6), posq6, q6);
 
         return true;
     }

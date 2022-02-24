@@ -39,7 +39,7 @@ public class NameActivity extends BaseActivity {
             return handleError("this can't be empty", editName);
         }
         person.setName(name);
-        sharedPref.edit().putString("persoName", name).commit();
+        sharedPref.edit().putString("personName", name).commit();
         Log.i(APP_TAG, "name saved in sharedPref: " + sharedPref.getString("personName", null));
 
         return true;

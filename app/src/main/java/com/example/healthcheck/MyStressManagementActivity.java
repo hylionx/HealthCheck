@@ -20,6 +20,9 @@ public class MyStressManagementActivity extends BaseActivity {
 
         btnMyStressManagmentPrec.setOnClickListener(view -> gotoPreviousActivity());
         btnMyStressManagmentNext.setOnClickListener(view -> gotoNextActivity(MyHygieneOfLifeActivity.class));
+
+        getPersonByIntent();
+        questions = new String[]{"f6_q1", "f6_q2", "f6_q3"};
     }
 
     @Override
