@@ -16,9 +16,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HealthCheck">
         <activity
-            android:name=".AppRatedActivity"
-            android:exported="false" />
-        <activity
             android:name=".WebsiteCheckupActivity"
             android:exported="false" />
         <activity
