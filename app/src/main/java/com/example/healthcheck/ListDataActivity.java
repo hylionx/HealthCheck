@@ -44,14 +44,16 @@ public class ListDataActivity extends BaseActivity {
                 q.setText(qa.questionValue);
                 q.setTextSize(15);
                 q.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+                q.setPadding(0,20,0,0);
 
 
 
                 TextView a = new TextView(this);
                 a.setText(qa.answerValue);
-                a.setTextSize(8);
+                a.setTextSize(10);
                 a.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
-                
+                a.setPadding(0,0,0,20);
+
                 linearlayout.addView(q);
                 linearlayout.addView(a);
 

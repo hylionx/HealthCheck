@@ -13,15 +13,46 @@ import android.widget.TextView;
 public class CheckUpAppActivity extends BaseActivity {
 
     ListView listView;
-    String[] topicName = {"My Heart", "My Cardiac Monitoring"," My Diet", "My Physical Activity", "My Tobacco Consumption", "My stress Managment","My Hygiene of life"};
-    int [] topicImage = {R.drawable.coeur, R.drawable.suivicardiaque, R.drawable.alimentation, R.drawable.basket, R.drawable.tabac, R.drawable.stress, R.drawable.dodo};
-
+    String[] topicName;
+    int [] topicImage;
+    int [] bgColors;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_check_up_app);
         getPersonByIntent();
+
+        topicName = new String[]{
+                getString(R.string.txtMyHeartTitle),
+                getString(R.string.my_cardiac_monitoring_title),
+                getString(R.string.my_diet_title),
+                getString(R.string.myPhysicalActivityTitle),
+                getString(R.string.myTobaccoConsumptionTitle),
+                getString(R.string.myStressManagementTitle),
+                getString(R.string.myHygieneOfLifeTitle)
+        };
+
+        topicImage = new int[]{
+                R.drawable.coeur,
+                R.drawable.suivicardiaque,
+                R.drawable.alimentation,
+                R.drawable.basket,
+                R.drawable.tabac,
+                R.drawable.stress,
+                R.drawable.dodo
+        };
+
+        bgColors = new int[]{
+                R.color.myHeart,
+                R.color.myCardiacMonitoring,
+                R.color.myDiet,
+                R.color.myPhysicalActivity,
+                R.color.myTobaccoActivity,
+                R.color.myStressManagment,
+                R.color.myHygieneOfLife
+
+        };
 
         listView = findViewById(R.id.listview);
 
@@ -70,6 +101,7 @@ public class CheckUpAppActivity extends BaseActivity {
            View view1 = getLayoutInflater().inflate(R.layout.activity_row_data, null);
             TextView name = view1.findViewById(R.id.txtTitleTopic);
             ImageView image = view1.findViewById(R.id.images);
+            view1.setBackgroundColor(getResources().getColor(bgColors[i]));
 
             name.setText(topicName[i]);
             image.setImageResource(topicImage[i]);
