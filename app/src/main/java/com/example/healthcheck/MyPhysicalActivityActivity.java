@@ -35,7 +35,7 @@ public class MyPhysicalActivityActivity extends BaseActivity{
 
         getPersonByIntent();
         questions = new String[]{"f5_q1", "f5_q2", "f5_q3", "f5_q4", "f5_q5"};
-        btnNextMyPhysicalActivity.performClick();
+        //btnNextMyPhysicalActivity.performClick();
     }
 
     @Override

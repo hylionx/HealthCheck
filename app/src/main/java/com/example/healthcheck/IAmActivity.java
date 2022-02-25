@@ -77,7 +77,7 @@ public class IAmActivity extends BaseActivity {
         if(TextUtils.isEmpty(weight)) {
             return handleError("weight can't be empty", editWeight);
         }
-        person.setName(weight);
+        //person.setName(weight); TODO dans les sharedPrefs
 
 
         //check height
@@ -85,7 +85,7 @@ public class IAmActivity extends BaseActivity {
         if(TextUtils.isEmpty(height)) {
             return handleError("height can't be empty", editHeight);
         }
-        person.setName(height);
+        //person.setName(height); TODO dans les sharedPrefs
 
 
         return true;

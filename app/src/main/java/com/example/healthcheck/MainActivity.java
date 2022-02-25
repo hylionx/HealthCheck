@@ -53,20 +53,7 @@ public class MainActivity extends BaseActivity {
             }
         }, 3000);
 
-        verifyStoragePermissions(this);
     }
 
-    public static void verifyStoragePermissions(Activity activity) {
-        // Vérifie si nous avons les droits d'écriture
-        int permission = ActivityCompat.checkSelfPermission(activity,
-                Manifest.permission.WRITE_EXTERNAL_STORAGE);
-        if (permission != PackageManager.PERMISSION_GRANTED) {
-            // Aie, il faut les demander àl'utilisateur
-            ActivityCompat.requestPermissions(
-                    activity,
-                    PERMISSIONS_STORAGE,
-                    REQUEST_EXTERNAL_STORAGE
-            );
-        }
-    }
+
 }

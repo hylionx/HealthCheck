@@ -34,7 +34,7 @@ public class MyHygieneOfLifeActivity extends BaseActivity {
 
 
         questions = new String[]{"f8_q1", "f8_q2", "f8_q3", "f8_q4"};
-        btnValidate.performClick();
+        //btnValidate.performClick();
 
     }
 

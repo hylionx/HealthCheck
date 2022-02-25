@@ -40,7 +40,7 @@ public class MyDietActivity extends BaseActivity {
 
         getPersonByIntent();
         questions = new String[]{"f4_q1", "f4_q2", "f4_q3", "f4_q4", "f4_q5", "f4_q6"};
-        btnNextMyDiet.performClick();
+        //btnNextMyDiet.performClick();
     }
 
     @Override

@@ -35,7 +35,7 @@ public class MyStressManagementActivity extends BaseActivity {
 
         getPersonByIntent();
         questions = new String[]{"f7_q1", "f7_q2", "f7_q3", "f7_q4"};
-        btnNextMyStressManagment.performClick();
+        //btnNextMyStressManagment.performClick();
 
     }
 

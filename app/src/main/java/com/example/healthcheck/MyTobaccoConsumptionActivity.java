@@ -33,7 +33,7 @@ public class MyTobaccoConsumptionActivity extends BaseActivity {
 
         getPersonByIntent();
         questions = new String[]{"f6_q1", "f6_q2", "f6_q3"};
-        btnNextMyTobaccoConsumption.performClick();
+        //btnNextMyTobaccoConsumption.performClick();
 
     }
 
