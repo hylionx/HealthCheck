@@ -83,4 +83,6 @@
     <string name="txtCheckupH3">"Das Ziel dieses Tests ist die Prävention und Sensibilisierung der Öffentlichkeit. Es geht also im Wesentlichen um die tägliche Lebensweise. Dieser Test ist daher nicht medizinischer Natur. Insbesondere Fälle von Personen mit Herzerkrankungen oder erblich bedingten Risiken werden nicht berücksichtigt. Bei medizinischen Fragen empfehlen wir Ihnen, sich an Ihren Arzt oder Kardiologen zu wenden.  "</string>
     <string name="txtMadeBy">Erstellen Sie mit ❤️ von Hylia und Jugurtha</string>
     <string name="txtopinon">Teile deine Meinung</string>
+    <string name="txtWeight">Dein Gewicht</string>
+    <string name="txtHeight">Deine Größe</string>
 </resources>
