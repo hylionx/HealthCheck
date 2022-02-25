@@ -18,6 +18,8 @@ public class ChoiceNextActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choice_next);
 
+        getPersonByIntent();
+
         buttonAppli = findViewById(R.id.buttonAppli);
         buttonWebSite = findViewById(R.id.buttonWebSite);
 

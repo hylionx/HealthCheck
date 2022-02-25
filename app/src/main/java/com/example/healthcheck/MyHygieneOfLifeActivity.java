@@ -27,11 +27,12 @@ public class MyHygieneOfLifeActivity extends BaseActivity {
         switchMyHygieneOfLifeQ2 = findViewById(R.id.switchMyHygieneOfLifeQ2);
         switchMyHygieneOfLifeQ3 = findViewById(R.id.switchMyHygieneOfLifeQ3);
         switchMyHygieneOfLifeQ4 = findViewById(R.id.switchMyHygieneOfLifeQ4);
+        getPersonByIntent();
 
         btnPrevMyHygieneOfLife.setOnClickListener(view -> gotoPreviousActivity());
         btnValidate.setOnClickListener(view -> gotoNextActivity(ChoiceNextActivity.class));
 
-        getPersonByIntent();
+
         questions = new String[]{"f8_q1", "f8_q2", "f8_q3", "f8_q4"};
 
     }

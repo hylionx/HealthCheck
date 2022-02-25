@@ -17,7 +17,7 @@ import java.net.URLEncoder;
 
 public abstract class BaseActivity extends AppCompatActivity {
 
-    private static final String EXTRA_PERSON = "com.example.extras.EXTRA_PERSON";
+    protected static final String EXTRA_PERSON = "com.example.extras.EXTRA_PERSON";
     protected String questions[];
     protected Person person;
     protected SharedPreferences sharedPref; // = PreferenceManager.getDefaultSharedPreferences(this);

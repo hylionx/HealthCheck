@@ -78,4 +78,5 @@
     <string name="rbBetween40and60">Zwischen 40 und 60 Jahre alt</string>
     <string name="rbOver60">Über 60 Jahre alt</string>
     <string name="titreEnd">Wo möchten Sie Ihren Test einsehen?</string>
+    <string name="txtmyresult">Meine Ergebnisse</string>
 </resources>
