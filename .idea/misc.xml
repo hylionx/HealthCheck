@@ -6,8 +6,6 @@
         <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/drawable-anydpi/ic_action_name.xml" value="0.37864583333333335" />
         <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout-land/activity_je_suis.xml" value="0.21164021164021163" />
         <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout-land/activity_main.xml" value="0.21164021164021163" />
-        <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout/activity_bilan.xml" value="0.33" />
-        <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout/activity_choice_next.xml" value="0.33" />
         <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout/activity_hello.xml" value="0.25" />
         <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout/activity_i_am.xml" value="0.33" />
         <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout/activity_je_suis.xml" value="0.264" />
@@ -18,12 +16,10 @@
         <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout/activity_my_cardiac_monitoring.xml" value="0.33" />
         <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout/activity_my_diet.xml" value="0.33" />
         <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout/activity_my_heart.xml" value="0.33" />
-        <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout/activity_my_hygiene_of_life.xml" value="0.2328125" />
         <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout/activity_my_hygiene_of_lige.xml" value="0.3625" />
         <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout/activity_my_physical_activity.xml" value="0.3625" />
         <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout/activity_my_stress_management.xml" value="0.33" />
         <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout/activity_my_tobacco_consumption.xml" value="0.3625" />
-        <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout/activity_name.xml" value="0.2328125" />
         <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout/content_mon_coeur.xml" value="0.25" />
         <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout/fragment_first.xml" value="0.25" />
         <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout/fragment_second.xml" value="0.17135416666666667" />
@@ -31,10 +27,14 @@
         <entry key="..\:/Users/jugur/Desktop/IHM/project/app/src/main/res/layout-land/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/jugur/Desktop/IHM/project/app/src/main/res/layout-land/activity_my_heart.xml" value="0.2173721340388007" />
         <entry key="..\:/Users/jugur/Desktop/IHM/project/app/src/main/res/layout/activity_autre_activite.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/jugur/Desktop/IHM/project/app/src/main/res/layout/activity_choice_next.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/jugur/Desktop/IHM/project/app/src/main/res/layout/activity_i_am.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/jugur/Desktop/IHM/project/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/jugur/Desktop/IHM/project/app/src/main/res/layout/activity_mon_coeur.xml" value="0.353713768115942" />
+        <entry key="..\:/Users/jugur/Desktop/IHM/project/app/src/main/res/layout/activity_my_cardiac_monitoring.xml" value="0.5" />
+        <entry key="..\:/Users/jugur/Desktop/IHM/project/app/src/main/res/layout/activity_my_diet.xml" value="0.33" />
         <entry key="..\:/Users/jugur/Desktop/IHM/project/app/src/main/res/layout/activity_my_heart.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/jugur/Desktop/IHM/project/app/src/main/res/layout/activity_website_checkup.xml" value="0.26614583333333336" />
       </map>
     </option>
   </component>

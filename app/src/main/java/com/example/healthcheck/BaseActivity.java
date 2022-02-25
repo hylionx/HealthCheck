@@ -21,17 +21,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected String questions[];
     protected Person person;
     protected SharedPreferences sharedPref; // = PreferenceManager.getDefaultSharedPreferences(this);
-    protected String postParams = "";
 
-
-
-    protected void addPostParams(String question, int value) {
-        try {
-            postParams += (postParams.isEmpty() ? "" : "&") + question + "=" + URLEncoder.encode("" + value , "UTF-8");
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        }
-    }
 
     protected void getPersonByIntent() {
         Intent intent = getIntent();

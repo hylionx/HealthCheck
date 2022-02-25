@@ -5,10 +5,11 @@ import android.os.Parcelable;
 
 public class QuestionAnswer implements Parcelable {
 
-    String questionID;
-    String questionValue;
-    Integer answerIndex;
-    String answerValue;
+    private String questionID;
+    private String questionValue;
+    private Integer answerIndex;
+    private String answerValue;
+
 
     public QuestionAnswer(String questionID, String questionValue, Integer answerIndex, String answerValue) {
         this.questionID = questionID;
@@ -67,5 +68,13 @@ public class QuestionAnswer implements Parcelable {
                 ", answerValue='" + answerValue + '\'' +
                 ", answerIndex=" + answerIndex +
                 '}';
+    }
+
+    public String getQuestionID() {
+        return questionID;
+    }
+
+    public Integer getAnswerIndex() {
+        return answerIndex;
     }
 }
