@@ -1,6 +1,9 @@
 package com.example.healthcheck;
 
+import android.Manifest;
+import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.WindowManager;
 import android.view.animation.Animation;
@@ -10,9 +13,16 @@ import android.os.Handler;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
 public class MainActivity extends AppCompatActivity {
     public static final String APP_TAG = "MainActivityApp";
+    // Listes des permissions
+    private static final int REQUEST_EXTERNAL_STORAGE = 1;
+    private static String[] PERMISSIONS_STORAGE = {
+            Manifest.permission.READ_EXTERNAL_STORAGE,
+            Manifest.permission.WRITE_EXTERNAL_STORAGE
+    };
 
     ImageView imageView;
     TextView txtMadeBy;
@@ -38,5 +48,21 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         }, 3000);
+
+        verifyStoragePermissions(this);
+    }
+
+    public static void verifyStoragePermissions(Activity activity) {
+        // Vérifie si nous avons les droits d'écriture
+        int permission = ActivityCompat.checkSelfPermission(activity,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        if (permission != PackageManager.PERMISSION_GRANTED) {
+            // Aie, il faut les demander àl'utilisateur
+            ActivityCompat.requestPermissions(
+                    activity,
+                    PERMISSIONS_STORAGE,
+                    REQUEST_EXTERNAL_STORAGE
+            );
+        }
     }
 }

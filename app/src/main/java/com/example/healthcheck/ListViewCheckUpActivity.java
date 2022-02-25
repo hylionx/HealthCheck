@@ -2,6 +2,7 @@ package com.example.healthcheck;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -65,7 +66,7 @@ public class ListViewCheckUpActivity extends BaseActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent = new Intent(getApplicationContext(), CheckUpActivity.class);
                 intent.putExtra("indexForm", (i+1));
-                intent.putExtra(EXTRA_PERSON, person);
+                intent.putExtra(EXTRA_PERSON, (Parcelable) person);
                 intent.putExtra("name", topicName[i]);
                 intent.putExtra("image", topicImage[i]);
                 intent.putExtra("bgColors", bgColors[i]);

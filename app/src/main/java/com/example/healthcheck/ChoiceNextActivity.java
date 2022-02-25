@@ -3,6 +3,8 @@ package com.example.healthcheck;
 import android.os.Bundle;
 import android.widget.ImageButton;
 
+import com.example.healthcheck.Utils.Serializer;
+
 public class ChoiceNextActivity extends BaseActivity {
 
     ImageButton buttonAppli;
@@ -23,6 +25,8 @@ public class ChoiceNextActivity extends BaseActivity {
         buttonAppli.setOnClickListener(view -> gotoNextActivity(ListViewCheckUpActivity.class));
 
         buttonWebSite.setOnClickListener(view -> gotoNextActivity(WebsiteCheckupActivity.class));
+
+        Serializer.serialize(person, this);
     }
 
     @Override

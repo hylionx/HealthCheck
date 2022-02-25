@@ -36,12 +36,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonAppli"
         app:srcCompat="@drawable/federation"
-        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck"
-
-        android:ImageButton.IsShadowEnabled="true"
-        android:ImageButton.ShadowColor="Gray"
-        android:ImageButton.ShadowRadius="12"
-    />
+        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
 
     <TextView
         android:id="@+id/titreEnd"

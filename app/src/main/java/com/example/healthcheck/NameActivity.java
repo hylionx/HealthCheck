@@ -7,6 +7,8 @@ import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.healthcheck.Utils.Serializer;
+
 public class NameActivity extends BaseActivity {
     // in Logcat : (MainApp)|(IAMApp)|(MyHeartApp)
     public static final String APP_TAG = "NameActivityApp";
@@ -23,7 +25,12 @@ public class NameActivity extends BaseActivity {
     }
 
     private void init() {
-        person = new Person();
+
+        person = Serializer.deSerialize("hylia", this);
+        if (person != null)
+            Log.i(APP_TAG, "777777777777777   " + person);
+        else
+            person = new Person();
         btnStart = findViewById(R.id.btnStartTest);
         editName = findViewById(R.id.etName);
         sharedPref = PreferenceManager.getDefaultSharedPreferences(this);

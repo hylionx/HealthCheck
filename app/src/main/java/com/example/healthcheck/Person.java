@@ -4,11 +4,14 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import android.util.Log;
 
+import com.example.healthcheck.Utils.Serializer;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class Person implements Parcelable {
+public class Person implements Parcelable, Serializable {
 
     // MAIN
     private String name;

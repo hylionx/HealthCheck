@@ -3,7 +3,9 @@ package com.example.healthcheck;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class QuestionAnswer implements Parcelable {
+import java.io.Serializable;
+
+public class QuestionAnswer implements Parcelable, Serializable {
 
     private String questionID;
     private String questionValue;

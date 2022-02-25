@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
+import android.os.Parcelable;
 import android.os.VibrationEffect;
 import android.os.Vibrator;
 import android.util.Log;
@@ -33,7 +34,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         if (validateWidgetsAndAffectPersonDatas()) {
 
             Intent intent = new Intent(this, cls );
-            intent.putExtra(EXTRA_PERSON, person);
+            intent.putExtra(EXTRA_PERSON, (Parcelable) person);
             startActivity(intent);
         }
     }

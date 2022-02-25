@@ -8,12 +8,12 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="myHeart"> #E8426E</color>
-    <color name="myCardiacMonitoring"> #0cb4bd</color>
+    <color name="myHeart"> #CCE8426E</color>
+    <color name="myCardiacMonitoring"> #CC0cb4bd</color>
     <color name="myDiet"> #f8ac3b</color>
-    <color name="myPhysicalActivity"> #EB605A</color>
-    <color name="myTobaccoActivity"> #37B39B</color>
-    <color name="myStressManagment"> #E15778</color>
-    <color name="myHygieneOfLife"> #AE9C2B</color>
+    <color name="myPhysicalActivity"> #CCEB605A</color>
+    <color name="myTobaccoActivity"> #CC37B39B</color>
+    <color name="myStressManagment"> #CCE15778</color>
+    <color name="myHygieneOfLife"> #CCAE9C2B</color>
 
 </resources>
