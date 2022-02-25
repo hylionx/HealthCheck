@@ -1,5 +1,6 @@
 package com.example.healthcheck;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.text.TextUtils;
@@ -8,6 +9,9 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.healthcheck.Utils.Serializer;
+
+import java.util.Set;
+import java.util.TreeSet;
 
 public class NameActivity extends BaseActivity {
     // in Logcat : (MainApp)|(IAMApp)|(MyHeartApp)
@@ -25,17 +29,20 @@ public class NameActivity extends BaseActivity {
     }
 
     private void init() {
-
+/*
         person = Serializer.deSerialize("hylia", this);
         if (person != null)
             Log.i(APP_TAG, "777777777777777   " + person);
-        else
+        else*/
             person = new Person();
         btnStart = findViewById(R.id.btnStartTest);
         editName = findViewById(R.id.etName);
-        sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
 
         btnStart.setOnClickListener(view -> gotoNextActivity(IAmActivity.class));
+        Log.i(APP_TAG, "Name ----- reloadSavedPersons");
+        reloadSavedPersons();
+        Log.i(APP_TAG, "Name ----- displaySavedPersons");
+        displaySavedPersons();
     }
 
     @Override
@@ -46,10 +53,9 @@ public class NameActivity extends BaseActivity {
             return handleError("this can't be empty", editName);
         }
         person.setName(name);
-        sharedPref.edit().putString("personName", name).commit();
-        Log.i(APP_TAG, "name saved in sharedPref: " + sharedPref.getString("personName", null));
 
         return true;
     }
+
 
 }

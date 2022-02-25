@@ -7,27 +7,35 @@ import android.os.Build;
 import android.os.Parcelable;
 import android.os.VibrationEffect;
 import android.os.Vibrator;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.healthcheck.Utils.Serializer;
+
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
+import java.util.Set;
+import java.util.TreeSet;
 
 public abstract class BaseActivity extends AppCompatActivity {
+
+    public static final String SHARED_PREFS = "sharedPrefs";
+    public static final String SAVED_PERSONS = "savedPersons";
 
     protected static final String EXTRA_PERSON = "com.example.extras.EXTRA_PERSON";
     protected String questions[];
     protected Person person;
-    protected SharedPreferences sharedPref; // = PreferenceManager.getDefaultSharedPreferences(this);
+    Set<String> savedPersons;
 
 
     protected void getPersonByIntent() {
         Intent intent = getIntent();
         person = intent.getParcelableExtra(EXTRA_PERSON);
-        Log.d("Person", "Received " + person);
+        //Log.d("Person", "Received " + person);
     }
 
     protected void gotoNextActivity(Class<?> cls) {
@@ -80,6 +88,29 @@ public abstract class BaseActivity extends AppCompatActivity {
     }
 
     protected abstract boolean validateWidgetsAndAffectPersonDatas();
+
+
+    public void reloadSavedPersons() {
+        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
+        savedPersons = new TreeSet<String>(sharedPref.getStringSet(SAVED_PERSONS, new TreeSet<String>()));
+        Log.i("Person", "reloadSavedPersons new size = " + savedPersons.size());
+    }
+
+    public void savePerson() {
+        Serializer.serialize(person, this);
+        savedPersons.add(person.getName());
+        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
+        sharedPref.edit().putStringSet(SAVED_PERSONS, savedPersons).commit();
+    }
+
+    public void displaySavedPersons() {
+        reloadSavedPersons();
+        Log.d("Person","displaySavedPersons size = "+savedPersons.size()+": ");
+        for (String item : savedPersons) {
+            Log.d("Person","\t- " + item);
+        }
+    }
+
 
 
 }

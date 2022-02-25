@@ -1,9 +1,16 @@
 package com.example.healthcheck;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.util.Log;
 import android.widget.ImageButton;
 
 import com.example.healthcheck.Utils.Serializer;
+
+import java.util.Set;
+import java.util.TreeSet;
+
 
 public class ChoiceNextActivity extends BaseActivity {
 
@@ -23,14 +30,18 @@ public class ChoiceNextActivity extends BaseActivity {
         getPersonByIntent();
 
         buttonAppli.setOnClickListener(view -> gotoNextActivity(ListViewCheckUpActivity.class));
-
         buttonWebSite.setOnClickListener(view -> gotoNextActivity(WebsiteCheckupActivity.class));
 
-        Serializer.serialize(person, this);
+        reloadSavedPersons();
+        displaySavedPersons();
+
+        Log.i("Person", "ChoiceNextActivity ----- savePerson");
+        savePerson();
     }
 
     @Override
     protected boolean validateWidgetsAndAffectPersonDatas() {
         return true;
     }
+
 }
