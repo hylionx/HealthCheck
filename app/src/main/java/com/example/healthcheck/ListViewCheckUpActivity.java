@@ -1,27 +1,39 @@
 package com.example.healthcheck;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.RatingBar;
 import android.widget.TextView;
+
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 public class ListViewCheckUpActivity extends BaseActivity {
 
-    ListView listView;
-    String[] topicName;
-    int [] topicImage;
-    int [] bgColors;
+    private ListView listView;
+    private String[] topicName;
+    private int [] topicImage;
+    private int [] bgColors;
+    private AlertDialog.Builder dialogBuilder;
+    private AlertDialog dialog;
+    private RatingBar ratingBar;
+    Button btnPopup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_view_check_up);
         getPersonByIntent();
+        btnPopup = findViewById(R.id.btnPopup);
+
+        createDialog();
 
         topicName = new String[]{
                 getString(R.string.txtMyHeartTitle),
@@ -72,7 +84,32 @@ public class ListViewCheckUpActivity extends BaseActivity {
                 startActivity(intent);
             }
         });
+
+
+
     }
+
+
+    public void createDialog(){
+        //pop up dialogue
+
+        dialogBuilder = new AlertDialog.Builder(this);
+        final View popUpRater = getLayoutInflater().inflate(R.layout.popup,null);
+        btnPopup = popUpRater.findViewById(R.id.btnPopup);
+
+        ratingBar = popUpRater.findViewById(R.id.ratingBar);
+        dialogBuilder.setView(popUpRater);
+        dialog = dialogBuilder.create();
+        dialog.show();
+
+        btnPopup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
+    }
+
 
     @Override
     protected boolean validateWidgetsAndAffectPersonDatas() {
@@ -99,7 +136,7 @@ public class ListViewCheckUpActivity extends BaseActivity {
 
         @Override
         public View getView(int i, View view, ViewGroup viewGroup) {
-           View view1 = getLayoutInflater().inflate(R.layout.activity_list_view_check_up_format, null);
+            View view1 = getLayoutInflater().inflate(R.layout.activity_list_view_check_up_format, null);
             TextView name = view1.findViewById(R.id.txtTitleTopic);
             ImageView image = view1.findViewById(R.id.images);
 

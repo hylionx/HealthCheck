@@ -38,9 +38,6 @@
         app:srcCompat="@drawable/federation"
         tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck"
 
-        android:ImageButton.IsShadowEnabled="true"
-        android:ImageButton.ShadowColor="Gray"
-        android:ImageButton.ShadowRadius="12"
     />
 
     <TextView
