@@ -87,7 +87,9 @@ public abstract class BaseActivity extends AppCompatActivity {
         return handleError(msg, null);
     }
 
-    protected abstract boolean validateWidgetsAndAffectPersonDatas();
+    protected boolean validateWidgetsAndAffectPersonDatas() {
+        return true;
+    }
 
 
     public void reloadSavedPersons() {

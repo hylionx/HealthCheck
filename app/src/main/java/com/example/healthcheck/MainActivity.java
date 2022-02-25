@@ -15,7 +15,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
     public static final String APP_TAG = "MainActivityApp";
     // Listes des permissions
     private static final int REQUEST_EXTERNAL_STORAGE = 1;
@@ -39,11 +39,15 @@ public class MainActivity extends AppCompatActivity {
         bottoAnimation = AnimationUtils.loadAnimation(this, R.anim.animation_bottom);
         imageView.setAnimation(topaniAnimation);
         txtMadeBy.setAnimation(bottoAnimation);
+        reloadSavedPersons();
 
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(MainActivity.this, ListViewSavedPersonsActivity.class );
+
+                Class<?> nextClass = (savedPersons.size() > 0) ? ListViewSavedPersonsActivity.class : NameActivity.class;
+
+                Intent intent = new Intent(MainActivity.this, nextClass );
                 startActivity(intent);
                 finish();
             }

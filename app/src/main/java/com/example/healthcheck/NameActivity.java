@@ -29,19 +29,15 @@ public class NameActivity extends BaseActivity {
     }
 
     private void init() {
-/*
-        person = Serializer.deSerialize("hylia", this);
-        if (person != null)
-            Log.i(APP_TAG, "777777777777777   " + person);
-        else*/
-            person = new Person();
+
+        person = new Person();
         btnStart = findViewById(R.id.btnStartTest);
         editName = findViewById(R.id.etName);
 
         btnStart.setOnClickListener(view -> gotoNextActivity(IAmActivity.class));
-        Log.i(APP_TAG, "Name ----- reloadSavedPersons");
+        //Log.i(APP_TAG, "Name ----- reloadSavedPersons");
         reloadSavedPersons();
-        Log.i(APP_TAG, "Name ----- displaySavedPersons");
+        //Log.i(APP_TAG, "Name ----- displaySavedPersons");
         displaySavedPersons();
     }
 
