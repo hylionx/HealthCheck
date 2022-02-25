@@ -77,4 +77,12 @@ public class QuestionAnswer implements Parcelable {
     public Integer getAnswerIndex() {
         return answerIndex;
     }
+
+    public String getQuestionValue() {
+        return questionValue;
+    }
+
+    public String getAnswerValue() {
+        return answerValue;
+    }
 }

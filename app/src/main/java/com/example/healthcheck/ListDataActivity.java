@@ -34,14 +34,14 @@ public class ListDataActivity extends BaseActivity {
         Intent intent = getIntent();
         index = intent.getIntExtra("indexForm", 0);
 
-        Log.i("person", "*************************************" + index);
+        Log.i("person", "+++++++++++++++++++++++++++++++++++++++++" + index);
         //Log.i("person", "*************************************" + person);
 
         for (QuestionAnswer qa: person.getQuestionAnswers()) {
-            if (qa.questionID.contains("f" + index)) {
+            if (qa.getQuestionID().contains("f" + index)) {
                 Log.i("Person", "-------------" + qa);
                 TextView q = new TextView(this);
-                q.setText(qa.questionValue);
+                q.setText(qa.getQuestionValue());
                 q.setTextSize(15);
                 q.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
                 q.setPadding(0,20,0,0);
@@ -49,7 +49,7 @@ public class ListDataActivity extends BaseActivity {
 
 
                 TextView a = new TextView(this);
-                a.setText(qa.answerValue);
+                a.setText(qa.getAnswerValue());
                 a.setTextSize(10);
                 a.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
                 a.setPadding(0,0,0,20);

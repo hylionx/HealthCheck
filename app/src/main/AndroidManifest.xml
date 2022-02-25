@@ -16,7 +16,6 @@
             android:name=".WebsiteCheckupActivity"
             android:exported="false" />
         <activity
-            android:name=".BilanActivity"
             android:name=".ListDataActivity"
             android:exported="false" />
         <activity

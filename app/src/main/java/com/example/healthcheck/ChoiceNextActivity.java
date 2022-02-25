@@ -25,13 +25,7 @@ public class ChoiceNextActivity extends BaseActivity {
 
         getPersonByIntent();
 
-        buttonAppli.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intentLoadNewActivity = new Intent(ChoiceNextActivity.this, BilanActivity.class);
-                startActivity(intentLoadNewActivity);
-            }
-        });
+        buttonAppli.setOnClickListener(view -> gotoNextActivity(CheckUpAppActivity.class));
 
         buttonWebSite.setOnClickListener(view -> gotoNextActivity(WebsiteCheckupActivity.class));
     }
