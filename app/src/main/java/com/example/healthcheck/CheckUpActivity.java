@@ -15,8 +15,10 @@ public class CheckUpActivity extends BaseActivity {
     TextView name;
     ImageView image;
     int index;
+    int idq = 1;
     int bgcolor;
     int img;
+
     LinearLayout linearlayout;
     ConstraintLayout constraintlayoutListData;
 
@@ -40,13 +42,10 @@ public class CheckUpActivity extends BaseActivity {
 
         for (QuestionAnswer qa: person.getQuestionAnswers()) {
             if (qa.getQuestionID().contains("f" + index) ) {
-
-
                     Log.i("Person", "-------------" + qa);
                     TextView q = new TextView(this);
                     q.setText( qa.getQuestionValue());
                     q.setTextSize(15);
-                    q.setTextColor(getResources().getColor(R.color.white));
                     q.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
                     q.setPadding(0, 20, 0, 0);
 
@@ -54,7 +53,6 @@ public class CheckUpActivity extends BaseActivity {
                     TextView a = new TextView(this);
                     a.setText("-> " + qa.getAnswerValue());
                     a.setTextSize(10);
-                    a.setTextColor(getResources().getColor(R.color.white));
                     a.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
                     a.setPadding(0, 0, 0, 20);
 

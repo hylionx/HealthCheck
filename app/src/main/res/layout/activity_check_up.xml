@@ -51,24 +51,14 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/txtMyResults"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="20dp"
-                android:fontFamily="sans-serif-thin"
-                android:text="@string/txtmyresult"
-                android:textColor="@color/white"
-                android:textSize="24sp"
-                android:textStyle="bold" />
-
-            <TextView
                 android:id="@+id/txtCheckupH2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
+                android:background="#EFEDEE"
                 android:fontFamily="casual"
                 android:text="@string/txtCheckupH2"
+                android:textAlignment="center"
                 android:textColor="#434040"
                 android:textSize="20sp" />
 
@@ -78,11 +68,26 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="casual"
                 android:gravity="center"
-                android:padding="30dp"
+                android:paddingTop="30dp"
+                android:paddingBottom="30dp"
                 android:text="@string/txtCheckupH3"
                 android:textAlignment="gravity"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/txtMyResults"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:background="#EFEDEE"
+                android:fontFamily="casual"
+                android:paddingStart="50dp"
+                android:paddingEnd="50dp"
+                android:text="@string/txtmyresult"
+                android:textColor="#434040"
+                android:textSize="24sp" />
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
