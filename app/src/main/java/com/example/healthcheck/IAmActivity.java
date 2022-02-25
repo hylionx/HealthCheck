@@ -1,7 +1,10 @@
 package com.example.healthcheck;
 
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.util.Log;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -14,6 +17,9 @@ public class IAmActivity extends BaseActivity {
     RadioGroup rgAge;
 
     TextView txtAge;
+
+    EditText editHeight;
+    EditText editWeight;
 
     Button btnNextIAm;
     Button btnPrevIAm;
@@ -30,6 +36,9 @@ public class IAmActivity extends BaseActivity {
         rgSexe = findViewById(R.id.rgSexe);
         rgAge = findViewById(R.id.rgAge);
         txtAge = findViewById(R.id.txtAge);
+
+        editHeight = findViewById(R.id.editHeight);
+        editWeight = findViewById(R.id.editWeight);
 
         btnNextIAm = findViewById(R.id.btnNextIAm);
         btnPrevIAm = findViewById(R.id.btnPrevIAm);
@@ -62,6 +71,21 @@ public class IAmActivity extends BaseActivity {
         int idx2 = rgAge.indexOfChild(radioButton1);
         String value2 = radioButton1.getText().toString();
         person.addQA(questions[1], getString(R.string.txtMyProfilQ2), idx2, value2);
+
+        //check weight
+        String weight = editWeight.getText().toString();
+        if(TextUtils.isEmpty(weight)) {
+            return handleError("weight can't be empty", editWeight);
+        }
+        person.setName(weight);
+
+
+        //check height
+        String height = editHeight.getText().toString();
+        if(TextUtils.isEmpty(height)) {
+            return handleError("height can't be empty", editHeight);
+        }
+        person.setName(height);
 
 
         return true;
