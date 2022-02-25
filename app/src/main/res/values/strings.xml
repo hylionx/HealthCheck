@@ -94,6 +94,8 @@
     <string name="txtCheckupH3">The objective of this test is prevention and public awareness. It is therefore essentially about the daily way of life. This test is therefore not of a medical nature. It does not take into account the cases of people with cardiac pathologies or at risk for hereditary reasons in particular. For any medical questions, we recommend that you contact your doctor or cardiologist.</string>
     <string name="txtMadeBy">Made with ❤️ by Hylia and Jugurtha</string>
     <string name="txtopinon">Share your opinion</string>
+    <string name="txtWeight">Your weight</string>
+    <string name="txtHeight">Your height</string>
 
 
     <!-- Strings used for fragments for navigation

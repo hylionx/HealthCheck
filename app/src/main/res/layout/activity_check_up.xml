@@ -72,20 +72,20 @@
                 android:paddingBottom="30dp"
                 android:text="@string/txtCheckupH3"
                 android:textAlignment="gravity"
+                android:textColor="#494242"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
                 android:id="@+id/txtMyResults"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="20dp"
                 android:background="#EFEDEE"
                 android:fontFamily="casual"
-                android:paddingStart="50dp"
-                android:paddingEnd="50dp"
                 android:text="@string/txtmyresult"
+                android:textAlignment="center"
                 android:textColor="#434040"
                 android:textSize="24sp" />
 
