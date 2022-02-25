@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class CheckUpAppActivity extends BaseActivity {
+public class ListViewCheckUpActivity extends BaseActivity {
 
     ListView listView;
     String[] topicName;
@@ -20,7 +20,7 @@ public class CheckUpAppActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_check_up_app);
+        setContentView(R.layout.activity_list_view_check_up);
         getPersonByIntent();
 
         topicName = new String[]{
@@ -34,7 +34,7 @@ public class CheckUpAppActivity extends BaseActivity {
         };
 
         topicImage = new int[]{
-                R.drawable.coeur,
+                R.drawable.moncoeur,
                 R.drawable.suivicardiaque,
                 R.drawable.alimentation,
                 R.drawable.basket,
@@ -63,11 +63,12 @@ public class CheckUpAppActivity extends BaseActivity {
 
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent = new Intent(getApplicationContext(), ListDataActivity.class);
+                Intent intent = new Intent(getApplicationContext(), CheckUpActivity.class);
                 intent.putExtra("indexForm", (i+1));
                 intent.putExtra(EXTRA_PERSON, person);
                 intent.putExtra("name", topicName[i]);
                 intent.putExtra("image", topicImage[i]);
+                intent.putExtra("bgColors", bgColors[i]);
                 startActivity(intent);
             }
         });
@@ -98,13 +99,14 @@ public class CheckUpAppActivity extends BaseActivity {
 
         @Override
         public View getView(int i, View view, ViewGroup viewGroup) {
-           View view1 = getLayoutInflater().inflate(R.layout.activity_row_data, null);
+           View view1 = getLayoutInflater().inflate(R.layout.activity_list_view_check_up_format, null);
             TextView name = view1.findViewById(R.id.txtTitleTopic);
             ImageView image = view1.findViewById(R.id.images);
-            view1.setBackgroundColor(getResources().getColor(bgColors[i]));
 
+            view1.setBackgroundColor(getResources().getColor(bgColors[i]));
             name.setText(topicName[i]);
             image.setImageResource(topicImage[i]);
+
 
             return view1;
 

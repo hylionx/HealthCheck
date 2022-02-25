@@ -78,5 +78,8 @@
     <string name="rbBetween40and60">Entre 40 et 60 ans</string>
     <string name="rbOver60">"Plus de 60 ans "</string>
     <string name="titreEnd">" Où souhaitez-vous consulter votre bilan?"</string>
-    <string name="txtmyresult">Mes résultats</string>
+    <string name="txtmyresult">MES RESULTATS</string>
+    <string name="txtCheckupH2">"Votre Profil cardiovasculaire est calculé "</string>
+    <string name="txtCheckupH3">"Ce test a pour objectif la prévention et la sensibilisation du grand public. Il porte donc essentiellement sur le mode de vie au quotidien. Ce test n'a donc pas de caractère medical. Il ne prend pas en compte les cas de personnes atteintes de pathologies cardiaques ou à risque pour des raisons héréditaires notamment. Pour toute question d'ordre médical, nous vous recommandons de contacter votre médecin ou votre cardiologue.  "</string>
+    <string name="txtMadeBy">Créer avec  ❤️ par Hylia et Jugurtha</string>
 </resources>

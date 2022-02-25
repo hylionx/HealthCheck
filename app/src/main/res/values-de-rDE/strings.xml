@@ -78,5 +78,8 @@
     <string name="rbBetween40and60">Zwischen 40 und 60 Jahre alt</string>
     <string name="rbOver60">Über 60 Jahre alt</string>
     <string name="titreEnd">Wo möchten Sie Ihren Test einsehen?</string>
-    <string name="txtmyresult">Meine Ergebnisse</string>
+    <string name="txtmyresult">MEINE ERGEBNISSE</string>
+    <string name="txtCheckupH2">"Ihr Herz-Kreislauf-Profil wird berechnet "</string>
+    <string name="txtCheckupH3">"Das Ziel dieses Tests ist die Prävention und Sensibilisierung der Öffentlichkeit. Es geht also im Wesentlichen um die tägliche Lebensweise. Dieser Test ist daher nicht medizinischer Natur. Insbesondere Fälle von Personen mit Herzerkrankungen oder erblich bedingten Risiken werden nicht berücksichtigt. Bei medizinischen Fragen empfehlen wir Ihnen, sich an Ihren Arzt oder Kardiologen zu wenden.  "</string>
+    <string name="txtMadeBy">Erstellen Sie mit ❤️ von Hylia und Jugurtha</string>
 </resources>

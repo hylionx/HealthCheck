@@ -38,6 +38,7 @@ public class MyCardiacMonitoringActivity extends BaseActivity {
 
         getPersonByIntent();
         questions = new String[]{"f3_q1", "f3_q2", "f3_q3"};
+        btnNextMyCardiacMonitoring.performClick();
     }
 
 

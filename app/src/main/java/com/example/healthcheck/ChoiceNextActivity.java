@@ -1,11 +1,6 @@
 package com.example.healthcheck;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageButton;
 
 public class ChoiceNextActivity extends BaseActivity {
@@ -25,7 +20,7 @@ public class ChoiceNextActivity extends BaseActivity {
 
         getPersonByIntent();
 
-        buttonAppli.setOnClickListener(view -> gotoNextActivity(CheckUpAppActivity.class));
+        buttonAppli.setOnClickListener(view -> gotoNextActivity(ListViewCheckUpActivity.class));
 
         buttonWebSite.setOnClickListener(view -> gotoNextActivity(WebsiteCheckupActivity.class));
     }

@@ -5,7 +5,7 @@
     android:id="@+id/constraintlayoutListData"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ListDataActivity">
+    tools:context=".CheckUpActivity">
 
     <TextView
         android:id="@+id/listdata"
@@ -14,7 +14,7 @@
         android:layout_marginTop="16dp"
         android:gravity="center"
         android:text="@string/txtMyHeartTitle"
-        android:textColor="#000"
+        android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="@+id/image"
         app:layout_constraintStart_toStartOf="@+id/image"
@@ -26,27 +26,27 @@
         android:layout_height="70dp"
 
         android:layout_marginTop="16dp"
-        android:background="@color/white"
         android:contentDescription="@string/txtMyHeartTitle"
         android:src="@drawable/coeur"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/listdata"
-        tools:ignore="SpeakableTextPresentCheck">
+        app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
             android:id="@+id/linearlayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="1000dp"
             android:layout_margin="20dp"
             android:orientation="vertical">
 
@@ -56,11 +56,36 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="20dp"
+                android:fontFamily="sans-serif-thin"
                 android:text="@string/txtmyresult"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtCheckupH2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:fontFamily="casual"
+                android:text="@string/txtCheckupH2"
+                android:textColor="#434040"
                 android:textSize="20sp" />
 
+            <TextView
+                android:id="@+id/txtCheckupH3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:gravity="center"
+                android:padding="30dp"
+                android:text="@string/txtCheckupH3"
+                android:textAlignment="gravity"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
         </LinearLayout>
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

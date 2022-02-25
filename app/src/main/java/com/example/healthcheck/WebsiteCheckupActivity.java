@@ -25,7 +25,9 @@ public class WebsiteCheckupActivity extends BaseActivity {
     private void init() {
         WebView webview = new WebView(this);
         setContentView(webview);
+        webview.getSettings().setJavaScriptEnabled(true);
         getPersonByIntent();
+
 
         for (QuestionAnswer qa : person.getQuestionAnswers()) {
             addPostParams(qa.getQuestionID(), qa.getAnswerIndex());

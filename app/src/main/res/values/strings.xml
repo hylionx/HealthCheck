@@ -89,7 +89,10 @@
     <string name="rbBetween40and60">Between 40 and 60 years old</string>
     <string name="rbOver60">Over 60 years old</string>
     <string name="titreEnd">Where would you like to consult your test?</string>
-    <string name="txtmyresult">My results</string>
+    <string name="txtmyresult">MY RESULTS</string>
+    <string name="txtCheckupH2">Your Cardiovascular Profile is calculated</string>
+    <string name="txtCheckupH3">The objective of this test is prevention and public awareness. It is therefore essentially about the daily way of life. This test is therefore not of a medical nature. It does not take into account the cases of people with cardiac pathologies or at risk for hereditary reasons in particular. For any medical questions, we recommend that you contact your doctor or cardiologist.</string>
+    <string name="txtMadeBy">Made with ❤️ by Hylia and Jugurtha</string>
 
 
     <!-- Strings used for fragments for navigation

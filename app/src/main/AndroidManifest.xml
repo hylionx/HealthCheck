@@ -16,10 +16,10 @@
             android:name=".WebsiteCheckupActivity"
             android:exported="false" />
         <activity
-            android:name=".ListDataActivity"
+            android:name=".CheckUpActivity"
             android:exported="false" />
         <activity
-            android:name=".CheckUpAppActivity"
+            android:name=".ListViewCheckUpActivity"
             android:exported="false" />
         <activity
             android:name=".ChoiceNextActivity"

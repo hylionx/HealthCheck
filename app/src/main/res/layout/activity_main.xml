@@ -19,5 +19,16 @@
         android:contentDescription="@string/app_name"
         android:src="@drawable/federation" />
 
+    <TextView
+        android:id="@+id/txtMadeBy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="62dp"
+        android:layout_marginBottom="40dp"
+        android:fontFamily="casual"
+        android:text="@string/txtMadeBy" />
+
 
 </RelativeLayout>
