@@ -89,6 +89,7 @@
     <string name="rbBetween40and60">Between 40 and 60 years old</string>
     <string name="rbOver60">Over 60 years old</string>
     <string name="titreEnd">Where would you like to consult your test?</string>
+    <string name="txtmyresult">My results</string>
 
 
     <!-- Strings used for fragments for navigation

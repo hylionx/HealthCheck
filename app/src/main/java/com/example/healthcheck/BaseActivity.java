@@ -17,21 +17,11 @@ import java.net.URLEncoder;
 
 public abstract class BaseActivity extends AppCompatActivity {
 
-    private static final String EXTRA_PERSON = "com.example.extras.EXTRA_PERSON";
+    protected static final String EXTRA_PERSON = "com.example.extras.EXTRA_PERSON";
     protected String questions[];
     protected Person person;
     protected SharedPreferences sharedPref; // = PreferenceManager.getDefaultSharedPreferences(this);
-    protected String postParams = "";
 
-
-
-    protected void addPostParams(String question, int value) {
-        try {
-            postParams += (postParams.isEmpty() ? "" : "&") + question + "=" + URLEncoder.encode("" + value , "UTF-8");
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        }
-    }
 
     protected void getPersonByIntent() {
         Intent intent = getIntent();

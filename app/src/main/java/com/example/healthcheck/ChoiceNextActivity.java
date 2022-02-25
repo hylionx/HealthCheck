@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-public class ChoiceNextActivity extends AppCompatActivity {
+public class ChoiceNextActivity extends BaseActivity {
 
     ImageButton buttonAppli;
     ImageButton buttonWebSite;
@@ -18,15 +18,16 @@ public class ChoiceNextActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choice_next);
 
+        getPersonByIntent();
+
         buttonAppli = findViewById(R.id.buttonAppli);
         buttonWebSite = findViewById(R.id.buttonWebSite);
 
-        buttonAppli.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intentLoadNewActivity = new Intent(ChoiceNextActivity.this, BilanActivity.class);
-                startActivity(intentLoadNewActivity);
-            }
-        });
+        buttonAppli.setOnClickListener(view -> gotoNextActivity(CheckUpAppActivity.class));
+    }
+
+    @Override
+    protected boolean validateWidgetsAndAffectPersonDatas() {
+        return true;
     }
 }

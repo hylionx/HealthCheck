@@ -13,7 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HealthCheck">
         <activity
-            android:name=".BilanActivity"
+            android:name=".ListDataActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CheckUpAppActivity"
             android:exported="false" />
         <activity
             android:name=".ChoiceNextActivity"
