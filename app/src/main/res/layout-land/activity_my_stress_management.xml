@@ -11,10 +11,9 @@
         android:id="@+id/imgStressMngmt"
         android:layout_width="120dp"
         android:layout_height="70dp"
-        android:layout_marginTop="32dp"
         android:contentDescription="@string/myStressManagementTitle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/scrollView6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/stress"
@@ -24,7 +23,6 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
         android:text="@string/myStressManagementTitle"
         android:textColor="@color/white"
         android:textSize="24sp"
@@ -34,15 +32,14 @@
         tools:ignore="TextContrastCheck" />
 
     <ScrollView
-        android:layout_width="0dp"
+        android:id="@+id/scrollView6"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginTop="8dp"
         android:background="#E15778"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -52,9 +49,9 @@
                 android:id="@+id/txtMyStressManagementQ1"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
-                android:layout_marginStart="16dp"
+                android:layout_marginStart="100dp"
                 android:layout_marginTop="32dp"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="100dp"
                 android:text="@string/txtMyStressManagementQ1"
                 android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"

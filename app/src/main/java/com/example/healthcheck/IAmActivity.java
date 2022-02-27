@@ -54,7 +54,7 @@ public class IAmActivity extends BaseActivity {
         // check rgSexe
         int radioButtonID = rgSexe.getCheckedRadioButtonId();
         if (radioButtonID == -1) {
-            return handleError("You must choose your sexe");
+            return handleError((getString(R.string.txtErrorSexe)));
         }
         RadioButton radioButton = rgSexe.findViewById(radioButtonID);
         int idx = rgSexe.indexOfChild(radioButton);
@@ -65,7 +65,7 @@ public class IAmActivity extends BaseActivity {
         // check rgAge
         int radioButtonID2 = rgAge.getCheckedRadioButtonId();
         if(radioButtonID2 == -1){
-            return handleError("You must choose your age");
+            return handleError(getString(R.string.txtErrorAge));
         }
         RadioButton radioButton1 = rgAge.findViewById(radioButtonID2);
         int idx2 = rgAge.indexOfChild(radioButton1);
@@ -75,7 +75,7 @@ public class IAmActivity extends BaseActivity {
         //check weight
         String weight = editWeight.getText().toString();
         if(TextUtils.isEmpty(weight)) {
-            return handleError("weight can't be empty", editWeight);
+            return handleError((getString(R.string.txtErrorWeight)), editWeight);
         }
         //person.setName(weight); TODO dans les sharedPrefs
 
@@ -83,7 +83,7 @@ public class IAmActivity extends BaseActivity {
         //check height
         String height = editHeight.getText().toString();
         if(TextUtils.isEmpty(height)) {
-            return handleError("height can't be empty", editHeight);
+            return handleError((getString(R.string.txtErrorHeight)), editHeight);
         }
         //person.setName(height); TODO dans les sharedPrefs
 

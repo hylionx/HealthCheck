@@ -96,6 +96,12 @@
     <string name="txtopinon">Share your opinion</string>
     <string name="txtWeight">Your weight</string>
     <string name="txtHeight">Your height</string>
+    <string name="txtRequired">Required *</string>
+    <string name="txterror">This can\'t be empty</string>
+    <string name="txtErrorAge">You must choose your age</string>
+    <string name="txtErrorWeight">Weight can\'t be empty</string>
+    <string name="txtErrorHeight">Height can\'t be empty</string>
+    <string name="txtErrorSexe">You must choose your sexe</string>
 
 
     <!-- Strings used for fragments for navigation

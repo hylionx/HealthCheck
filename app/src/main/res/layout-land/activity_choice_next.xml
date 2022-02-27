@@ -10,50 +10,49 @@
 
     <ImageButton
         android:id="@+id/buttonAppli"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="100dp"
+        style="@android:style/Widget.Material.ImageButton"
+        android:layout_width="100dp"
+        android:layout_height="88dp"
         android:background="@color/cardview_shadow_end_color"
         android:contentDescription="@string/app_name"
         android:scaleType="fitXY"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titreEnd"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonWebSite"
+        app:layout_constraintEnd_toStartOf="@+id/buttonWebSite"
+        app:layout_constraintStart_toStartOf="@+id/titreEnd"
+        app:layout_constraintTop_toTopOf="@+id/buttonWebSite"
         app:srcCompat="@mipmap/ic_launcher"
         tools:ignore="SpeakableTextPresentCheck,DuplicateSpeakableTextCheck,ImageContrastCheck" />
 
     <ImageButton
         android:id="@+id/buttonWebSite"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="108dp"
+        style="@android:style/Widget.ImageButton"
+        android:layout_width="215dp"
+        android:layout_height="70dp"
+
+        android:adjustViewBounds="true"
         android:background="@color/cardview_shadow_end_color"
         android:contentDescription="@string/app_name"
         android:cropToPadding="false"
-        android:adjustViewBounds="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonAppli"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/titreEnd"
+        app:layout_constraintTop_toBottomOf="@+id/titreEnd"
+        app:layout_constraintVertical_bias="0.483"
         app:srcCompat="@drawable/federation"
-        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck"
-
-    />
+        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
 
     <TextView
         android:id="@+id/titreEnd"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="24dp"
         android:fontFamily="sans-serif-thin"
         android:text="@string/titreEnd"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

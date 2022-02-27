@@ -2,21 +2,16 @@ package com.example.healthcheck;
 
 import android.Manifest;
 import android.app.Activity;
-import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.text.TextUtils;
-import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.core.app.ActivityCompat;
 
-import com.example.healthcheck.Utils.Serializer;
-
-import java.util.Set;
-import java.util.TreeSet;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 
 public class NameActivity extends BaseActivity {
     // in Logcat : (MainApp)|(IAMApp)|(MyHeartApp)
@@ -29,7 +24,7 @@ public class NameActivity extends BaseActivity {
             Manifest.permission.WRITE_EXTERNAL_STORAGE
     };
 
-    private EditText editName;
+    private TextInputEditText txtiputeditName;
     private Button btnStart;
 
     @Override
@@ -44,7 +39,7 @@ public class NameActivity extends BaseActivity {
 
         person = new Person();
         btnStart = findViewById(R.id.btnStartTest);
-        editName = findViewById(R.id.etName);
+        txtiputeditName = findViewById(R.id.txtiputeditName);
 
         btnStart.setOnClickListener(view -> gotoNextActivity(IAmActivity.class));
         //Log.i(APP_TAG, "Name ----- reloadSavedPersons");
@@ -58,9 +53,9 @@ public class NameActivity extends BaseActivity {
     @Override
     protected boolean validateWidgetsAndAffectPersonData() {
         // check name
-        String name = editName.getText().toString();
+        String name = txtiputeditName.getText().toString();
         if(TextUtils.isEmpty(name)) {
-            return handleError("this can't be empty", editName);
+            return handleError(getString(R.string.txterror), txtiputeditName);
         }
         person.setName(name);
 

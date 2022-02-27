@@ -81,8 +81,14 @@
     <string name="txtmyresult">MES RESULTATS</string>
     <string name="txtCheckupH2">"Votre Profil cardiovasculaire est calculé "</string>
     <string name="txtCheckupH3">"Ce test a pour objectif la prévention et la sensibilisation du grand public. Il porte donc essentiellement sur le mode de vie au quotidien. Ce test n'a donc pas de caractère medical. Il ne prend pas en compte les cas de personnes atteintes de pathologies cardiaques ou à risque pour des raisons héréditaires notamment. Pour toute question d'ordre médical, nous vous recommandons de contacter votre médecin ou votre cardiologue.  "</string>
-    <string name="txtMadeBy">Créer avec  ❤️ par Hylia et Jugurtha</string>
+    <string name="txtMadeBy">Créé avec  ❤️ par Hylia et Jugurtha</string>
     <string name="txtopinon">Notez cette application</string>
     <string name="txtWeight">Votre poids</string>
     <string name="txtHeight">"Votre taille "</string>
+    <string name="txtRequired">Obligatoire *</string>
+    <string name="txterror">Veuillez remplir tous les champs</string>
+    <string name="txtErrorAge">Vous devez choisir votre age</string>
+    <string name="txtErrorWeight">Saisir poids</string>
+    <string name="txtErrorHeight">Saisir taille</string>
+    <string name="txtErrorSexe">Saisir le sexe</string>
 </resources>
