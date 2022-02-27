@@ -69,7 +69,7 @@ public class CheckUpActivity extends BaseActivity {
     }
 
     @Override
-    protected boolean validateWidgetsAndAffectPersonDatas() {
+    protected boolean validateWidgetsAndAffectPersonData() {
 
 
 

@@ -45,7 +45,7 @@ public class MyHeartActivity extends BaseActivity {
 
     }
     @Override
-    protected boolean validateWidgetsAndAffectPersonDatas() {
+    protected boolean validateWidgetsAndAffectPersonData() {
 
         int posq1 = spinnerMyHeartRepQ1.getSelectedItemPosition();
         int posq2 = spinnerMyHeartRepQ2.getSelectedItemPosition();

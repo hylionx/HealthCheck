@@ -44,7 +44,7 @@ public class MyCardiacMonitoringActivity extends BaseActivity {
 
 
     @Override
-    protected boolean validateWidgetsAndAffectPersonDatas() {
+    protected boolean validateWidgetsAndAffectPersonData() {
 
 
         if(checkBoxCardiacMonitoringQ1.isChecked()){

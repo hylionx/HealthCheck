@@ -11,10 +11,14 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+
 public class Person implements Parcelable, Serializable {
 
-    // MAIN
+
     private String name;
+    /**
+     * A list of QuestionAnswer that will be updated in each activity.
+     */
     private List<QuestionAnswer> questionAnswers = new ArrayList<>();
 
     public Person() {

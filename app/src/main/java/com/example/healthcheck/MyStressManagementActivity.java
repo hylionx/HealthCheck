@@ -40,7 +40,7 @@ public class MyStressManagementActivity extends BaseActivity {
     }
 
     @Override
-    protected boolean validateWidgetsAndAffectPersonDatas() {
+    protected boolean validateWidgetsAndAffectPersonData() {
         int posq1 = spinnerMyStressManagementRepQ1.getSelectedItemPosition();
         int posq2 = spinnerMyStressManagementRepQ2.getSelectedItemPosition();
 

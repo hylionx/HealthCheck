@@ -21,25 +21,35 @@ import java.net.URLEncoder;
 import java.util.Set;
 import java.util.TreeSet;
 
+/**
+ * Represents the parent activity of all our activities.
+ */
 public abstract class BaseActivity extends AppCompatActivity {
 
     public static final String SHARED_PREFS = "sharedPrefs";
     public static final String SAVED_PERSONS = "savedPersons";
+    public static final String EXTRA_PERSON = "com.example.extras.EXTRA_PERSON";
 
-    protected static final String EXTRA_PERSON = "com.example.extras.EXTRA_PERSON";
     protected String questions[];
     protected Person person;
     Set<String> savedPersons;
 
-
+    /**
+     * Get the person object from intent and affect it to the person attribute.
+     */
     protected void getPersonByIntent() {
         Intent intent = getIntent();
         person = intent.getParcelableExtra(EXTRA_PERSON);
         //Log.d("Person", "Received " + person);
     }
 
+    /**
+     * Start the next activity after validation all widgets
+     * and putting the person object by intent.
+     * @param cls The class of the next activity.
+     */
     protected void gotoNextActivity(Class<?> cls) {
-        if (validateWidgetsAndAffectPersonDatas()) {
+        if (validateWidgetsAndAffectPersonData()) {
 
             Intent intent = new Intent(this, cls );
             intent.putExtra(EXTRA_PERSON, (Parcelable) person);
@@ -47,8 +57,12 @@ public abstract class BaseActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Finish the current activity and get back to the previous one
+     * after validation all widgets and putting the person object by intent.
+     */
     protected void gotoPreviousActivity(){
-        if (validateWidgetsAndAffectPersonDatas()) {
+        if (validateWidgetsAndAffectPersonData()) {
             finish();
         }
     }
@@ -70,6 +84,12 @@ public abstract class BaseActivity extends AppCompatActivity {
         // sinon il n'y a pas de mécanisme de vibration
     }
 
+    /**
+     * Vibrate and show an error message on the tip of the a TextView or with a Toast.
+     * @param msg The error message.
+     * @param textView a TextView on which to display the tip ( if null, show on Toast).
+     * @return Always followed by false.
+     */
     protected boolean handleError(String msg, TextView textView){
         vibrate(200);
         if (textView != null) {
@@ -83,21 +103,22 @@ public abstract class BaseActivity extends AppCompatActivity {
     }
 
     protected boolean handleError(String msg){
-
         return handleError(msg, null);
     }
 
-    protected boolean validateWidgetsAndAffectPersonDatas() {
+    /**
+     * Verify if there's no error with all the widgets of the activity
+     * and affect the new data to the person object.
+     * @return false if an error found (true by default).
+     */
+    protected boolean validateWidgetsAndAffectPersonData() {
         return true;
     }
 
-
-    public void reloadSavedPersons() {
-        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
-        savedPersons = new TreeSet<String>(sharedPref.getStringSet(SAVED_PERSONS, new TreeSet<String>()));
-        Log.i("Person", "reloadSavedPersons new size = " + savedPersons.size());
-    }
-
+    /**
+     * Store the person object in file system with serialization
+     * and register the person name in the shared preferences.
+     */
     public void savePerson() {
         Serializer.serialize(person, this);
         savedPersons.add(person.getName());
@@ -105,6 +126,19 @@ public abstract class BaseActivity extends AppCompatActivity {
         sharedPref.edit().putStringSet(SAVED_PERSONS, savedPersons).commit();
     }
 
+    /**
+     * Retrieve the saved StringSet of person's names.
+     */
+    public void reloadSavedPersons() {
+        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
+        savedPersons = new TreeSet<String>(sharedPref.getStringSet(SAVED_PERSONS, new TreeSet<String>()));
+        Log.i("Person", "reloadSavedPersons new size = " + savedPersons.size());
+    }
+
+
+    /**
+     * Log all registered person's names in the shared preferences.
+     */
     public void displaySavedPersons() {
         reloadSavedPersons();
         Log.d("Person","displaySavedPersons size = "+savedPersons.size()+": ");

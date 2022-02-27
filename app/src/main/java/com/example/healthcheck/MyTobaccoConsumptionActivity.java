@@ -38,7 +38,7 @@ public class MyTobaccoConsumptionActivity extends BaseActivity {
     }
 
     @Override
-    protected boolean validateWidgetsAndAffectPersonDatas() {
+    protected boolean validateWidgetsAndAffectPersonData() {
         if(checkBoxMyTobaccoConsumptionQ1.isChecked()){
             person.addQA(questions[0], getString(R.string.txtMyTobaccoConsumptionQ1), 1, getString(R.string.txt_Yes));
         } else {

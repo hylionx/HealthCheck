@@ -50,7 +50,7 @@ public class IAmActivity extends BaseActivity {
     }
 
     @Override
-    protected boolean validateWidgetsAndAffectPersonDatas() {
+    protected boolean validateWidgetsAndAffectPersonData() {
         // check rgSexe
         int radioButtonID = rgSexe.getCheckedRadioButtonId();
         if (radioButtonID == -1) {

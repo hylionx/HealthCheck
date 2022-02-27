@@ -39,7 +39,7 @@ public class MyHygieneOfLifeActivity extends BaseActivity {
     }
 
     @Override
-    protected boolean validateWidgetsAndAffectPersonDatas() {
+    protected boolean validateWidgetsAndAffectPersonData() {
 
 
         if(switchMyHygieneOfLifeQ1.isChecked()){

@@ -44,9 +44,4 @@ public class WebsiteCheckupActivity extends BaseActivity {
             e.printStackTrace();
         }
     }
-
-    @Override
-    protected boolean validateWidgetsAndAffectPersonDatas() {
-        return true;
-    }
 }

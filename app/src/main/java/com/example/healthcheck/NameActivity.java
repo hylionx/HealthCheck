@@ -56,7 +56,7 @@ public class NameActivity extends BaseActivity {
     }
 
     @Override
-    protected boolean validateWidgetsAndAffectPersonDatas() {
+    protected boolean validateWidgetsAndAffectPersonData() {
         // check name
         String name = editName.getText().toString();
         if(TextUtils.isEmpty(name)) {

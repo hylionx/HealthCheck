@@ -62,10 +62,6 @@ public class ListViewSavedPersonsActivity extends BaseActivity {
             }
         });
     }
-    @Override
-    protected boolean validateWidgetsAndAffectPersonDatas() {
-        return true;
-    }
 
 
     class CustomAdaptor extends BaseAdapter{

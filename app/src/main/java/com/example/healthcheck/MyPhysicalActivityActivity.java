@@ -39,7 +39,7 @@ public class MyPhysicalActivityActivity extends BaseActivity{
     }
 
     @Override
-    protected boolean validateWidgetsAndAffectPersonDatas() {
+    protected boolean validateWidgetsAndAffectPersonData() {
 
         if(checkBoxMyPhysicalActivityQ1.isChecked()){
             person.addQA(questions[0], getString(R.string.txtMyPhysicalActivityQ1), 1, getString(R.string.txt_Yes));
