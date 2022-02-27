@@ -11,9 +11,9 @@
         android:id="@+id/myphysicalActivityImg"
         android:layout_width="120dp"
         android:layout_height="70dp"
-        android:layout_marginTop="32dp"
         android:contentDescription="@string/myPhysicalActivityTitle"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/scrollView2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/basket"
@@ -23,7 +23,6 @@
         android:id="@+id/myPhysicalActivityTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
         android:text="@string/myPhysicalActivityTitle"
         android:textColor="@color/white"
         android:textSize="24sp"
@@ -34,16 +33,13 @@
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginTop="16dp"
         android:background="#EB605A"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/myPhysicalActivityTitle"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="SpeakableTextPresentCheck">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -52,11 +48,11 @@
 
             <CheckBox
                 android:id="@+id/checkBoxMyPhysicalActivityQ1"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
+                android:layout_marginStart="60dp"
                 android:layout_marginTop="32dp"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="60dp"
                 android:buttonTint="@color/white"
                 android:text="@string/txtMyPhysicalActivityQ1"
                 android:textColor="@color/white"
@@ -167,7 +163,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="50dp"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="32dp"
                 android:layout_marginBottom="32dp"
                 android:text="@string/btnNext"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -179,7 +175,7 @@
                 android:id="@+id/btnPrevMyPhysicalActivity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
+                android:layout_marginStart="32dp"
                 android:text="@string/btnPrec"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/btnNextMyPhysicalActivity" />

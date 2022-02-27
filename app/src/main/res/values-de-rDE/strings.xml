@@ -85,4 +85,10 @@
     <string name="txtopinon">Teile deine Meinung</string>
     <string name="txtWeight">Dein Gewicht</string>
     <string name="txtHeight">Deine Größe</string>
+    <string name="txtRequired">Verpflichtend *</string>
+    <string name="txterror">Dies darf nicht leer sein</string>
+    <string name="txtErrorAge">Sie müssen Ihr Alter auswählen</string>
+    <string name="txtErrorWeight">Gewicht eingeben</string>
+    <string name="txtErrorHeight">Größe eingeben</string>
+    <string name="txtErrorSexe">Sex eingeben</string>
 </resources>

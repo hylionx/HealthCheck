@@ -8,35 +8,6 @@
     tools:context=".NameActivity">
 
     <TextView
-        android:id="@+id/tvName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:labelFor="@id/etName"
-        android:text="@string/txtMainYourName"
-        android:textColor="#F5F5F5"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/tvMainSubtitle"
-        app:layout_constraintStart_toStartOf="@+id/tvMainSubtitle"
-        app:layout_constraintTop_toBottomOf="@+id/tvMainSubtitle" />
-
-    <EditText
-        android:id="@+id/etName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:autofillHints=" "
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:textColor="#F3EFEF"
-        app:layout_constraintEnd_toEndOf="@+id/tvName"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/tvName"
-        app:layout_constraintTop_toBottomOf="@+id/tvName"
-        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
-
-    <TextView
         android:id="@+id/tvMainTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -73,5 +44,29 @@
         app:layout_constraintStart_toStartOf="@+id/tvMainTitle"
         app:layout_constraintTop_toBottomOf="@+id/tvMainTitle"
         tools:ignore="TextContrastCheck" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/txtMainYourName"
+        app:layout_constraintBottom_toTopOf="@+id/btnStartTest"
+        app:layout_constraintEnd_toEndOf="@+id/tvMainSubtitle"
+        app:layout_constraintStart_toStartOf="@+id/tvMainSubtitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvMainSubtitle"
+        app:helperText="@string/txtRequired"
+        app:counterMaxLength="20"
+        app:counterEnabled="true"
+        app:endIconMode="clear_text"
+        app:helperTextTextColor="@color/design_default_color_error"
+        app:startIconDrawable="@drawable/ic_person">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtiputeditName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:maxLength="20"
+            tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

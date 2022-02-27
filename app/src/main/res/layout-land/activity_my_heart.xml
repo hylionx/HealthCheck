@@ -8,43 +8,38 @@
     android:visibility="visible"
     tools:context=".MyHeartActivity">
 
+    <ImageView
+        android:id="@+id/myHeartImg"
+        android:layout_width="120dp"
+        android:layout_height="70dp"
+        android:contentDescription="@string/txtMyHeartTitle"
+        android:src="@drawable/moncoeur"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/scrollView3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ImageContrastCheck" />
+
     <TextView
         android:id="@+id/txtMyHeart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
         android:text="@string/txtMyHeartTitle"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/myHeartImg"
         app:layout_constraintStart_toStartOf="@+id/myHeartImg"
-        app:layout_constraintTop_toBottomOf="@+id/myHeartImg" />
+        app:layout_constraintTop_toBottomOf="@+id/myHeartImg"
+        tools:ignore="TextContrastCheck" />
 
-    <ImageView
-        android:id="@+id/myHeartImg"
-        android:layout_width="120dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="32dp"
-        android:contentDescription="@string/txtMyHeartTitle"
-        android:src="@drawable/moncoeur"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ScrollView
-        android:layout_width="0dp"
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginTop="8dp"
         android:background="#E8426E"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtMyHeart"
-        app:layout_constraintVertical_bias="1.0"
-        tools:ignore="SpeakableTextPresentCheck">
+        app:layout_constraintEnd_toEndOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -55,7 +50,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="36dp"
                 android:layout_marginEnd="16dp"
                 android:contentDescription="@string/txtMyHeartQ1"
                 android:text="@string/txtMyHeartQ1"
@@ -69,12 +64,14 @@
                 android:id="@+id/spinnerMyHeartRepQ1"
                 android:layout_width="337dp"
                 android:layout_height="48dp"
-                android:layout_marginTop="24dp"
-                android:background="#80FFFFFF"
+                android:layout_marginStart="64dp"
 
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="64dp"
+                android:background="#80FFFFFF"
                 android:entries="@array/myHeart_answer_question_1_2_3_4"
-                app:layout_constraintEnd_toEndOf="@+id/txtMyHeartQ1"
-                app:layout_constraintStart_toStartOf="@+id/txtMyHeartQ1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txtMyHeartQ1"
                 tools:ignore="SpeakableTextPresentCheck,DuplicateSpeakableTextCheck" />
 
@@ -157,8 +154,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginBottom="16dp"
+                android:layout_marginEnd="60dp"
+                android:layout_marginBottom="32dp"
                 android:text="@string/btnNext"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -168,7 +165,7 @@
                 android:id="@+id/btnPrevMyHeart"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
+                android:layout_marginStart="60dp"
                 android:text="@string/btnPrec"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/btnNextMyHeart"
@@ -178,10 +175,11 @@
                 android:id="@+id/txtMyHeartQ5"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="8dp"
                 android:text="@string/txtMyHeartQ5"
                 android:textColor="#F1E8E8"
                 app:layout_constraintEnd_toEndOf="@+id/spinnerMyHeartRepQ4"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/spinnerMyHeartRepQ4"
                 app:layout_constraintTop_toBottomOf="@+id/spinnerMyHeartRepQ4"
                 tools:ignore="TextContrastCheck" />
@@ -222,6 +220,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/txtMyHeartQ6" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

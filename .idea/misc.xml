@@ -5,8 +5,18 @@
       <map>
         <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/drawable-anydpi/ic_action_name.xml" value="0.37864583333333335" />
         <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/font/amarante.xml" value="0.2791666666666667" />
+        <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout-land/activity_choice_next.xml" value="0.30687830687830686" />
+        <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout-land/activity_i_am.xml" value="0.33" />
         <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout-land/activity_je_suis.xml" value="0.21164021164021163" />
         <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout-land/activity_main.xml" value="0.21164021164021163" />
+        <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout-land/activity_my_cardiac_monitoring.xml" value="0.29504027130139887" />
+        <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout-land/activity_my_diet.xml" value="0.30687830687830686" />
+        <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout-land/activity_my_heart.xml" value="0.30687830687830686" />
+        <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout-land/activity_my_hygiene_of_life.xml" value="0.25" />
+        <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout-land/activity_my_physical_activity.xml" value="0.30687830687830686" />
+        <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout-land/activity_my_stress_management.xml" value="0.30687830687830686" />
+        <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout-land/activity_my_tobacco_consumption.xml" value="0.30687830687830686" />
+        <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout-land/activity_name.xml" value="0.30687830687830686" />
         <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout/activity_app_rated.xml" value="0.209375" />
         <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout/activity_bilan.xml" value="0.33" />
         <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout/activity_check_up.xml" value="0.33" />
@@ -24,14 +34,15 @@
         <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout/activity_mon_coeur.xml" value="0.25" />
         <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout/activity_mon_coeur2.xml" value="0.25" />
         <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout/activity_mon_suivi_cardiaque.xml" value="0.12708333333333333" />
-        <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout/activity_my_cardiac_monitoring.xml" value="0.33" />
+        <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout/activity_my_cardiac_monitoring.xml" value="0.2744479495268139" />
         <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout/activity_my_diet.xml" value="0.33" />
         <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout/activity_my_heart.xml" value="0.33" />
+        <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout/activity_my_hygiene_of_life.xml" value="0.3220108695652174" />
         <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout/activity_my_hygiene_of_lige.xml" value="0.3625" />
         <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout/activity_my_physical_activity.xml" value="0.3625" />
         <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout/activity_my_stress_management.xml" value="0.33" />
         <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout/activity_my_tobacco_consumption.xml" value="0.3625" />
-        <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout/activity_name.xml" value="0.2328125" />
+        <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout/activity_name.xml" value="0.33" />
         <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout/activity_row_data.xml" value="0.3625" />
         <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout/content_mon_coeur.xml" value="0.25" />
         <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout/customlayout.xml" value="0.33" />
@@ -62,7 +73,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.2453125" />
+        <option name="scale" value="0.33" />
       </ProjectState>
     </option>
   </component>
