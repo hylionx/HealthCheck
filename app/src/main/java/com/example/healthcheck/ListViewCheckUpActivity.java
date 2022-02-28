@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RatingBar;
@@ -25,7 +26,7 @@ public class ListViewCheckUpActivity extends BaseActivity {
     private AlertDialog.Builder dialogBuilder;
     private AlertDialog dialog;
     private RatingBar ratingBar;
-    Button btnPopup;
+    private Button btnPopup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

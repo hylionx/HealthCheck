@@ -2,11 +2,19 @@ package com.example.healthcheck;
 
 import android.Manifest;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.os.Parcelable;
+import android.provider.ContactsContract;
 import android.text.TextUtils;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.GridView;
+import android.widget.ImageButton;
 
 import androidx.core.app.ActivityCompat;
 
@@ -26,11 +34,18 @@ public class NameActivity extends BaseActivity {
 
     private TextInputEditText txtiputeditName;
     private Button btnStart;
+    private AlertDialog.Builder dialogBuilder;
+    private AlertDialog dialog;
+    private ImageButton imgButtonAvatar;
+    private Button btnAvatarPopup;
+    private GridView gridViewAvatar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_name);
+        btnAvatarPopup = findViewById(R.id.btnAvatarPopup);
 
         init();
     }
@@ -40,6 +55,16 @@ public class NameActivity extends BaseActivity {
         person = new Person();
         btnStart = findViewById(R.id.btnStartTest);
         txtiputeditName = findViewById(R.id.txtiputeditName);
+        imgButtonAvatar = findViewById(R.id.imgButtonAvatar);
+
+
+        //ouvre la popup lorqu'on clique sur l'image
+        imgButtonAvatar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                createDialog();
+            }
+        });
 
         btnStart.setOnClickListener(view -> gotoNextActivity(IAmActivity.class));
         //Log.i(APP_TAG, "Name ----- reloadSavedPersons");
@@ -74,6 +99,39 @@ public class NameActivity extends BaseActivity {
                     REQUEST_EXTERNAL_STORAGE
             );
         }
+    }
+
+    public void createDialog(){
+        //pop up dialogue
+
+        dialogBuilder = new AlertDialog.Builder(this);
+        final View popUpAvatar = getLayoutInflater().inflate(R.layout.avatar_popup,null);
+        btnAvatarPopup = popUpAvatar.findViewById(R.id.btnAvatarPopup);
+
+        gridViewAvatar = popUpAvatar.findViewById(R.id.gridViewAvatar);
+        //partie de la grid
+        gridViewAvatar.setAdapter(new ImageAdapter(this));
+        gridViewAvatar.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+               // ImageAdapter imageAdapter = new ImageAdapter(NameActivity.this);
+
+            }
+        });
+
+
+        dialogBuilder.setView(popUpAvatar);
+        dialog = dialogBuilder.create();
+        dialog.show();
+
+
+        btnAvatarPopup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
     }
 
 
