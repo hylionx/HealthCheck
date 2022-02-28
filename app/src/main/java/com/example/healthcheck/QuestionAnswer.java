@@ -12,6 +12,9 @@ public class QuestionAnswer implements Parcelable, Serializable {
     private Integer answerIndex;
     private String answerValue;
 
+    private String cardiologistAdvice = "";
+
+
 
     public QuestionAnswer(String questionID, String questionValue, Integer answerIndex, String answerValue) {
         this.questionID = questionID;
@@ -24,25 +27,27 @@ public class QuestionAnswer implements Parcelable, Serializable {
     protected QuestionAnswer(Parcel in) {
         questionID = in.readString();
         questionValue = in.readString();
-        answerValue = in.readString();
         if (in.readByte() == 0) {
             answerIndex = null;
         } else {
             answerIndex = in.readInt();
         }
+        answerValue = in.readString();
+        cardiologistAdvice = in.readString();
     }
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(questionID);
         dest.writeString(questionValue);
-        dest.writeString(answerValue);
         if (answerIndex == null) {
             dest.writeByte((byte) 0);
         } else {
             dest.writeByte((byte) 1);
             dest.writeInt(answerIndex);
         }
+        dest.writeString(answerValue);
+        dest.writeString(cardiologistAdvice);
     }
 
     @Override
@@ -86,5 +91,13 @@ public class QuestionAnswer implements Parcelable, Serializable {
 
     public String getAnswerValue() {
         return answerValue;
+    }
+
+    public String getCardiologistAdvice() {
+        return cardiologistAdvice;
+    }
+
+    public void setCardiologistAdvice(String cardiologistAdvice) {
+        this.cardiologistAdvice = cardiologistAdvice;
     }
 }

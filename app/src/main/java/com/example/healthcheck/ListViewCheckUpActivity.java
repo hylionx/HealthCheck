@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -16,16 +17,31 @@ import android.widget.TextView;
 
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import java.util.HashMap;
+import java.util.Map;
+
 public class ListViewCheckUpActivity extends BaseActivity {
 
     private ListView listView;
     private String[] topicName;
-    private int [] topicImage;
-    private int [] bgColors;
+    private int[] topicImage;
+    private int[] bgColors;
     private AlertDialog.Builder dialogBuilder;
     private AlertDialog dialog;
     private RatingBar ratingBar;
     Button btnPopup;
+    String URL = "https://www.fedecardio.org/je-me-teste/test-3-minutes/";
+    protected String postParams = "";
+    Document document = null;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,12 +88,12 @@ public class ListViewCheckUpActivity extends BaseActivity {
         CustomAdapter customAdapter = new CustomAdapter();
         listView.setAdapter(customAdapter);
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent = new Intent(getApplicationContext(), CheckUpActivity.class);
-                intent.putExtra("indexForm", (i+1));
+                intent.putExtra("indexForm", (i + 1));
                 intent.putExtra(EXTRA_PERSON, (Parcelable) person);
                 intent.putExtra("name", topicName[i]);
                 intent.putExtra("image", topicImage[i]);
@@ -87,15 +103,14 @@ public class ListViewCheckUpActivity extends BaseActivity {
         });
 
 
-
     }
 
 
-    public void createDialog(){
+    public void createDialog() {
         //pop up dialogue
 
         dialogBuilder = new AlertDialog.Builder(this);
-        final View popUpRater = getLayoutInflater().inflate(R.layout.popup,null);
+        final View popUpRater = getLayoutInflater().inflate(R.layout.popup, null);
         btnPopup = popUpRater.findViewById(R.id.btnPopup);
 
         ratingBar = popUpRater.findViewById(R.id.ratingBar);
@@ -109,6 +124,12 @@ public class ListViewCheckUpActivity extends BaseActivity {
                 dialog.dismiss();
             }
         });
+
+        try {
+            setCariologTips();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     private class CustomAdapter extends BaseAdapter {
@@ -144,4 +165,48 @@ public class ListViewCheckUpActivity extends BaseActivity {
 
         }
     }
+
+    protected void addPostParams(String question, Integer value) {
+        try {
+            postParams += (postParams.isEmpty() ? "" : "&") + question + "=" + URLEncoder.encode("" + value, "UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+    }
+
+    protected void setCariologTips() throws IOException {
+
+        Map<String, String> data = new HashMap<>();
+        for (QuestionAnswer qa : person.getQuestionAnswers()) {
+            data.put(qa.getQuestionID(), qa.getAnswerIndex().toString());
+        }
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    document = Jsoup.connect(URL).data(data).post();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+        thread.start();
+        try {
+            thread.join();
+            Elements advElements = document.select("p.question-conseil");
+            int qaIndex = 2;
+            for (Element adv : advElements) {
+                QuestionAnswer qa = person.getQuestionAnswers().get(qaIndex++);
+                qa.setCardiologistAdvice(adv.text());
+                Log.i("Person", "advElements: " + qa.getCardiologistAdvice());
+            }
+            //ResultActivity.this.results.add(res);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+
+    }
+
 }
