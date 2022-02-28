@@ -20,6 +20,8 @@ public class MyHygieneOfLifeActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_hygiene_of_life);
 
+        questions = new String[]{"f8_q1", "f8_q2", "f8_q3", "f8_q4"};
+        formNumber = 8;
         btnPrevMyHygieneOfLife = findViewById(R.id.btnPrevMyHygieneOfLife);
         btnValidate = findViewById(R.id.btnValidate);
 
@@ -33,13 +35,12 @@ public class MyHygieneOfLifeActivity extends BaseActivity {
         btnValidate.setOnClickListener(view -> gotoNextActivity(ChoiceNextActivity.class));
 
 
-        questions = new String[]{"f8_q1", "f8_q2", "f8_q3", "f8_q4"};
         //btnValidate.performClick();
 
     }
 
     @Override
-    protected boolean validateWidgetsAndAffectPersonDatas() {
+    protected boolean validateWidgetsAndAffectPersonData() {
 
 
         if(switchMyHygieneOfLifeQ1.isChecked()){

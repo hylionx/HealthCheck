@@ -33,6 +33,8 @@ public class IAmActivity extends BaseActivity {
     }
 
     private void init() {
+        questions = new String[]{"f1_q1", "f1_q2"};
+        formNumber = 1;
         rgSexe = findViewById(R.id.rgSexe);
         rgAge = findViewById(R.id.rgAge);
         txtAge = findViewById(R.id.txtAge);
@@ -46,11 +48,11 @@ public class IAmActivity extends BaseActivity {
         btnPrevIAm.setOnClickListener(view -> gotoPreviousActivity());
 
         getPersonByIntent();
-        questions = new String[]{"f1_q1", "f1_q2"};
+
     }
 
     @Override
-    protected boolean validateWidgetsAndAffectPersonDatas() {
+    protected boolean validateWidgetsAndAffectPersonData() {
         // check rgSexe
         int radioButtonID = rgSexe.getCheckedRadioButtonId();
         if (radioButtonID == -1) {

@@ -39,9 +39,4 @@ public class ChoiceNextActivity extends BaseActivity {
         savePerson();
     }
 
-    @Override
-    protected boolean validateWidgetsAndAffectPersonDatas() {
-        return true;
-    }
-
 }

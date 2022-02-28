@@ -23,7 +23,8 @@ public class MyDietActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_diet);
 
-
+        questions = new String[]{"f4_q1", "f4_q2", "f4_q3", "f4_q4", "f4_q5", "f4_q6"};
+        formNumber = 4;
         btnPrevMyDiet = findViewById(R.id.btnPrevMyDiet);
         btnNextMyDiet = findViewById(R.id.btnNextMyDiet);
         checkBoxMyDietQ1 = findViewById(R.id.checkBoxMyDietQ1);
@@ -39,12 +40,11 @@ public class MyDietActivity extends BaseActivity {
         btnNextMyDiet.setOnClickListener(view -> gotoNextActivity(MyPhysicalActivityActivity.class));
 
         getPersonByIntent();
-        questions = new String[]{"f4_q1", "f4_q2", "f4_q3", "f4_q4", "f4_q5", "f4_q6"};
         //btnNextMyDiet.performClick();
     }
 
     @Override
-    protected boolean validateWidgetsAndAffectPersonDatas() {
+    protected boolean validateWidgetsAndAffectPersonData() {
 
         if(checkBoxMyDietQ1.isChecked()){
             person.addQA(questions[0], getString(R.string.txtMyDietQ1), 0, getString(R.string.txt_Yes));

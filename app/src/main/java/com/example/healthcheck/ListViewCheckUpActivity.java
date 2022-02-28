@@ -111,12 +111,6 @@ public class ListViewCheckUpActivity extends BaseActivity {
         });
     }
 
-
-    @Override
-    protected boolean validateWidgetsAndAffectPersonDatas() {
-        return true;
-    }
-
     private class CustomAdapter extends BaseAdapter {
 
 

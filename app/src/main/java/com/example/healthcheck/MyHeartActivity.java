@@ -26,6 +26,8 @@ public class MyHeartActivity extends BaseActivity {
 
 
     private void init(){
+        questions = new String[]{"f2_q1", "f2_q2", "f2_q3", "f2_q4", "f2_q5", "f2_q6"};
+        formNumber = 2;
         btnPrevMyHeart = findViewById(R.id.btnPrevMyHeart);
         btnNextMyHeart = findViewById(R.id.btnNextMyHeart);
         spinnerMyHeartRepQ1 = findViewById(R.id.spinnerMyHeartRepQ1);
@@ -40,12 +42,11 @@ public class MyHeartActivity extends BaseActivity {
 
 
         getPersonByIntent();
-        questions = new String[]{"f2_q1", "f2_q2", "f2_q3", "f2_q4", "f2_q5", "f2_q6"};
         //btnNextMyHeart.performClick();
 
     }
     @Override
-    protected boolean validateWidgetsAndAffectPersonDatas() {
+    protected boolean validateWidgetsAndAffectPersonData() {
 
         int posq1 = spinnerMyHeartRepQ1.getSelectedItemPosition();
         int posq2 = spinnerMyHeartRepQ2.getSelectedItemPosition();

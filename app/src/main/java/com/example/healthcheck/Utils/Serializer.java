@@ -11,8 +11,17 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
+/**
+ * Class that Serialize and deserialize a person object
+ * and store it into a file with the same name as the person.
+ */
 public abstract class Serializer {
 
+    /**
+     * Serialization of a person object.
+     * @param person The object to serialize.
+     * @param context
+     */
     public static void serialize(Person person, Context context) {
         FileOutputStream file;
         ObjectOutputStream oos;
@@ -31,6 +40,12 @@ public abstract class Serializer {
     }
 
 
+    /**
+     * Deserialization of a person object from file.
+     * @param personName The name of the file.
+     * @param context
+     * @return A Person object or null if file not found.
+     */
     public static Person deSerialize(String personName, Context context) {
         FileInputStream file;
         ObjectInputStream ois;
