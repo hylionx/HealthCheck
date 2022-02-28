@@ -42,9 +42,9 @@ public class MyPhysicalActivityActivity extends BaseActivity{
     protected boolean validateWidgetsAndAffectPersonDatas() {
 
         if(checkBoxMyPhysicalActivityQ1.isChecked()){
-            person.addQA(questions[0], getString(R.string.txtMyPhysicalActivityQ1), 1, getString(R.string.txt_Yes));
+            person.addQA(questions[0], getString(R.string.txtMyPhysicalActivityQ1), 0, getString(R.string.txt_Yes));
         } else {
-            person.addQA(questions[0], getString(R.string.txtMyPhysicalActivityQ1), 0, getString(R.string.txt_No));
+            person.addQA(questions[0], getString(R.string.txtMyPhysicalActivityQ1), 1, getString(R.string.txt_No));
         }
 
 
@@ -54,9 +54,9 @@ public class MyPhysicalActivityActivity extends BaseActivity{
 
 
         if(checkBoxMyPhysicalActivityQ3.isChecked()){
-            person.addQA(questions[2], getString(R.string.txtMyPhysicalActivityQ3), 1, getString(R.string.txt_Yes));
+            person.addQA(questions[2], getString(R.string.txtMyPhysicalActivityQ3), 0, getString(R.string.txt_Yes));
         } else {
-            person.addQA(questions[2], getString(R.string.txtMyPhysicalActivityQ3), 0, getString(R.string.txt_No));
+            person.addQA(questions[2], getString(R.string.txtMyPhysicalActivityQ3), 1, getString(R.string.txt_No));
         }
 
 

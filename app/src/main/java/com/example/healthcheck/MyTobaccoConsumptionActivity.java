@@ -40,22 +40,22 @@ public class MyTobaccoConsumptionActivity extends BaseActivity {
     @Override
     protected boolean validateWidgetsAndAffectPersonDatas() {
         if(checkBoxMyTobaccoConsumptionQ1.isChecked()){
-            person.addQA(questions[0], getString(R.string.txtMyTobaccoConsumptionQ1), 1, getString(R.string.txt_Yes));
+            person.addQA(questions[0], getString(R.string.txtMyTobaccoConsumptionQ1), 0, getString(R.string.txt_Yes));
         } else {
-            person.addQA(questions[0], getString(R.string.txtMyTobaccoConsumptionQ1), 0, getString(R.string.txt_No));
+            person.addQA(questions[0], getString(R.string.txtMyTobaccoConsumptionQ1), 1, getString(R.string.txt_No));
         }
 
         if(checkBoxMyTobaccoConsumptionQ2.isChecked()){
-            person.addQA(questions[1], getString(R.string.txtMyTobaccoConsumptionQ2), 1, getString(R.string.txt_Yes));
+            person.addQA(questions[1], getString(R.string.txtMyTobaccoConsumptionQ2), 0, getString(R.string.txt_Yes));
         } else {
-            person.addQA(questions[1], getString(R.string.txtMyTobaccoConsumptionQ2), 0, getString(R.string.txt_No));
+            person.addQA(questions[1], getString(R.string.txtMyTobaccoConsumptionQ2), 1, getString(R.string.txt_No));
         }
 
 
         if(checkBoxMyTobaccoConsumptionQ3.isChecked()){
-            person.addQA(questions[2], getString(R.string.txtMyTobaccoConsumptionQ3), 1, getString(R.string.txt_Yes));
+            person.addQA(questions[2], getString(R.string.txtMyTobaccoConsumptionQ3), 0, getString(R.string.txt_Yes));
         } else {
-            person.addQA(questions[2], getString(R.string.txtMyTobaccoConsumptionQ3), 0, getString(R.string.txt_No));
+            person.addQA(questions[2], getString(R.string.txtMyTobaccoConsumptionQ3), 1, getString(R.string.txt_No));
         }
 
         return true;

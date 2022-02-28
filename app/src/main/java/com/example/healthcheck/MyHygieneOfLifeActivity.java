@@ -43,28 +43,28 @@ public class MyHygieneOfLifeActivity extends BaseActivity {
 
 
         if(switchMyHygieneOfLifeQ1.isChecked()){
-            person.addQA(questions[0], getString(R.string.txtMyHygieneOfLifeQ1), 1, getString(R.string.txt_Yes));
+            person.addQA(questions[0], getString(R.string.txtMyHygieneOfLifeQ1), 0, getString(R.string.txt_Yes));
         } else {
-            person.addQA(questions[0], getString(R.string.txtMyHygieneOfLifeQ1), 0, getString(R.string.txt_No));
+            person.addQA(questions[0], getString(R.string.txtMyHygieneOfLifeQ1), 1, getString(R.string.txt_No));
         }
 
         if(switchMyHygieneOfLifeQ2.isChecked()){
-            person.addQA(questions[1], getString(R.string.txtMyHygieneOfLifeQ2), 1, getString(R.string.txt_Yes));
+            person.addQA(questions[1], getString(R.string.txtMyHygieneOfLifeQ2), 0, getString(R.string.txt_Yes));
         } else {
-            person.addQA(questions[1], getString(R.string.txtMyHygieneOfLifeQ2), 0, getString(R.string.txt_No));
+            person.addQA(questions[1], getString(R.string.txtMyHygieneOfLifeQ2), 1, getString(R.string.txt_No));
         }
 
 
         if(switchMyHygieneOfLifeQ3.isChecked()){
-            person.addQA(questions[2], getString(R.string.txtMyHygieneOfLifeQ3), 1, getString(R.string.txt_Yes));
+            person.addQA(questions[2], getString(R.string.txtMyHygieneOfLifeQ3), 0, getString(R.string.txt_Yes));
         } else {
-            person.addQA(questions[2], getString(R.string.txtMyHygieneOfLifeQ3), 0, getString(R.string.txt_No));
+            person.addQA(questions[2], getString(R.string.txtMyHygieneOfLifeQ3), 1, getString(R.string.txt_No));
         }
 
         if(switchMyHygieneOfLifeQ4.isChecked()){
-            person.addQA(questions[3], getString(R.string.txtMyHygieneOfLifeQ4), 1, getString(R.string.txt_Yes));
+            person.addQA(questions[3], getString(R.string.txtMyHygieneOfLifeQ4), 0, getString(R.string.txt_Yes));
         } else {
-            person.addQA(questions[3], getString(R.string.txtMyHygieneOfLifeQ4), 0, getString(R.string.txt_No));
+            person.addQA(questions[3], getString(R.string.txtMyHygieneOfLifeQ4), 1, getString(R.string.txt_No));
         }
 
 

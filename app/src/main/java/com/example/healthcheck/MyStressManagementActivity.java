@@ -51,15 +51,15 @@ public class MyStressManagementActivity extends BaseActivity {
         person.addQA(questions[1], getString(R.string.txtMyStressManagementQ2), posq2, q2);
 
         if(switchMyStressManagementQ3.isChecked()){
-            person.addQA(questions[2], getString(R.string.txtMyStressManagementQ3), 1, getString(R.string.txt_Yes));
+            person.addQA(questions[2], getString(R.string.txtMyStressManagementQ3), 0, getString(R.string.txt_Yes));
         } else {
-            person.addQA(questions[2], getString(R.string.txtMyStressManagementQ3), 0, getString(R.string.txt_No));
+            person.addQA(questions[2], getString(R.string.txtMyStressManagementQ3), 1, getString(R.string.txt_No));
         }
 
         if(switchMyStressManagementQ4.isChecked()){
-            person.addQA(questions[3], getString(R.string.txtMyStressManagementQ4), 1, getString(R.string.txt_Yes));
+            person.addQA(questions[3], getString(R.string.txtMyStressManagementQ4), 0, getString(R.string.txt_Yes));
         } else {
-            person.addQA(questions[3], getString(R.string.txtMyStressManagementQ4), 0, getString(R.string.txt_No));
+            person.addQA(questions[3], getString(R.string.txtMyStressManagementQ4), 1, getString(R.string.txt_No));
         }
 
 

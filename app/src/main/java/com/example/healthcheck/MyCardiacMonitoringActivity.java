@@ -50,24 +50,24 @@ public class MyCardiacMonitoringActivity extends BaseActivity {
         if(checkBoxCardiacMonitoringQ1.isChecked()){
 
             //person.setCardiovascularRiskCheck(true, repQ1);
-            person.addQA(questions[0], getString(R.string.txtCardiacMonitoringQ1), 1, getString(R.string.txt_Yes));
+            person.addQA(questions[0], getString(R.string.txtCardiacMonitoringQ1), 0, getString(R.string.txt_Yes));
         } else {
-            person.addQA(questions[0], getString(R.string.txtCardiacMonitoringQ1), 0, getString(R.string.txt_No));
+            person.addQA(questions[0], getString(R.string.txtCardiacMonitoringQ1), 1, getString(R.string.txt_No));
         }
 
         if(checkBoxCardiacMonitoringQ2.isChecked()){
             //person.setHeartCheckup(true, repQ2);
-            person.addQA(questions[1], getString(R.string.txtCardiacMonitoringQ2), 1, getString(R.string.txt_Yes));
+            person.addQA(questions[1], getString(R.string.txtCardiacMonitoringQ2), 0, getString(R.string.txt_Yes));
         } else {
-            person.addQA(questions[1], getString(R.string.txtCardiacMonitoringQ2), 0, getString(R.string.txt_No));
+            person.addQA(questions[1], getString(R.string.txtCardiacMonitoringQ2), 1, getString(R.string.txt_No));
         }
 
 
         if(checkBoxCardiacMonitoringQ3.isChecked()){
             //person.setCardiologistConsulted(true, repQ3);
-            person.addQA(questions[2], getString(R.string.txtCardiacMonitoringQ3), 1, getString(R.string.txt_Yes));
+            person.addQA(questions[2], getString(R.string.txtCardiacMonitoringQ3), 0, getString(R.string.txt_Yes));
         } else {
-            person.addQA(questions[2], getString(R.string.txtCardiacMonitoringQ3), 0, getString(R.string.txt_No));
+            person.addQA(questions[2], getString(R.string.txtCardiacMonitoringQ3), 1, getString(R.string.txt_No));
         }
 
 

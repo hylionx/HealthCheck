@@ -47,16 +47,16 @@ public class MyDietActivity extends BaseActivity {
     protected boolean validateWidgetsAndAffectPersonDatas() {
 
         if(checkBoxMyDietQ1.isChecked()){
-            person.addQA(questions[0], getString(R.string.txtMyDietQ1), 1, getString(R.string.txt_Yes));
+            person.addQA(questions[0], getString(R.string.txtMyDietQ1), 0, getString(R.string.txt_Yes));
         } else {
-            person.addQA(questions[0], getString(R.string.txtMyDietQ1), 0, getString(R.string.txt_No));
+            person.addQA(questions[0], getString(R.string.txtMyDietQ1), 1, getString(R.string.txt_No));
         }
 
 
         if(checkBoxMyDietQ2.isChecked()){
-            person.addQA(questions[1], getString(R.string.txtMyDietQ2), 1, getString(R.string.txt_Yes));
+            person.addQA(questions[1], getString(R.string.txtMyDietQ2), 0, getString(R.string.txt_Yes));
         } else {
-            person.addQA(questions[1], getString(R.string.txtMyDietQ2), 0, getString(R.string.txt_No));
+            person.addQA(questions[1], getString(R.string.txtMyDietQ2), 1, getString(R.string.txt_No));
         }
 
 
@@ -67,23 +67,23 @@ public class MyDietActivity extends BaseActivity {
 
 
         if(checkBoxMyDietQ4.isChecked()){
-            person.addQA(questions[3], getString(R.string.txtMyDietQ3), 1, getString(R.string.txt_Yes));
+            person.addQA(questions[3], getString(R.string.txtMyDietQ3), 0, getString(R.string.txt_Yes));
         } else {
-            person.addQA(questions[3], getString(R.string.txtMyDietQ3), 0, getString(R.string.txt_No));
+            person.addQA(questions[3], getString(R.string.txtMyDietQ3), 1, getString(R.string.txt_No));
         }
 
 
         if(checkBoxMyDietQ5.isChecked()){
-            person.addQA(questions[4], getString(R.string.txtMyDietQ5), 1, getString(R.string.txt_Yes));
+            person.addQA(questions[4], getString(R.string.txtMyDietQ5), 0, getString(R.string.txt_Yes));
         } else {
-            person.addQA(questions[4], getString(R.string.txtMyDietQ5), 0, getString(R.string.txt_No));
+            person.addQA(questions[4], getString(R.string.txtMyDietQ5), 1, getString(R.string.txt_No));
         }
 
 
         if(checkBoxMyDietQ6.isChecked()){
-            person.addQA(questions[5], getString(R.string.txtMyDietQ6), 1, getString(R.string.txt_Yes));
+            person.addQA(questions[5], getString(R.string.txtMyDietQ6), 0, getString(R.string.txt_Yes));
         } else {
-            person.addQA(questions[5], getString(R.string.txtMyDietQ6), 0, getString(R.string.txt_No));
+            person.addQA(questions[5], getString(R.string.txtMyDietQ6), 1, getString(R.string.txt_No));
         }
 
 
