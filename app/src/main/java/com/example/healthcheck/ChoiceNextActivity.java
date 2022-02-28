@@ -8,6 +8,9 @@ import android.widget.ImageButton;
 
 import com.example.healthcheck.Utils.Serializer;
 
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -38,5 +41,6 @@ public class ChoiceNextActivity extends BaseActivity {
         Log.i("Person", "ChoiceNextActivity ----- savePerson");
         savePerson();
     }
+
 
 }

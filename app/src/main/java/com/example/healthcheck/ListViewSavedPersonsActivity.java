@@ -32,15 +32,10 @@ public class ListViewSavedPersonsActivity extends BaseActivity {
         setContentView(R.layout.activity_list_view_saved_persons);
         init();
     }
-
-
-
-
     private void init() {
 
         reloadSavedPersons();
         displaySavedPersons();
-
 
         names = new ArrayList<>(savedPersons);
         listViewPersons = findViewById(R.id.listViewPersons);
@@ -48,7 +43,6 @@ public class ListViewSavedPersonsActivity extends BaseActivity {
 
         CustomAdaptor customAdaptor = new CustomAdaptor();
         listViewPersons.setAdapter(customAdaptor);
-
 
         bntStartTestNewPerson.setOnClickListener(view -> gotoNextActivity(NameActivity.class));
 

@@ -42,22 +42,29 @@ public class CheckUpActivity extends BaseActivity {
 
         for (QuestionAnswer qa: person.getQuestionAnswers()) {
             if (qa.getQuestionID().contains("f" + index) ) {
-                    Log.i("Person", "-------------" + qa);
-                    TextView q = new TextView(this);
-                    q.setText( qa.getQuestionValue());
-                    q.setTextSize(15);
-                    q.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
-                    q.setPadding(0, 20, 0, 0);
+                Log.i("Person", "-------------" + qa);
+                TextView question = new TextView(this);
+                question.setText( qa.getQuestionValue());
+                question.setTextSize(15);
+                question.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+                question.setPadding(0, 20, 0, 0);
 
 
-                    TextView a = new TextView(this);
-                    a.setText("-> " + qa.getAnswerValue());
-                    a.setTextSize(10);
-                    a.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
-                    a.setPadding(0, 0, 0, 20);
+                TextView answer = new TextView(this);
+                answer.setText("-> " + qa.getAnswerValue());
+                answer.setTextSize(10);
+                answer.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+                answer.setPadding(0, 0, 0, 20);
 
-                    linearlayout.addView(q);
-                    linearlayout.addView(a);
+                TextView cardiologistAdvice = new TextView(this);
+                cardiologistAdvice.setText("---------> " + qa.getCardiologistAdvice());
+                cardiologistAdvice.setTextSize(10);
+                cardiologistAdvice.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+                cardiologistAdvice.setPadding(0, 0, 0, 20);
+
+                linearlayout.addView(question);
+                linearlayout.addView(answer);
+                linearlayout.addView(cardiologistAdvice);
 
             }
         }
