@@ -17,9 +17,10 @@ public class Person implements Parcelable, Serializable {
 
     private String name;
     /**
-     * A list of QuestionAnswer that will be updated in each activity.
+     * An array of QuestionAnswer that will be updated in each activity.
      */
     private List<QuestionAnswer> questionAnswers = new ArrayList<>();
+
 
     public Person() {
     }
@@ -28,6 +29,7 @@ public class Person implements Parcelable, Serializable {
     protected Person(Parcel in) {
         name = in.readString();
         in.readTypedList(questionAnswers, QuestionAnswer.CREATOR);
+
     }
 
     @Override
@@ -67,8 +69,22 @@ public class Person implements Parcelable, Serializable {
 
     public void addQA(String questionID, String questionValue, Integer AnswerIndex, String AnswerValue) {
         QuestionAnswer qa = new QuestionAnswer(questionID, questionValue, AnswerIndex, AnswerValue);
-        this.questionAnswers.add(qa);
+        questionAnswers.add(qa);
         Log.i("Person", "QA added : " + qa);
+    }
+
+    public void removeQAs(String regex) {
+        Log.d("Person", "\n\n\n\npopLastQAs: " + regex);
+        int last = questionAnswers.size();
+        while (last-- > 0) {
+            if (questionAnswers.get(last).getQuestionID().contains(regex)) {
+                Log.d("Person", "removing : " + questionAnswers.get(last).getQuestionID());
+                questionAnswers.remove(last);
+
+            } else {
+                return;
+            }
+        }
     }
 
     @Override

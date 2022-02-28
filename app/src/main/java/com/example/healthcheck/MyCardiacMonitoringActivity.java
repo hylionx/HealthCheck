@@ -26,6 +26,8 @@ public class MyCardiacMonitoringActivity extends BaseActivity {
 
 
     private void init(){
+        questions = new String[]{"f3_q1", "f3_q2", "f3_q3"};
+        formNumber = 3;
         btnPrevMyCardiacMonitoring = findViewById(R.id.btnPrevMyCardiacMonitoring);
         btnNextMyCardiacMonitoring = findViewById(R.id.btnNextMyCardiacMonitoring);
 
@@ -37,7 +39,6 @@ public class MyCardiacMonitoringActivity extends BaseActivity {
         checkBoxCardiacMonitoringQ3 = findViewById(R.id.checkBoxCardiacMonitoringQ3);
 
         getPersonByIntent();
-        questions = new String[]{"f3_q1", "f3_q2", "f3_q3"};
         //btnNextMyCardiacMonitoring.performClick();
     }
 

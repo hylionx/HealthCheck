@@ -21,6 +21,8 @@ public class MyPhysicalActivityActivity extends BaseActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_physical_activity);
 
+        questions = new String[]{"f5_q1", "f5_q2", "f5_q3", "f5_q4", "f5_q5"};
+        formNumber = 5;
         btnPrevMyPhysicalActivity = findViewById(R.id.btnPrevMyPhysicalActivity);
         btnNextMyPhysicalActivity = findViewById(R.id.btnNextMyPhysicalActivity);
         checkBoxMyPhysicalActivityQ1 = findViewById(R.id.checkBoxMyPhysicalActivityQ1);
@@ -34,7 +36,6 @@ public class MyPhysicalActivityActivity extends BaseActivity{
         btnNextMyPhysicalActivity.setOnClickListener(view -> gotoNextActivity(MyTobaccoConsumptionActivity.class));
 
         getPersonByIntent();
-        questions = new String[]{"f5_q1", "f5_q2", "f5_q3", "f5_q4", "f5_q5"};
         //btnNextMyPhysicalActivity.performClick();
     }
 

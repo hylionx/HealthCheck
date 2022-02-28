@@ -18,6 +18,7 @@ import com.example.healthcheck.Utils.Serializer;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
+import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -26,13 +27,13 @@ import java.util.TreeSet;
  */
 public abstract class BaseActivity extends AppCompatActivity {
 
-    public static final String SHARED_PREFS = "sharedPrefs";
     public static final String SAVED_PERSONS = "savedPersons";
     public static final String EXTRA_PERSON = "com.example.extras.EXTRA_PERSON";
 
     protected String questions[];
     protected Person person;
-    Set<String> savedPersons;
+    protected Set<String> savedPersons;
+    protected int formNumber = -1; // -1 by default for non-form activities
 
     /**
      * Get the person object from intent and affect it to the person attribute.
@@ -40,7 +41,8 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected void getPersonByIntent() {
         Intent intent = getIntent();
         person = intent.getParcelableExtra(EXTRA_PERSON);
-        //Log.d("Person", "Received " + person);
+        //Log.i("Person", "Received " + person);
+
     }
 
     /**
@@ -54,6 +56,10 @@ public abstract class BaseActivity extends AppCompatActivity {
             Intent intent = new Intent(this, cls );
             intent.putExtra(EXTRA_PERSON, (Parcelable) person);
             startActivity(intent);
+
+            if (!(formNumber < 0)) {
+                person.removeQAs("f" + formNumber);
+            }
         }
     }
 

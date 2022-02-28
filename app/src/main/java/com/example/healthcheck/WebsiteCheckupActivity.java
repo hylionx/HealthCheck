@@ -33,6 +33,8 @@ public class WebsiteCheckupActivity extends BaseActivity {
             addPostParams(qa.getQuestionID(), qa.getAnswerIndex());
         }
 
+        Log.i("Person", "/////////////// params :  " + postParams);
+
         String URL = "https://www.fedecardio.org/je-me-teste/test-3-minutes/";
         webview.postUrl(URL, postParams.getBytes());
     }

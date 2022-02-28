@@ -21,6 +21,8 @@ public class MyStressManagementActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_stress_management);
 
+        questions = new String[]{"f7_q1", "f7_q2", "f7_q3", "f7_q4"};
+        formNumber = 7;
         btnPrevMyStressManagment = findViewById(R.id.btnPrevMyStressManagment);
         btnNextMyStressManagment = findViewById(R.id.btnNextMyStressManagment);
 
@@ -34,7 +36,6 @@ public class MyStressManagementActivity extends BaseActivity {
         btnNextMyStressManagment.setOnClickListener(view -> gotoNextActivity(MyHygieneOfLifeActivity.class));
 
         getPersonByIntent();
-        questions = new String[]{"f7_q1", "f7_q2", "f7_q3", "f7_q4"};
         //btnNextMyStressManagment.performClick();
 
     }
