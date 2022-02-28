@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.os.Parcelable;
 import android.provider.ContactsContract;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -22,7 +23,7 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
 public class NameActivity extends BaseActivity {
-    // in Logcat : (MainApp)|(IAMApp)|(MyHeartApp)
+    // in Logcat : (MainApp)|(IAMApp)|(MyHeartApp)... etc
     public static final String APP_TAG = "NameActivityApp";
 
     // Listes des permissions
@@ -39,6 +40,7 @@ public class NameActivity extends BaseActivity {
     private ImageButton imgButtonAvatar;
     private Button btnAvatarPopup;
     private GridView gridViewAvatar;
+    private int [] imagesAvatar;
 
 
     @Override
@@ -51,11 +53,24 @@ public class NameActivity extends BaseActivity {
     }
 
     private void init() {
+        Log.i(APP_TAG, " ************************* onItemClick: " + 12);
 
         person = new Person();
         btnStart = findViewById(R.id.btnStartTest);
         txtiputeditName = findViewById(R.id.txtiputeditName);
         imgButtonAvatar = findViewById(R.id.imgButtonAvatar);
+        imagesAvatar = new int[]{
+                R.drawable.avatar1,
+                R.drawable.avatar2,
+                R.drawable.avatar3,
+                R.drawable.avatar4,
+                R.drawable.avatar5,
+                R.drawable.avatar6,
+                R.drawable.avatar7,
+                R.drawable.avatar8,
+                R.drawable.avatar9,
+                R.drawable.avatar10
+        };
 
 
         //ouvre la popup lorqu'on clique sur l'image
@@ -110,12 +125,18 @@ public class NameActivity extends BaseActivity {
 
         gridViewAvatar = popUpAvatar.findViewById(R.id.gridViewAvatar);
         //partie de la grid
-        gridViewAvatar.setAdapter(new ImageAdapter(this));
+        gridViewAvatar.setAdapter(new ImageAdapter(this, imagesAvatar));
         gridViewAvatar.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
-               // ImageAdapter imageAdapter = new ImageAdapter(NameActivity.this);
+                imgButtonAvatar.setImageResource(imagesAvatar[i]);
+                person.setAvatar(imagesAvatar[i]);
+                dialog.dismiss();
+
+                //Log.i(APP_TAG, " ************************* onItemClick: " + view);
+
+               //ImageAdapter imageAdapter = new ImageAdapter(NameActivity.this);
 
             }
         });

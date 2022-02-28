@@ -18,7 +18,6 @@ public class WebsiteCheckupActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_website_checkup);
 
-
         init();
     }
 
@@ -27,7 +26,6 @@ public class WebsiteCheckupActivity extends BaseActivity {
         setContentView(webview);
         webview.getSettings().setJavaScriptEnabled(true);
         getPersonByIntent();
-
 
         for (QuestionAnswer qa : person.getQuestionAnswers()) {
             addPostParams(qa.getQuestionID(), qa.getAnswerIndex());

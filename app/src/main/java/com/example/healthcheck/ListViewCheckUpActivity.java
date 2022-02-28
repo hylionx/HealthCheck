@@ -177,14 +177,14 @@ public class ListViewCheckUpActivity extends BaseActivity {
 
     protected void setCariologTips() throws IOException {
 
-        Map<String, String> data = new HashMap<>();
-        for (QuestionAnswer qa : person.getQuestionAnswers()) {
-            data.put(qa.getQuestionID(), qa.getAnswerIndex().toString());
-        }
         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
                 try {
+                    Map<String, String> data = new HashMap<>();
+                    for (QuestionAnswer qa : person.getQuestionAnswers()) {
+                        data.put(qa.getQuestionID(), qa.getAnswerIndex().toString());
+                    }
                     document = Jsoup.connect(URL).data(data).post();
                 } catch (Exception e) {
                     e.printStackTrace();

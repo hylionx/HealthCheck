@@ -16,6 +16,7 @@ public class Person implements Parcelable, Serializable {
 
 
     private String name;
+    private int avatar;
     /**
      * An array of QuestionAnswer that will be updated in each activity.
      */
@@ -26,8 +27,11 @@ public class Person implements Parcelable, Serializable {
     }
 
 
+
+
     protected Person(Parcel in) {
         name = in.readString();
+        avatar = in.readInt();
         in.readTypedList(questionAnswers, QuestionAnswer.CREATOR);
 
     }
@@ -35,6 +39,7 @@ public class Person implements Parcelable, Serializable {
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(name);
+        dest.writeInt(avatar);
         dest.writeTypedList(questionAnswers);
     }
 
@@ -95,5 +100,13 @@ public class Person implements Parcelable, Serializable {
         }
         str += "]}";
         return str;
+    }
+
+    public int getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(int avatar) {
+        this.avatar = avatar;
     }
 }
