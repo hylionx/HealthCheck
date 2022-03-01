@@ -8,13 +8,13 @@ import android.widget.ImageView;
 public class MyTobaccoConsumptionActivity extends BaseActivity {
     public static final String APP_TAG = "MyTobaccoConsumptionActivityApp";
 
-    Button btnPrevMyTobaccoConsumption;
-    Button btnNextMyTobaccoConsumption;
+    private Button btnPrevMyTobaccoConsumption;
+    private Button btnNextMyTobaccoConsumption;
 
-    CheckBox checkBoxMyTobaccoConsumptionQ1;
-    CheckBox checkBoxMyTobaccoConsumptionQ2;
-    CheckBox checkBoxMyTobaccoConsumptionQ3;
-    ImageView myTobaccoImg;
+    private CheckBox checkBoxMyTobaccoConsumptionQ1;
+    private CheckBox checkBoxMyTobaccoConsumptionQ2;
+    private CheckBox checkBoxMyTobaccoConsumptionQ3;
+    private ImageView myTobaccoImg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

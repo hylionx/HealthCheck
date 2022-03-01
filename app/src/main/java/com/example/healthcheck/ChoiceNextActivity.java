@@ -17,8 +17,8 @@ import java.util.TreeSet;
 
 public class ChoiceNextActivity extends BaseActivity {
 
-    ImageButton buttonAppli;
-    ImageButton buttonWebSite;
+    private ImageButton buttonAppli;
+    private ImageButton buttonWebSite;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

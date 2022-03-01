@@ -9,14 +9,14 @@ import android.widget.Spinner;
 public class MyPhysicalActivityActivity extends BaseActivity{
     public static final String APP_TAG = "MyPhysicalActivityActivityApp";
 
-    Button btnPrevMyPhysicalActivity;
-    Button btnNextMyPhysicalActivity;
-    CheckBox checkBoxMyPhysicalActivityQ1;
-    Spinner spinnerMyPhysicalActivityRepQ2;
-    CheckBox checkBoxMyPhysicalActivityQ3;
-    Spinner spinnerMyPhysicalActivityRepQ4;
-    Spinner spinnerMyPhysicalActivityRepQ5;
-    ImageView myphysicalActivityImg;
+    private Button btnPrevMyPhysicalActivity;
+    private Button btnNextMyPhysicalActivity;
+    private CheckBox checkBoxMyPhysicalActivityQ1;
+    private Spinner spinnerMyPhysicalActivityRepQ2;
+    private CheckBox checkBoxMyPhysicalActivityQ3;
+    private Spinner spinnerMyPhysicalActivityRepQ4;
+    private Spinner spinnerMyPhysicalActivityRepQ5;
+    private ImageView myphysicalActivityImg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

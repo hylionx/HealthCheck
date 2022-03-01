@@ -14,18 +14,18 @@ import android.widget.TextView;
 public class IAmActivity extends BaseActivity {
     public static final String APP_TAG = "IAmActivityApp";
 
-    RadioGroup rgSexe;
-    RadioGroup rgAge;
+    private RadioGroup rgSexe;
+    private RadioGroup rgAge;
 
-    ImageView myProfilImg;
+    private ImageView myProfilImg;
 
-    TextView txtAge;
+    private TextView txtAge;
 
-    EditText editHeight;
-    EditText editWeight;
+    private EditText editHeight;
+    private EditText editWeight;
 
-    Button btnNextIAm;
-    Button btnPrevIAm;
+    private Button btnNextIAm;
+    private Button btnPrevIAm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

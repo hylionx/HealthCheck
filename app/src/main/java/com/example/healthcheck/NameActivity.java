@@ -72,7 +72,23 @@ public class NameActivity extends BaseActivity {
                 R.drawable.avatar7,
                 R.drawable.avatar8,
                 R.drawable.avatar9,
-                R.drawable.avatar10
+                R.drawable.avatar10,
+                R.drawable.avatar11,
+                R.drawable.avatar12,
+                R.drawable.avatar13,
+                R.drawable.avatar14,
+                R.drawable.avatar15,
+                R.drawable.avatar16,
+                R.drawable.avatar17,
+                R.drawable.avatar18,
+                R.drawable.avatar19,
+                R.drawable.avatar20,
+                R.drawable.avatar21,
+                R.drawable.avatar22,
+                R.drawable.avatar23,
+                R.drawable.avatar24,
+                R.drawable.avatar25,
+                R.drawable.avatar26
         };
 
 

@@ -8,15 +8,15 @@ import android.widget.Spinner;
 public class MyHeartActivity extends BaseActivity {
     public static final String APP_TAG = "MyHeartActivityApp";
 
-    Button btnPrevMyHeart;
-    Button btnNextMyHeart;
-    Spinner spinnerMyHeartRepQ1;
-    Spinner spinnerMyHeartRepQ2;
-    Spinner spinnerMyHeartRepQ3;
-    Spinner spinnerMyHeartRepQ4;
-    Spinner spinnerMyHeartRepQ5;
-    Spinner spinnerMyHeartRepQ6;
-    ImageView myHeartImg;
+    private Button btnPrevMyHeart;
+    private Button btnNextMyHeart;
+    private Spinner spinnerMyHeartRepQ1;
+    private Spinner spinnerMyHeartRepQ2;
+    private Spinner spinnerMyHeartRepQ3;
+    private Spinner spinnerMyHeartRepQ4;
+    private Spinner spinnerMyHeartRepQ5;
+    private Spinner spinnerMyHeartRepQ6;
+    private ImageView myHeartImg;
 
 
     @Override

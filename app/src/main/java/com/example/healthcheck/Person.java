@@ -2,7 +2,9 @@ package com.example.healthcheck;
 
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.provider.Telephony;
 import android.util.Log;
+import android.widget.RatingBar;
 
 import com.example.healthcheck.Utils.Serializer;
 
@@ -21,7 +23,6 @@ public class Person implements Parcelable, Serializable {
      * An array of QuestionAnswer that will be updated in each activity.
      */
     private List<QuestionAnswer> questionAnswers = new ArrayList<>();
-
 
     public Person() {
     }
@@ -109,4 +110,5 @@ public class Person implements Parcelable, Serializable {
     public void setAvatar(int avatar) {
         this.avatar = avatar;
     }
+
 }

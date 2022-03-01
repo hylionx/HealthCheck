@@ -9,13 +9,13 @@ import androidx.appcompat.widget.SwitchCompat;
 public class MyStressManagementActivity extends BaseActivity {
     public static final String APP_TAG = "MyStressManagementActivityApp";
 
-    Button btnPrevMyStressManagment;
-    Button btnNextMyStressManagment;
-    Spinner spinnerMyStressManagementRepQ1;
-    Spinner spinnerMyStressManagementRepQ2;
-    SwitchCompat switchMyStressManagementQ3;
-    SwitchCompat switchMyStressManagementQ4;
-    ImageView imgStressMngmt;
+    private Button btnPrevMyStressManagment;
+    private Button btnNextMyStressManagment;
+    private Spinner spinnerMyStressManagementRepQ1;
+    private Spinner spinnerMyStressManagementRepQ2;
+    private SwitchCompat switchMyStressManagementQ3;
+    private SwitchCompat switchMyStressManagementQ4;
+    private ImageView imgStressMngmt;
 
 
 

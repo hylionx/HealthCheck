@@ -12,15 +12,14 @@ import android.widget.TextView;
 
 public class CheckUpActivity extends BaseActivity {
 
-    TextView name;
-    ImageView image;
-    int index;
-    int idq = 1;
-    int bgcolor;
-    int img;
+    private TextView name;
+    private ImageView image;
+    private int index;
+    private int bgcolor;
+    private int img;
 
-    LinearLayout linearlayout;
-    ConstraintLayout constraintlayoutListData;
+    private LinearLayout linearlayout;
+    private ConstraintLayout constraintlayoutListData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +29,6 @@ public class CheckUpActivity extends BaseActivity {
         image = findViewById(R.id.image);
         linearlayout = findViewById(R.id.linearlayout);
         constraintlayoutListData = findViewById(R.id.constraintlayoutListData);
-
 
         getPersonByIntent();
         Intent intent = getIntent();
@@ -45,14 +43,14 @@ public class CheckUpActivity extends BaseActivity {
                 Log.i("Person", "-------------" + qa);
                 TextView question = new TextView(this);
                 question.setText( qa.getQuestionValue());
-                question.setTextSize(15);
+                question.setTextSize(20);
                 question.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
                 question.setPadding(0, 20, 0, 0);
 
 
                 TextView answer = new TextView(this);
                 answer.setText("-> " + qa.getAnswerValue());
-                answer.setTextSize(10);
+                answer.setTextSize(15);
                 answer.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
                 answer.setPadding(0, 0, 0, 20);
 
@@ -72,7 +70,6 @@ public class CheckUpActivity extends BaseActivity {
         name.setText(intent.getStringExtra("name"));
         image.setImageResource(img);
         constraintlayoutListData.setBackgroundColor(getResources().getColor(bgcolor));
-       // constraintlayoutListData.setBackgroundColor(getResources().getColor());
     }
 
     @Override

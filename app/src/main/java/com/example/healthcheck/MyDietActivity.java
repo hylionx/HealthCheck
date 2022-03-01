@@ -9,15 +9,15 @@ import android.widget.Spinner;
 public class MyDietActivity extends BaseActivity {
     public static final String APP_TAG = "MyDietActivityApp";
 
-    Button btnPrevMyDiet;
-    Button btnNextMyDiet;
-    CheckBox checkBoxMyDietQ1;
-    CheckBox checkBoxMyDietQ2;
-    Spinner spinnerMyDietRepQ3;
-    CheckBox checkBoxMyDietQ4;
-    CheckBox checkBoxMyDietQ5;
-    CheckBox checkBoxMyDietQ6;
-    ImageView myDietImg;
+    private Button btnPrevMyDiet;
+    private Button btnNextMyDiet;
+    private CheckBox checkBoxMyDietQ1;
+    private CheckBox checkBoxMyDietQ2;
+    private Spinner spinnerMyDietRepQ3;
+    private CheckBox checkBoxMyDietQ4;
+    private CheckBox checkBoxMyDietQ5;
+    private CheckBox checkBoxMyDietQ6;
+    private ImageView myDietImg;
 
 
     @Override

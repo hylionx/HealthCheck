@@ -2,8 +2,10 @@ package com.example.healthcheck;
 
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Parcelable;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,10 +40,11 @@ public class ListViewCheckUpActivity extends BaseActivity {
     private AlertDialog.Builder dialogBuilder;
     private AlertDialog dialog;
     private RatingBar ratingBar;
-    Button btnPopup;
-    String URL = "https://www.fedecardio.org/je-me-teste/test-3-minutes/";
+    private Button btnPopup;
+    private String URL = "https://www.fedecardio.org/je-me-teste/test-3-minutes/";
     protected String postParams = "";
-    Document document = null;
+    private Document document = null;
+    private SharedPreferences sharedPref;
 
 
     @Override
@@ -51,9 +54,14 @@ public class ListViewCheckUpActivity extends BaseActivity {
         getPersonByIntent();
         btnPopup = findViewById(R.id.btnPopup);
 
-        createDialog();
+        sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
+        if(sharedPref.getFloat("ratingValue", -1.0f) == -1.0f){
+            createDialog();
+
+        }
 
         topicName = new String[]{
+                getString(R.string.txtMyProfilTitle),
                 getString(R.string.txtMyHeartTitle),
                 getString(R.string.my_cardiac_monitoring_title),
                 getString(R.string.my_diet_title),
@@ -64,6 +72,7 @@ public class ListViewCheckUpActivity extends BaseActivity {
         };
 
         topicImage = new int[]{
+                R.drawable.profill,
                 R.drawable.moncoeur,
                 R.drawable.suivicardiaque,
                 R.drawable.alimentation,
@@ -74,6 +83,7 @@ public class ListViewCheckUpActivity extends BaseActivity {
         };
 
         bgColors = new int[]{
+                R.color.iAm,
                 R.color.myHeart,
                 R.color.myCardiacMonitoring,
                 R.color.myDiet,
@@ -122,7 +132,12 @@ public class ListViewCheckUpActivity extends BaseActivity {
         btnPopup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Log.i("Person", "**************************************************valeur rating = "+ ratingBar.getRating());
+                float ratingValue = ratingBar.getRating();
+                sharedPref.edit().putFloat("ratingValue", ratingValue).commit();
+
                 dialog.dismiss();
+
             }
         });
 
@@ -202,7 +217,6 @@ public class ListViewCheckUpActivity extends BaseActivity {
                 qa.setCardiologistAdvice(adv.text());
                 Log.i("Person", "advElements: " + qa.getCardiologistAdvice());
             }
-            //ResultActivity.this.results.add(res);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

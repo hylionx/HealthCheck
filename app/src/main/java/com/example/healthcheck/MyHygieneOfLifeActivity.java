@@ -9,13 +9,13 @@ import androidx.appcompat.widget.SwitchCompat;
 public class MyHygieneOfLifeActivity extends BaseActivity {
     public static final String APP_TAG = "MyHygieneOfLifeActivityApp";
 
-    Button btnPrevMyHygieneOfLife;
-    Button btnValidate;
-    SwitchCompat switchMyHygieneOfLifeQ1;
-    SwitchCompat switchMyHygieneOfLifeQ2;
-    SwitchCompat switchMyHygieneOfLifeQ3;
-    SwitchCompat switchMyHygieneOfLifeQ4;
-    ImageView imgHygieneOfLife;
+    private Button btnPrevMyHygieneOfLife;
+    private Button btnValidate;
+    private SwitchCompat switchMyHygieneOfLifeQ1;
+    private SwitchCompat switchMyHygieneOfLifeQ2;
+    private SwitchCompat switchMyHygieneOfLifeQ3;
+    private SwitchCompat switchMyHygieneOfLifeQ4;
+    private ImageView imgHygieneOfLife;
 
 
     @Override

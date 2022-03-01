@@ -20,10 +20,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ListViewSavedPersonsActivity extends BaseActivity {
-    ListView listViewPersons;
-    int [] images;
-    List<Person> persons;
-    Button bntStartTestNewPerson;
+    private ListView listViewPersons;
+    private List<Person> persons;
+    private Button bntStartTestNewPerson;
 
 
     @Override
