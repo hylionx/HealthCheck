@@ -40,6 +40,9 @@ public class ChoiceNextActivity extends BaseActivity {
 
         Log.i("Person", "ChoiceNextActivity ----- savePerson");
         savePerson();
+
+        animatePop(buttonAppli);
+        animatePop(buttonWebSite);
     }
 
 

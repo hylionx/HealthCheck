@@ -2,6 +2,7 @@ package com.example.healthcheck;
 
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Spinner;
 
 public class MyHeartActivity extends BaseActivity {
@@ -15,6 +16,7 @@ public class MyHeartActivity extends BaseActivity {
     Spinner spinnerMyHeartRepQ4;
     Spinner spinnerMyHeartRepQ5;
     Spinner spinnerMyHeartRepQ6;
+    ImageView myHeartImg;
 
 
     @Override
@@ -36,6 +38,7 @@ public class MyHeartActivity extends BaseActivity {
         spinnerMyHeartRepQ4 = findViewById(R.id.spinnerMyHeartRepQ4);
         spinnerMyHeartRepQ5 = findViewById(R.id.spinnerMyHeartRepQ5);
         spinnerMyHeartRepQ6 = findViewById(R.id.spinnerMyHeartRepQ6);
+        myHeartImg = findViewById(R.id.myHeartImg);
 
         btnPrevMyHeart.setOnClickListener(view -> gotoPreviousActivity());
         btnNextMyHeart.setOnClickListener(view -> gotoNextActivity(MyCardiacMonitoringActivity.class));
@@ -43,6 +46,8 @@ public class MyHeartActivity extends BaseActivity {
 
         getPersonByIntent();
         //btnNextMyHeart.performClick();
+
+        animatePop(myHeartImg);
 
     }
     @Override

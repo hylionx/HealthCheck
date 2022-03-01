@@ -59,6 +59,9 @@ public class NameActivity extends BaseActivity {
         btnStart = findViewById(R.id.btnStartTest);
         txtiputeditName = findViewById(R.id.txtiputeditName);
         imgButtonAvatar = findViewById(R.id.imgButtonAvatar);
+
+
+
         imagesAvatar = new int[]{
                 R.drawable.avatar1,
                 R.drawable.avatar2,
@@ -88,6 +91,8 @@ public class NameActivity extends BaseActivity {
         displaySavedPersons();
 
         verifyStoragePermissions(this);
+
+        animatePop(imgButtonAvatar);
     }
 
     @Override

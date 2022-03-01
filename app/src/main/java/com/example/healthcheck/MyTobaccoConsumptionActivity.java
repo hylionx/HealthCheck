@@ -3,6 +3,7 @@ package com.example.healthcheck;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.ImageView;
 
 public class MyTobaccoConsumptionActivity extends BaseActivity {
     public static final String APP_TAG = "MyTobaccoConsumptionActivityApp";
@@ -13,6 +14,7 @@ public class MyTobaccoConsumptionActivity extends BaseActivity {
     CheckBox checkBoxMyTobaccoConsumptionQ1;
     CheckBox checkBoxMyTobaccoConsumptionQ2;
     CheckBox checkBoxMyTobaccoConsumptionQ3;
+    ImageView myTobaccoImg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,11 +30,14 @@ public class MyTobaccoConsumptionActivity extends BaseActivity {
         checkBoxMyTobaccoConsumptionQ2 = findViewById(R.id.checkBoxMyTobaccoConsumptionQ2);
         checkBoxMyTobaccoConsumptionQ3 = findViewById(R.id.checkBoxMyTobaccoConsumptionQ3);
 
+        myTobaccoImg =findViewById(R.id.myTobaccoImg);
+
         btnPrevMyTobaccoConsumption.setOnClickListener(view -> gotoPreviousActivity());
         btnNextMyTobaccoConsumption.setOnClickListener(view -> gotoNextActivity(MyStressManagementActivity.class));
 
         getPersonByIntent();
         //btnNextMyTobaccoConsumption.performClick();
+        animatePop(myTobaccoImg);
 
     }
 

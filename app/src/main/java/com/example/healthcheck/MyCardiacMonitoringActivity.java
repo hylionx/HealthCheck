@@ -4,7 +4,7 @@ package com.example.healthcheck;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.CheckBox;
-
+import android.widget.ImageView;
 
 
 public class MyCardiacMonitoringActivity extends BaseActivity {
@@ -15,6 +15,7 @@ public class MyCardiacMonitoringActivity extends BaseActivity {
     private CheckBox checkBoxCardiacMonitoringQ1;
     private CheckBox checkBoxCardiacMonitoringQ2;
     private CheckBox checkBoxCardiacMonitoringQ3;
+    private ImageView myCardiacMonitoringImg;
 
 
     @Override
@@ -30,7 +31,7 @@ public class MyCardiacMonitoringActivity extends BaseActivity {
         formNumber = 3;
         btnPrevMyCardiacMonitoring = findViewById(R.id.btnPrevMyCardiacMonitoring);
         btnNextMyCardiacMonitoring = findViewById(R.id.btnNextMyCardiacMonitoring);
-
+        myCardiacMonitoringImg = findViewById(R.id.myCardiacMonitoringImg);
         btnPrevMyCardiacMonitoring.setOnClickListener(view -> gotoPreviousActivity());
         btnNextMyCardiacMonitoring.setOnClickListener(view -> gotoNextActivity(MyDietActivity.class));
 
@@ -39,7 +40,9 @@ public class MyCardiacMonitoringActivity extends BaseActivity {
         checkBoxCardiacMonitoringQ3 = findViewById(R.id.checkBoxCardiacMonitoringQ3);
 
         getPersonByIntent();
-        //btnNextMyCardiacMonitoring.performClick();
+
+        animatePop(myCardiacMonitoringImg);
+
     }
 
 

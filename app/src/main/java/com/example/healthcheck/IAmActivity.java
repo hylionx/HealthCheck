@@ -6,6 +6,7 @@ import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -15,6 +16,8 @@ public class IAmActivity extends BaseActivity {
 
     RadioGroup rgSexe;
     RadioGroup rgAge;
+
+    ImageView myProfilImg;
 
     TextView txtAge;
 
@@ -37,6 +40,7 @@ public class IAmActivity extends BaseActivity {
         formNumber = 1;
         rgSexe = findViewById(R.id.rgSexe);
         rgAge = findViewById(R.id.rgAge);
+        myProfilImg = findViewById(R.id.myProfilImg);
         txtAge = findViewById(R.id.txtAge);
 
         editHeight = findViewById(R.id.editHeight);
@@ -48,6 +52,8 @@ public class IAmActivity extends BaseActivity {
         btnPrevIAm.setOnClickListener(view -> gotoPreviousActivity());
 
         getPersonByIntent();
+
+        animatePop(myProfilImg);
 
     }
 

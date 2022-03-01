@@ -2,6 +2,7 @@ package com.example.healthcheck;
 
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import androidx.appcompat.widget.SwitchCompat;
 
@@ -14,6 +15,8 @@ public class MyStressManagementActivity extends BaseActivity {
     Spinner spinnerMyStressManagementRepQ2;
     SwitchCompat switchMyStressManagementQ3;
     SwitchCompat switchMyStressManagementQ4;
+    ImageView imgStressMngmt;
+
 
 
     @Override
@@ -30,13 +33,14 @@ public class MyStressManagementActivity extends BaseActivity {
         spinnerMyStressManagementRepQ2 = findViewById(R.id.spinnerMyStressManagementRepQ2);
         switchMyStressManagementQ3 = findViewById(R.id.switchMyStressManagementQ3);
         switchMyStressManagementQ4 = findViewById(R.id.switchMyStressManagementQ4);
-
+        imgStressMngmt = findViewById(R.id.imgStressMngmt);
 
         btnPrevMyStressManagment.setOnClickListener(view -> gotoPreviousActivity());
         btnNextMyStressManagment.setOnClickListener(view -> gotoNextActivity(MyHygieneOfLifeActivity.class));
 
         getPersonByIntent();
         //btnNextMyStressManagment.performClick();
+        animatePop(imgStressMngmt);
 
     }
 

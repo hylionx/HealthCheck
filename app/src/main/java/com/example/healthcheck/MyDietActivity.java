@@ -3,6 +3,7 @@ package com.example.healthcheck;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.ImageView;
 import android.widget.Spinner;
 
 public class MyDietActivity extends BaseActivity {
@@ -16,6 +17,7 @@ public class MyDietActivity extends BaseActivity {
     CheckBox checkBoxMyDietQ4;
     CheckBox checkBoxMyDietQ5;
     CheckBox checkBoxMyDietQ6;
+    ImageView myDietImg;
 
 
     @Override
@@ -33,14 +35,15 @@ public class MyDietActivity extends BaseActivity {
         checkBoxMyDietQ4 = findViewById(R.id.checkBoxMyDietQ4);
         checkBoxMyDietQ5 = findViewById(R.id.checkBoxMyDietQ5);
         checkBoxMyDietQ6 = findViewById(R.id.checkBoxMyDietQ6);
-
+        myDietImg =findViewById(R.id.myDietImg);
 
 
         btnPrevMyDiet.setOnClickListener(view -> gotoPreviousActivity());
         btnNextMyDiet.setOnClickListener(view -> gotoNextActivity(MyPhysicalActivityActivity.class));
 
         getPersonByIntent();
-        //btnNextMyDiet.performClick();
+
+        animatePop(myDietImg);
     }
 
     @Override

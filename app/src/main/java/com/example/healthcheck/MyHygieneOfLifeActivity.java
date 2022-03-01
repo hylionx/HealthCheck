@@ -2,6 +2,7 @@ package com.example.healthcheck;
 
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import androidx.appcompat.widget.SwitchCompat;
 
@@ -14,6 +15,8 @@ public class MyHygieneOfLifeActivity extends BaseActivity {
     SwitchCompat switchMyHygieneOfLifeQ2;
     SwitchCompat switchMyHygieneOfLifeQ3;
     SwitchCompat switchMyHygieneOfLifeQ4;
+    ImageView imgHygieneOfLife;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +32,7 @@ public class MyHygieneOfLifeActivity extends BaseActivity {
         switchMyHygieneOfLifeQ2 = findViewById(R.id.switchMyHygieneOfLifeQ2);
         switchMyHygieneOfLifeQ3 = findViewById(R.id.switchMyHygieneOfLifeQ3);
         switchMyHygieneOfLifeQ4 = findViewById(R.id.switchMyHygieneOfLifeQ4);
+        imgHygieneOfLife =findViewById(R.id.imgHygieneOfLife);
         getPersonByIntent();
 
         btnPrevMyHygieneOfLife.setOnClickListener(view -> gotoPreviousActivity());
@@ -36,6 +40,7 @@ public class MyHygieneOfLifeActivity extends BaseActivity {
 
 
         //btnValidate.performClick();
+        animatePop(imgHygieneOfLife);
 
     }
 
