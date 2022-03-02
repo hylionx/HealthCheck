@@ -42,7 +42,6 @@ public class ListViewCheckUpActivity extends BaseActivity {
     private RatingBar ratingBar;
     private Button btnPopup;
     private String URL = "https://www.fedecardio.org/je-me-teste/test-3-minutes/";
-    protected String postParams = "";
     private Document document = null;
     private SharedPreferences sharedPref;
 
@@ -116,7 +115,6 @@ public class ListViewCheckUpActivity extends BaseActivity {
 
     }
 
-
     public void createDialog() {
         //pop up dialogue
 
@@ -135,15 +133,41 @@ public class ListViewCheckUpActivity extends BaseActivity {
                 Log.i("Person", "**************************************************valeur rating = "+ ratingBar.getRating());
                 float ratingValue = ratingBar.getRating();
                 sharedPref.edit().putFloat("ratingValue", ratingValue).commit();
-
                 dialog.dismiss();
-
             }
         });
 
+        setCardiologistAdvices();
+    }
+
+    protected void setCardiologistAdvices() {
+
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Map<String, String> data = new HashMap<>();
+                    for (QuestionAnswer qa : person.getQuestionAnswers()) {
+                        data.put(qa.getQuestionID(), qa.getAnswerIndex().toString());
+                    }
+                    document = Jsoup.connect(URL).data(data).post();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+        thread.start();
         try {
-            setCariologTips();
-        } catch (IOException e) {
+            thread.join();
+            Elements advices = document.select("p.question-conseil");
+            int qaIndex = 2; // Advices start from second activity
+            for (Element advice : advices) {
+                QuestionAnswer qa = person.getQuestionAnswers().get(qaIndex++);
+                qa.setCardiologistAdvice(advice.text());
+                Log.i("Person", "advices: " + qa.getCardiologistAdvice());
+            }
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }
@@ -176,52 +200,10 @@ public class ListViewCheckUpActivity extends BaseActivity {
             name.setText(topicName[i]);
             image.setImageResource(topicImage[i]);
 
-
             return view1;
 
         }
     }
 
-    protected void addPostParams(String question, Integer value) {
-        try {
-            postParams += (postParams.isEmpty() ? "" : "&") + question + "=" + URLEncoder.encode("" + value, "UTF-8");
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        }
-    }
-
-    protected void setCariologTips() throws IOException {
-
-        Thread thread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    Map<String, String> data = new HashMap<>();
-                    for (QuestionAnswer qa : person.getQuestionAnswers()) {
-                        data.put(qa.getQuestionID(), qa.getAnswerIndex().toString());
-                    }
-                    document = Jsoup.connect(URL).data(data).post();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-
-        thread.start();
-        try {
-            thread.join();
-            Elements advElements = document.select("p.question-conseil");
-            int qaIndex = 2;
-            for (Element adv : advElements) {
-                QuestionAnswer qa = person.getQuestionAnswers().get(qaIndex++);
-                qa.setCardiologistAdvice(adv.text());
-                Log.i("Person", "advElements: " + qa.getCardiologistAdvice());
-            }
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-
-    }
 
 }

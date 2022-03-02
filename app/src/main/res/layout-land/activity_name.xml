@@ -9,14 +9,12 @@
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="match_parent"
         android:fillViewport="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="1.0">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/linearLayout"
@@ -24,39 +22,10 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/tvName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="64dp"
-                android:labelFor="@id/etName2"
-                android:text="@string/txtMainYourName"
-                android:textColor="#F5F5F5"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="@+id/tvMainSubtitle"
-                app:layout_constraintHorizontal_bias="0.494"
-                app:layout_constraintStart_toStartOf="@+id/tvMainSubtitle"
-                app:layout_constraintTop_toBottomOf="@+id/tvMainSubtitle" />
-
-            <EditText
-                android:id="@+id/etName2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:autofillHints=" "
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:minHeight="48dp"
-                android:textColor="#F3EFEF"
-                app:layout_constraintEnd_toEndOf="@+id/tvName"
-                app:layout_constraintStart_toStartOf="@+id/tvName"
-                app:layout_constraintTop_toBottomOf="@+id/tvName"
-                tools:ignore="DuplicateSpeakableTextCheck" />
-
-            <TextView
                 android:id="@+id/tvMainTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="24dp"
                 android:text="@string/txtMainTitle"
                 android:textAlignment="center"
                 android:textColor="#F8ECEC"
@@ -64,20 +33,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-
-            <Button
-                android:id="@+id/btnStartTest"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="64dp"
-                android:layout_marginBottom="24dp"
-                android:background="#000000"
-                android:text="@string/btnStartTest"
-                android:textColor="#FBF4F4"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/etName2"
-                app:layout_constraintStart_toStartOf="@+id/etName2"
-                app:layout_constraintTop_toBottomOf="@+id/etName2" />
 
             <TextView
                 android:id="@+id/tvMainSubtitle"
@@ -91,6 +46,66 @@
                 app:layout_constraintStart_toStartOf="@+id/tvMainTitle"
                 app:layout_constraintTop_toBottomOf="@+id/tvMainTitle"
                 tools:ignore="TextContrastCheck" />
+
+            <ImageButton
+                android:id="@+id/imgButtonAvatar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="50dp"
+                android:adjustViewBounds="true"
+                android:background="@color/cardview_shadow_end_color"
+                android:contentDescription="@string/app_name"
+                android:cropToPadding="false"
+                android:stateListAnimator="@anim/animation_bottom"
+                app:layout_constraintBottom_toBottomOf="@+id/textInputLayout"
+                app:layout_constraintEnd_toStartOf="@+id/textInputLayout"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textInputLayout"
+                app:srcCompat="@drawable/avatar1"
+                tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:hint="@string/txtMainYourName"
+                app:counterEnabled="true"
+                app:counterMaxLength="20"
+                app:endIconMode="clear_text"
+                app:helperText="@string/txtRequired"
+                app:helperTextTextColor="@color/design_default_color_error"
+                app:layout_constraintEnd_toEndOf="@+id/tvMainTitle"
+                app:layout_constraintTop_toBottomOf="@+id/tvMainSubtitle"
+                app:startIconDrawable="@drawable/ic_person">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtiputeditName"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:maxLength="20"
+                    tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnStartTest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:layout_marginBottom="16dp"
+                android:background="#000000"
+                android:minHeight="48dp"
+                android:stateListAnimator="@anim/animation_bottom"
+                android:text="@string/btnStartTest"
+                android:textColor="#FBF4F4"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 
