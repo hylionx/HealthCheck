@@ -2,18 +2,21 @@ package com.example.healthcheck;
 
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import androidx.appcompat.widget.SwitchCompat;
 
 public class MyStressManagementActivity extends BaseActivity {
     public static final String APP_TAG = "MyStressManagementActivityApp";
 
-    Button btnPrevMyStressManagment;
-    Button btnNextMyStressManagment;
-    Spinner spinnerMyStressManagementRepQ1;
-    Spinner spinnerMyStressManagementRepQ2;
-    SwitchCompat switchMyStressManagementQ3;
-    SwitchCompat switchMyStressManagementQ4;
+    private Button btnPrevMyStressManagment;
+    private Button btnNextMyStressManagment;
+    private Spinner spinnerMyStressManagementRepQ1;
+    private Spinner spinnerMyStressManagementRepQ2;
+    private SwitchCompat switchMyStressManagementQ3;
+    private SwitchCompat switchMyStressManagementQ4;
+    private ImageView imgStressMngmt;
+
 
 
     @Override
@@ -30,13 +33,14 @@ public class MyStressManagementActivity extends BaseActivity {
         spinnerMyStressManagementRepQ2 = findViewById(R.id.spinnerMyStressManagementRepQ2);
         switchMyStressManagementQ3 = findViewById(R.id.switchMyStressManagementQ3);
         switchMyStressManagementQ4 = findViewById(R.id.switchMyStressManagementQ4);
-
+        imgStressMngmt = findViewById(R.id.imgStressMngmt);
 
         btnPrevMyStressManagment.setOnClickListener(view -> gotoPreviousActivity());
         btnNextMyStressManagment.setOnClickListener(view -> gotoNextActivity(MyHygieneOfLifeActivity.class));
 
         getPersonByIntent();
         //btnNextMyStressManagment.performClick();
+        animatePop(imgStressMngmt);
 
     }
 

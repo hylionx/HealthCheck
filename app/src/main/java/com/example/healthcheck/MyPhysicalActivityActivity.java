@@ -3,18 +3,20 @@ package com.example.healthcheck;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.ImageView;
 import android.widget.Spinner;
 
 public class MyPhysicalActivityActivity extends BaseActivity{
     public static final String APP_TAG = "MyPhysicalActivityActivityApp";
 
-    Button btnPrevMyPhysicalActivity;
-    Button btnNextMyPhysicalActivity;
-    CheckBox checkBoxMyPhysicalActivityQ1;
-    Spinner spinnerMyPhysicalActivityRepQ2;
-    CheckBox checkBoxMyPhysicalActivityQ3;
-    Spinner spinnerMyPhysicalActivityRepQ4;
-    Spinner spinnerMyPhysicalActivityRepQ5;
+    private Button btnPrevMyPhysicalActivity;
+    private Button btnNextMyPhysicalActivity;
+    private CheckBox checkBoxMyPhysicalActivityQ1;
+    private Spinner spinnerMyPhysicalActivityRepQ2;
+    private CheckBox checkBoxMyPhysicalActivityQ3;
+    private Spinner spinnerMyPhysicalActivityRepQ4;
+    private Spinner spinnerMyPhysicalActivityRepQ5;
+    private ImageView myphysicalActivityImg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,13 +32,14 @@ public class MyPhysicalActivityActivity extends BaseActivity{
         checkBoxMyPhysicalActivityQ3 = findViewById(R.id.checkBoxMyPhysicalActivityQ3);
         spinnerMyPhysicalActivityRepQ4 = findViewById(R.id.spinnerMyPhysicalActivityRepQ4);
         spinnerMyPhysicalActivityRepQ5 = findViewById(R.id.spinnerMyPhysicalActivityRepQ5);
-
+        myphysicalActivityImg = findViewById(R.id.myphysicalActivityImg);
 
         btnPrevMyPhysicalActivity.setOnClickListener(view -> gotoPreviousActivity());
         btnNextMyPhysicalActivity.setOnClickListener(view -> gotoNextActivity(MyTobaccoConsumptionActivity.class));
 
         getPersonByIntent();
         //btnNextMyPhysicalActivity.performClick();
+        animatePop(myphysicalActivityImg);
     }
 
     @Override

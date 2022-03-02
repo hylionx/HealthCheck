@@ -9,6 +9,10 @@ import android.os.VibrationEffect;
 import android.os.Vibrator;
 import android.preference.PreferenceManager;
 import android.util.Log;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,11 +32,12 @@ public abstract class BaseActivity extends AppCompatActivity {
     public static final String SAVED_PERSONS = "savedPersons";
     public static final String EXTRA_PERSON = "com.example.extras.EXTRA_PERSON";
 
+
     protected String questions[];
     protected Person person;
     protected Set<String> savedPersons;
     protected int formNumber = -1; // -1 by default for non-form activities
-
+    protected RatingBar rater;
     /**
      * Get the person object from intent and affect it to the person attribute.
      */
@@ -149,6 +154,21 @@ public abstract class BaseActivity extends AppCompatActivity {
         for (String item : savedPersons) {
             Log.d("Person","\t- " + item);
         }
+    }
+
+    public void animateTop(View view) {
+        Animation topAnimation = AnimationUtils.loadAnimation(this, R.anim.animation_top);
+        view.setAnimation(topAnimation);
+    }
+
+    public void animateBottom(View view) {
+        Animation bottomAnimation = AnimationUtils.loadAnimation(this, R.anim.animation_bottom);
+        view.setAnimation(bottomAnimation);
+    }
+
+    public void animatePop(View view) {
+        Animation bottomAnimation = AnimationUtils.loadAnimation(this, R.anim.animation_pop);
+        view.setAnimation(bottomAnimation);
     }
 
 

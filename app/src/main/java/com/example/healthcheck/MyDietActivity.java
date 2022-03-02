@@ -3,19 +3,21 @@ package com.example.healthcheck;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.ImageView;
 import android.widget.Spinner;
 
 public class MyDietActivity extends BaseActivity {
     public static final String APP_TAG = "MyDietActivityApp";
 
-    Button btnPrevMyDiet;
-    Button btnNextMyDiet;
-    CheckBox checkBoxMyDietQ1;
-    CheckBox checkBoxMyDietQ2;
-    Spinner spinnerMyDietRepQ3;
-    CheckBox checkBoxMyDietQ4;
-    CheckBox checkBoxMyDietQ5;
-    CheckBox checkBoxMyDietQ6;
+    private Button btnPrevMyDiet;
+    private Button btnNextMyDiet;
+    private CheckBox checkBoxMyDietQ1;
+    private CheckBox checkBoxMyDietQ2;
+    private Spinner spinnerMyDietRepQ3;
+    private CheckBox checkBoxMyDietQ4;
+    private CheckBox checkBoxMyDietQ5;
+    private CheckBox checkBoxMyDietQ6;
+    private ImageView myDietImg;
 
 
     @Override
@@ -33,14 +35,15 @@ public class MyDietActivity extends BaseActivity {
         checkBoxMyDietQ4 = findViewById(R.id.checkBoxMyDietQ4);
         checkBoxMyDietQ5 = findViewById(R.id.checkBoxMyDietQ5);
         checkBoxMyDietQ6 = findViewById(R.id.checkBoxMyDietQ6);
-
+        myDietImg =findViewById(R.id.myDietImg);
 
 
         btnPrevMyDiet.setOnClickListener(view -> gotoPreviousActivity());
         btnNextMyDiet.setOnClickListener(view -> gotoNextActivity(MyPhysicalActivityActivity.class));
 
         getPersonByIntent();
-        //btnNextMyDiet.performClick();
+
+        animatePop(myDietImg);
     }
 
     @Override

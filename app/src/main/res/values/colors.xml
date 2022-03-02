@@ -8,6 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
+    <color name="iAm"> #B8A5D0</color>
     <color name="myHeart"> #CCE8426E</color>
     <color name="myCardiacMonitoring"> #CC0cb4bd</color>
     <color name="myDiet"> #f8ac3b</color>

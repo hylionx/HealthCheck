@@ -102,6 +102,7 @@
     <string name="txtErrorWeight">Weight can\'t be empty</string>
     <string name="txtErrorHeight">Height can\'t be empty</string>
     <string name="txtErrorSexe">You must choose your sexe</string>
+    <string name="imgAvatar" translatable="false">imgAvatar</string>
 
 
     <!-- Strings used for fragments for navigation

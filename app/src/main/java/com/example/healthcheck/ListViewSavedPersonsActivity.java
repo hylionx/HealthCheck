@@ -17,10 +17,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ListViewSavedPersonsActivity extends BaseActivity {
-    ListView listViewPersons;
-    int [] images;
-    List<String> names;
-    Button bntStartTestNewPerson;
+    private ListView listViewPersons;
+    private List<Person> persons;
+    private Button bntStartTestNewPerson;
 
 
     @Override
@@ -34,7 +33,10 @@ public class ListViewSavedPersonsActivity extends BaseActivity {
         reloadSavedPersons();
         displaySavedPersons();
 
-        names = new ArrayList<>(savedPersons);
+        persons = new ArrayList();
+        for (String name: savedPersons) {
+            persons.add(Serializer.deSerialize(name, ListViewSavedPersonsActivity.this));
+        }
         listViewPersons = findViewById(R.id.listViewPersons);
         bntStartTestNewPerson = findViewById(R.id.bntStartTestNewPerson);
 
@@ -48,7 +50,7 @@ public class ListViewSavedPersonsActivity extends BaseActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent = new Intent(getApplicationContext(), ChoiceNextActivity.class);
-                intent.putExtra(EXTRA_PERSON, (Parcelable) Serializer.deSerialize(names.get(i), ListViewSavedPersonsActivity.this));
+                intent.putExtra(EXTRA_PERSON, (Parcelable) persons.get(i));
                 startActivity(intent);
             }
         });
@@ -59,7 +61,7 @@ public class ListViewSavedPersonsActivity extends BaseActivity {
 
         @Override
         public int getCount() {
-            return  names.size();
+            return  persons.size();
         }
 
         @Override
@@ -76,10 +78,10 @@ public class ListViewSavedPersonsActivity extends BaseActivity {
         public View getView(int i, View view, ViewGroup viewGroup) {
 
             View view1 = getLayoutInflater().inflate(R.layout.customlayout, null);
-            //ImageView mImageView = view1.findViewById(R.id.imgAvatar);
+            ImageView mImageView = view1.findViewById(R.id.imgAvatar);
             TextView textView = view1.findViewById(R.id.txtListViewPersonName);
-            //mImageView.setImageResource(images[i]);
-            textView.setText(names.get(i));
+            mImageView.setImageResource(persons.get(i).getAvatar());
+            textView.setText(persons.get(i).getName());
 
             return view1;
         }

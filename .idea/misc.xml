@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/drawable-anydpi/ic_action_name.xml" value="0.37864583333333335" />
+        <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/drawable/background.xml" value="0.37864583333333335" />
         <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/font/amarante.xml" value="0.2791666666666667" />
         <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout-land/activity_choice_next.xml" value="0.30687830687830686" />
         <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout-land/activity_i_am.xml" value="0.33" />
@@ -44,6 +45,7 @@
         <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout/activity_my_tobacco_consumption.xml" value="0.3625" />
         <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout/activity_name.xml" value="0.33" />
         <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout/activity_row_data.xml" value="0.3625" />
+        <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout/avatar_popup.xml" value="0.33" />
         <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout/content_mon_coeur.xml" value="0.25" />
         <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout/customlayout.xml" value="0.33" />
         <entry key="..\:/Users/Hylia/AndroidStudioProjects/HealthCheck/app/src/main/res/layout/fragment_first.xml" value="0.25" />

@@ -24,9 +24,9 @@ public class MainActivity extends BaseActivity {
             Manifest.permission.WRITE_EXTERNAL_STORAGE
     };
 
-    ImageView imageView;
-    TextView txtMadeBy;
-    Animation topaniAnimation, bottoAnimation;
+    private ImageView imageView;
+    private TextView txtMadeBy;
+    private Animation topaniAnimation, bottoAnimation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -7,8 +7,8 @@ import android.widget.ImageButton;
 
 public class ChoiceNextActivity extends BaseActivity {
 
-    ImageButton buttonAppli;
-    ImageButton buttonWebSite;
+    private ImageButton buttonAppli;
+    private ImageButton buttonWebSite;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +30,9 @@ public class ChoiceNextActivity extends BaseActivity {
 
         Log.i("Person", "ChoiceNextActivity ----- savePerson");
         savePerson();
+
+        animatePop(buttonAppli);
+        animatePop(buttonWebSite);
     }
 
 

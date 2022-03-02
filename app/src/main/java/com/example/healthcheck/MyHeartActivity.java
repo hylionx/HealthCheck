@@ -2,19 +2,21 @@ package com.example.healthcheck;
 
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Spinner;
 
 public class MyHeartActivity extends BaseActivity {
     public static final String APP_TAG = "MyHeartActivityApp";
 
-    Button btnPrevMyHeart;
-    Button btnNextMyHeart;
-    Spinner spinnerMyHeartRepQ1;
-    Spinner spinnerMyHeartRepQ2;
-    Spinner spinnerMyHeartRepQ3;
-    Spinner spinnerMyHeartRepQ4;
-    Spinner spinnerMyHeartRepQ5;
-    Spinner spinnerMyHeartRepQ6;
+    private Button btnPrevMyHeart;
+    private Button btnNextMyHeart;
+    private Spinner spinnerMyHeartRepQ1;
+    private Spinner spinnerMyHeartRepQ2;
+    private Spinner spinnerMyHeartRepQ3;
+    private Spinner spinnerMyHeartRepQ4;
+    private Spinner spinnerMyHeartRepQ5;
+    private Spinner spinnerMyHeartRepQ6;
+    private ImageView myHeartImg;
 
 
     @Override
@@ -36,6 +38,7 @@ public class MyHeartActivity extends BaseActivity {
         spinnerMyHeartRepQ4 = findViewById(R.id.spinnerMyHeartRepQ4);
         spinnerMyHeartRepQ5 = findViewById(R.id.spinnerMyHeartRepQ5);
         spinnerMyHeartRepQ6 = findViewById(R.id.spinnerMyHeartRepQ6);
+        myHeartImg = findViewById(R.id.myHeartImg);
 
         btnPrevMyHeart.setOnClickListener(view -> gotoPreviousActivity());
         btnNextMyHeart.setOnClickListener(view -> gotoNextActivity(MyCardiacMonitoringActivity.class));
@@ -43,6 +46,8 @@ public class MyHeartActivity extends BaseActivity {
 
         getPersonByIntent();
         //btnNextMyHeart.performClick();
+
+        animatePop(myHeartImg);
 
     }
     @Override
