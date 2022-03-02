@@ -1,7 +1,5 @@
 package com.example.healthcheck;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
@@ -10,11 +8,10 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.example.healthcheck.Utils.Serializer;
+import com.example.healthcheck.utils.Serializer;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,14 +1,11 @@
-package com.example.healthcheck;
+package com.example.healthcheck.data;
 
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.util.Log;
 
-import com.example.healthcheck.Utils.Serializer;
-
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 

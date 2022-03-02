@@ -1,10 +1,10 @@
 package com.example.healthcheck;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.util.Log;
 import android.webkit.WebView;
+
+import com.example.healthcheck.data.QuestionAnswer;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;

@@ -14,11 +14,9 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.healthcheck.Utils.Serializer;
+import com.example.healthcheck.data.Person;
+import com.example.healthcheck.utils.Serializer;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
-import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 

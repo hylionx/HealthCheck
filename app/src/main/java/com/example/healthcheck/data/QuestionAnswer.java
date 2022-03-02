@@ -1,4 +1,4 @@
-package com.example.healthcheck;
+package com.example.healthcheck.data;
 
 import android.os.Parcel;
 import android.os.Parcelable;

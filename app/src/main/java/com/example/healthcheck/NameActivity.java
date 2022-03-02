@@ -6,12 +6,11 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.Button;
-import android.widget.EditText;
 
 import androidx.core.app.ActivityCompat;
 
+import com.example.healthcheck.data.Person;
 import com.google.android.material.textfield.TextInputEditText;
-import com.google.android.material.textfield.TextInputLayout;
 
 public class NameActivity extends BaseActivity {
     // in Logcat : (MainApp)|(IAMApp)|(MyHeartApp)

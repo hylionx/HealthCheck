@@ -1,8 +1,8 @@
-package com.example.healthcheck.Utils;
+package com.example.healthcheck.utils;
 
 import android.content.Context;
 
-import com.example.healthcheck.Person;
+import com.example.healthcheck.data.Person;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

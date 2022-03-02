@@ -15,7 +15,7 @@ import android.widget.ListView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
-import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import com.example.healthcheck.data.QuestionAnswer;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
