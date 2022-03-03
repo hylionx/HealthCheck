@@ -1,4 +1,4 @@
-package com.example.healthcheck;
+package com.example.healthcheck.formActivities;
 
 import android.os.Bundle;
 import android.widget.Button;
@@ -6,8 +6,11 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import androidx.appcompat.widget.SwitchCompat;
 
+import com.example.healthcheck.BaseActivity;
+import com.example.healthcheck.R;
+
 public class MyStressManagementActivity extends BaseActivity {
-    public static final String APP_TAG = "MyStressManagementActivityApp";
+    public static final String APP_TAG = "MyStressManagementActivityMyApp";
 
     private Button btnPrevMyStressManagment;
     private Button btnNextMyStressManagment;
@@ -39,7 +42,7 @@ public class MyStressManagementActivity extends BaseActivity {
         btnNextMyStressManagment.setOnClickListener(view -> gotoNextActivity(MyHygieneOfLifeActivity.class));
 
         getPersonByIntent();
-        //btnNextMyStressManagment.performClick();
+        btnNextMyStressManagment.performClick();
         animatePop(imgStressMngmt);
 
     }

@@ -12,6 +12,7 @@ import java.util.List;
 
 
 public class Person implements Parcelable, Serializable {
+    public static final String APP_TAG = "PersonMyApp";
 
 
     private String name;
@@ -73,7 +74,7 @@ public class Person implements Parcelable, Serializable {
     public void addQA(String questionID, String questionValue, Integer AnswerIndex, String AnswerValue) {
         QuestionAnswer qa = new QuestionAnswer(questionID, questionValue, AnswerIndex, AnswerValue);
         questionAnswers.add(qa);
-        Log.i("Person", "QA added : " + qa);
+        Log.i(APP_TAG, "QA added : " + qa);
     }
 
     public void removeQAs(String regex) {
@@ -81,7 +82,7 @@ public class Person implements Parcelable, Serializable {
         int last = questionAnswers.size();
         while (last-- > 0) {
             if (questionAnswers.get(last).getQuestionID().contains(regex)) {
-                Log.d("Person", "removing : " + questionAnswers.get(last).getQuestionID());
+                Log.i(APP_TAG, "removing : " + questionAnswers.get(last).getQuestionID());
                 questionAnswers.remove(last);
 
             } else {

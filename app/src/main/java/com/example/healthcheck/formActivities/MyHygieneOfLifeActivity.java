@@ -1,4 +1,4 @@
-package com.example.healthcheck;
+package com.example.healthcheck.formActivities;
 
 import android.os.Bundle;
 import android.widget.Button;
@@ -6,8 +6,12 @@ import android.widget.ImageView;
 
 import androidx.appcompat.widget.SwitchCompat;
 
+import com.example.healthcheck.BaseActivity;
+import com.example.healthcheck.ChoiceNextActivity;
+import com.example.healthcheck.R;
+
 public class MyHygieneOfLifeActivity extends BaseActivity {
-    public static final String APP_TAG = "MyHygieneOfLifeActivityApp";
+    public static final String APP_TAG = "MyHygieneOfLifeActivityMyApp";
 
     private Button btnPrevMyHygieneOfLife;
     private Button btnValidate;
@@ -39,7 +43,7 @@ public class MyHygieneOfLifeActivity extends BaseActivity {
         btnValidate.setOnClickListener(view -> gotoNextActivity(ChoiceNextActivity.class));
 
 
-        //btnValidate.performClick();
+        btnValidate.performClick();
         animatePop(imgHygieneOfLife);
 
     }

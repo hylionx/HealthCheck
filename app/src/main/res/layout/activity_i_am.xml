@@ -7,7 +7,7 @@
     android:background="#DBCEEC"
     android:backgroundTint="#DBCEEC"
     android:contentDescription="@string/txtMyProfilTitle"
-    tools:context=".IAmActivity">
+    tools:context=".formActivities.IAmActivity">
 
     <ImageView
         android:id="@+id/myProfilImg"

@@ -10,7 +10,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 
 public class WebsiteCheckupActivity extends BaseActivity {
-
+    public static final String APP_TAG = "WebsiteCheckupActivityMyApp";
     protected String postParams = "";
 
     @Override
@@ -31,7 +31,8 @@ public class WebsiteCheckupActivity extends BaseActivity {
             addPostParams(qa.getQuestionID(), qa.getAnswerIndex());
         }
 
-        Log.i("Person", "/////////////// params :  " + postParams);
+        Log.i(APP_TAG, "params :  " + postParams);
+
 
         String URL = "https://www.fedecardio.org/je-me-teste/test-3-minutes/";
         webview.postUrl(URL, postParams.getBytes());

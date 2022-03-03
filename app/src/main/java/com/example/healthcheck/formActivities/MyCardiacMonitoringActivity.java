@@ -1,4 +1,4 @@
-package com.example.healthcheck;
+package com.example.healthcheck.formActivities;
 
 
 import android.os.Bundle;
@@ -6,9 +6,12 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 
+import com.example.healthcheck.BaseActivity;
+import com.example.healthcheck.R;
+
 
 public class MyCardiacMonitoringActivity extends BaseActivity {
-    public static final String APP_TAG = "MyCardiacMonitoringActivityApp";
+    public static final String APP_TAG = "MyCardiacMonitoringActivityMyApp";
 
     private Button btnPrevMyCardiacMonitoring;
     private Button btnNextMyCardiacMonitoring;
@@ -42,6 +45,7 @@ public class MyCardiacMonitoringActivity extends BaseActivity {
         getPersonByIntent();
 
         animatePop(myCardiacMonitoringImg);
+        btnNextMyCardiacMonitoring.performClick();
 
     }
 

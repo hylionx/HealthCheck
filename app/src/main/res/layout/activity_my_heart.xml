@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#ED6489"
     android:visibility="visible"
-    tools:context=".MyHeartActivity">
+    tools:context=".formActivities.MyHeartActivity">
 
     <TextView
         android:id="@+id/txtMyHeart"

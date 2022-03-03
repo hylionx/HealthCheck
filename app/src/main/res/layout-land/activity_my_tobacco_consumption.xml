@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#47D1B6"
-    tools:context=".MyTobaccoConsumptionActivity">
+    tools:context=".formActivities.MyTobaccoConsumptionActivity">
 
     <ImageView
         android:id="@+id/myTobaccoImg"

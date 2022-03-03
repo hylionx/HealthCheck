@@ -29,6 +29,7 @@ import java.util.TreeSet;
  */
 public abstract class BaseActivity extends AppCompatActivity {
 
+    public static final String APP_TAG = "BaseActivityMyApp";
     public static final String SAVED_PERSONS = "savedPersons";
     public static final String EXTRA_PERSON = "com.example.extras.EXTRA_PERSON";
 
@@ -44,7 +45,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected void getPersonByIntent() {
         Intent intent = getIntent();
         person = intent.getParcelableExtra(EXTRA_PERSON);
-        //Log.i("Person", "Received " + person);
+        Log.i(APP_TAG, "Received " + person);
 
     }
 
@@ -124,16 +125,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         return true;
     }
 
-    /**
-     * Store the person object in file system with serialization
-     * and register the person name in the shared preferences.
-     */
-    public void savePerson() {
-        Serializer.serialize(person, this);
-        savedPersons.add(person.getName());
-        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
-        sharedPref.edit().putStringSet(SAVED_PERSONS, savedPersons).commit();
-    }
+
 
     /**
      * Retrieve the saved StringSet of person's names.
@@ -141,7 +133,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     public void reloadSavedPersons() {
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
         savedPersons = new TreeSet<String>(sharedPref.getStringSet(SAVED_PERSONS, new TreeSet<String>()));
-        Log.i("Person", "reloadSavedPersons new size = " + savedPersons.size());
+        Log.i(APP_TAG, "reloadSavedPersons new size = " + savedPersons.size());
     }
 
 
@@ -150,20 +142,10 @@ public abstract class BaseActivity extends AppCompatActivity {
      */
     public void displaySavedPersons() {
         reloadSavedPersons();
-        Log.d("Person","displaySavedPersons size = "+savedPersons.size()+": ");
+        Log.i(APP_TAG,"displaySavedPersons size = "+savedPersons.size()+": ");
         for (String item : savedPersons) {
-            Log.d("Person","\t- " + item);
+            Log.i(APP_TAG,"\t- " + item);
         }
-    }
-
-    public void animateTop(View view) {
-        Animation topAnimation = AnimationUtils.loadAnimation(this, R.anim.animation_top);
-        view.setAnimation(topAnimation);
-    }
-
-    public void animateBottom(View view) {
-        Animation bottomAnimation = AnimationUtils.loadAnimation(this, R.anim.animation_bottom);
-        view.setAnimation(bottomAnimation);
     }
 
     public void animatePop(View view) {

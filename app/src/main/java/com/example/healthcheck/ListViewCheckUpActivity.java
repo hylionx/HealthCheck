@@ -1,23 +1,18 @@
 package com.example.healthcheck;
 
 import android.app.AlertDialog;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.BaseAdapter;
 import android.widget.Button;
-import android.widget.GridView;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RatingBar;
-import android.widget.TextView;
 
+import com.example.healthcheck.adapters.CheckUpAdapter;
 import com.example.healthcheck.data.QuestionAnswer;
 
 import org.jsoup.Jsoup;
@@ -25,13 +20,12 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
 import java.util.HashMap;
 import java.util.Map;
 
 public class ListViewCheckUpActivity extends BaseActivity {
+
+    public static final String APP_TAG = "ListViewCheckUpActivityMyApp";
 
     private ListView listView;
     private String[] topicName;
@@ -53,65 +47,25 @@ public class ListViewCheckUpActivity extends BaseActivity {
         getPersonByIntent();
         btnPopup = findViewById(R.id.btnPopup);
 
+        // rate the app once
         sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
         if(sharedPref.getFloat("ratingValue", -1.0f) == -1.0f){
             createDialog();
-
         }
 
-        topicName = new String[]{
-                getString(R.string.txtMyProfilTitle),
-                getString(R.string.txtMyHeartTitle),
-                getString(R.string.my_cardiac_monitoring_title),
-                getString(R.string.my_diet_title),
-                getString(R.string.myPhysicalActivityTitle),
-                getString(R.string.myTobaccoConsumptionTitle),
-                getString(R.string.myStressManagementTitle),
-                getString(R.string.myHygieneOfLifeTitle)
-        };
-
-        topicImage = new int[]{
-                R.drawable.profill,
-                R.drawable.moncoeur,
-                R.drawable.suivicardiaque,
-                R.drawable.alimentation,
-                R.drawable.basket,
-                R.drawable.tabac,
-                R.drawable.stress,
-                R.drawable.dodo
-        };
-
-        bgColors = new int[]{
-                R.color.iAm,
-                R.color.myHeart,
-                R.color.myCardiacMonitoring,
-                R.color.myDiet,
-                R.color.myPhysicalActivity,
-                R.color.myTobaccoActivity,
-                R.color.myStressManagment,
-                R.color.myHygieneOfLife
-
-        };
 
         listView = findViewById(R.id.listview);
 
-        CustomAdapter customAdapter = new CustomAdapter();
-        listView.setAdapter(customAdapter);
+        CheckUpAdapter checkUpAdapter = new CheckUpAdapter(this);
+        listView.setAdapter(checkUpAdapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent = new Intent(getApplicationContext(), CheckUpActivity.class);
-                intent.putExtra("indexForm", (i + 1));
-                intent.putExtra(EXTRA_PERSON, (Parcelable) person);
-                intent.putExtra("name", topicName[i]);
-                intent.putExtra("image", topicImage[i]);
-                intent.putExtra("bgColors", bgColors[i]);
-                startActivity(intent);
+                checkUpAdapter.next(EXTRA_PERSON, i, (Parcelable) person);
             }
         });
-
 
     }
 
@@ -130,7 +84,7 @@ public class ListViewCheckUpActivity extends BaseActivity {
         btnPopup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.i("Person", "**************************************************valeur rating = "+ ratingBar.getRating());
+                Log.i(APP_TAG, "valeur rating = "+ ratingBar.getRating());
                 float ratingValue = ratingBar.getRating();
                 sharedPref.edit().putFloat("ratingValue", ratingValue).commit();
                 dialog.dismiss();
@@ -165,45 +119,11 @@ public class ListViewCheckUpActivity extends BaseActivity {
             for (Element advice : advices) {
                 QuestionAnswer qa = person.getQuestionAnswers().get(qaIndex++);
                 qa.setCardiologistAdvice(advice.text());
-                Log.i("Person", "advices: " + qa.getCardiologistAdvice());
+                Log.i(APP_TAG, "advices: " + qa.getCardiologistAdvice());
             }
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }
-
-    private class CustomAdapter extends BaseAdapter {
-
-
-        @Override
-        public int getCount() {
-            return topicImage.length;
-        }
-
-        @Override
-        public Object getItem(int i) {
-            return null;
-        }
-
-        @Override
-        public long getItemId(int i) {
-            return 0;
-        }
-
-        @Override
-        public View getView(int i, View view, ViewGroup viewGroup) {
-            View view1 = getLayoutInflater().inflate(R.layout.activity_list_view_check_up_format, null);
-            TextView name = view1.findViewById(R.id.txtTitleTopic);
-            ImageView image = view1.findViewById(R.id.images);
-
-            view1.setBackgroundColor(getResources().getColor(bgColors[i]));
-            name.setText(topicName[i]);
-            image.setImageResource(topicImage[i]);
-
-            return view1;
-
-        }
-    }
-
 
 }

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F68E89"
-    tools:context=".MyPhysicalActivityActivity">
+    tools:context=".formActivities.MyPhysicalActivityActivity">
 
     <ImageView
         android:id="@+id/myphysicalActivityImg"

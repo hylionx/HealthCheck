@@ -1,18 +1,19 @@
-package com.example.healthcheck;
+package com.example.healthcheck.formActivities;
 
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import com.example.healthcheck.BaseActivity;
+import com.example.healthcheck.R;
+
 public class IAmActivity extends BaseActivity {
-    public static final String APP_TAG = "IAmActivityApp";
+    public static final String APP_TAG = "IAmActivityMyApp";
 
     private RadioGroup rgSexe;
     private RadioGroup rgAge;

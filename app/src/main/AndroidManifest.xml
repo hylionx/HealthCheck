@@ -32,31 +32,31 @@
             android:name=".ChoiceNextActivity"
             android:exported="false" />
         <activity
-            android:name=".NameActivity"
+            android:name=".formActivities.NameActivity"
             android:exported="false" />
         <activity
-            android:name=".MyHygieneOfLifeActivity"
+            android:name=".formActivities.MyHygieneOfLifeActivity"
             android:exported="false" />
         <activity
-            android:name=".MyStressManagementActivity"
+            android:name=".formActivities.MyStressManagementActivity"
             android:exported="false" />
         <activity
-            android:name=".MyTobaccoConsumptionActivity"
+            android:name=".formActivities.MyTobaccoConsumptionActivity"
             android:exported="false" />
         <activity
-            android:name=".MyPhysicalActivityActivity"
+            android:name=".formActivities.MyPhysicalActivityActivity"
             android:exported="false" />
         <activity
-            android:name=".MyDietActivity"
+            android:name=".formActivities.MyDietActivity"
             android:exported="false" />
         <activity
-            android:name=".MyCardiacMonitoringActivity"
+            android:name=".formActivities.MyCardiacMonitoringActivity"
             android:exported="false" />
         <activity
-            android:name=".MyHeartActivity"
+            android:name=".formActivities.MyHeartActivity"
             android:exported="false" />
         <activity
-            android:name=".IAmActivity"
+            android:name=".formActivities.IAmActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

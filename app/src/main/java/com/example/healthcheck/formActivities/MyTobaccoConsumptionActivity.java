@@ -1,12 +1,15 @@
-package com.example.healthcheck;
+package com.example.healthcheck.formActivities;
 
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 
+import com.example.healthcheck.BaseActivity;
+import com.example.healthcheck.R;
+
 public class MyTobaccoConsumptionActivity extends BaseActivity {
-    public static final String APP_TAG = "MyTobaccoConsumptionActivityApp";
+    public static final String APP_TAG = "MyTobaccoConsumptionActivityMyApp";
 
     private Button btnPrevMyTobaccoConsumption;
     private Button btnNextMyTobaccoConsumption;
@@ -36,7 +39,7 @@ public class MyTobaccoConsumptionActivity extends BaseActivity {
         btnNextMyTobaccoConsumption.setOnClickListener(view -> gotoNextActivity(MyStressManagementActivity.class));
 
         getPersonByIntent();
-        //btnNextMyTobaccoConsumption.performClick();
+        btnNextMyTobaccoConsumption.performClick();
         animatePop(myTobaccoImg);
 
     }

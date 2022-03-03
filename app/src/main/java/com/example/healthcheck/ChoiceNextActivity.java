@@ -1,11 +1,16 @@
 package com.example.healthcheck;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.widget.ImageButton;
 
+import com.example.healthcheck.utils.Serializer;
+
 
 public class ChoiceNextActivity extends BaseActivity {
+    public static final String APP_TAG = "ChoiceNextActivityMyApp";
 
     private ImageButton buttonAppli;
     private ImageButton buttonWebSite;
@@ -28,11 +33,22 @@ public class ChoiceNextActivity extends BaseActivity {
         reloadSavedPersons();
         displaySavedPersons();
 
-        Log.i("Person", "ChoiceNextActivity ----- savePerson");
+        Log.i(APP_TAG, "Saving person");
         savePerson();
 
         animatePop(buttonAppli);
         animatePop(buttonWebSite);
+    }
+
+    /**
+     * Store the person object in file system with serialization
+     * and register the person name in the shared preferences.
+     */
+    public void savePerson() {
+        Serializer.serialize(person, this);
+        savedPersons.add(person.getName());
+        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
+        sharedPref.edit().putStringSet(SAVED_PERSONS, savedPersons).commit();
     }
 
 

@@ -1,4 +1,4 @@
-package com.example.healthcheck;
+package com.example.healthcheck.formActivities;
 
 import android.os.Bundle;
 import android.widget.Button;
@@ -6,8 +6,11 @@ import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.Spinner;
 
+import com.example.healthcheck.BaseActivity;
+import com.example.healthcheck.R;
+
 public class MyDietActivity extends BaseActivity {
-    public static final String APP_TAG = "MyDietActivityApp";
+    public static final String APP_TAG = "MyDietActivityMyApp";
 
     private Button btnPrevMyDiet;
     private Button btnNextMyDiet;
@@ -44,6 +47,7 @@ public class MyDietActivity extends BaseActivity {
         getPersonByIntent();
 
         animatePop(myDietImg);
+        btnNextMyDiet.performClick();
     }
 
     @Override
