@@ -3,6 +3,7 @@ package com.example.healthcheck;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -15,15 +16,11 @@ import com.example.healthcheck.data.QuestionAnswer;
 public class CheckUpActivity extends BaseActivity {
     public static final String APP_TAG = "CheckUpActivityMyApp";
 
-
     private TextView name;
     private ImageView image;
     private int index;
-    private int bgcolor;
     private int img;
-
     private LinearLayout linearlayout;
-    private ConstraintLayout constraintlayoutListData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,31 +29,32 @@ public class CheckUpActivity extends BaseActivity {
         name = findViewById(R.id.listdata);
         image = findViewById(R.id.image);
         linearlayout = findViewById(R.id.linearlayout);
-        constraintlayoutListData = findViewById(R.id.constraintlayoutListData);
+        ConstraintLayout constraintlayoutListData = findViewById(R.id.constraintlayoutListData);
 
         getPersonByIntent();
         Intent intent = getIntent();
         index = intent.getIntExtra("indexForm", 0);
-        bgcolor = intent.getIntExtra("bgColors", 0);
+        int bgcolor = intent.getIntExtra("bgColors", 0);
         img = intent.getIntExtra("image", 0);
 
-        Log.i("person", "+++++++++++++++++++++++++++++++++++++++++" + bgcolor);
+        Log.i(APP_TAG, "bgcolor : " + bgcolor);
 
         for (QuestionAnswer qa: person.getQuestionAnswers()) {
             if (qa.getQuestionID().contains("f" + index) ) {
                 Log.i(APP_TAG, "QuestionAnswer : " + qa);
                 TextView question = new TextView(this);
-                question.setText( qa.getQuestionValue());
-                question.setTextSize(20);
+                question.setText(qa.getQuestionValue());
+                question.setTextSize(15);
                 question.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
                 question.setPadding(0, 20, 0, 0);
                 linearlayout.addView(question);
 
                 TextView answer = new TextView(this);
                 answer.setText(qa.getAnswerValue());
-                answer.setTextSize(15);
+                answer.setTextSize(20);
                 answer.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
                 answer.setPadding(0, 0, 0, 20);
+                answer.setShadowLayer(1.5f, -1, 1, Color.BLACK);
                 linearlayout.addView(answer);
 
                 String advice = qa.getCardiologistAdvice();

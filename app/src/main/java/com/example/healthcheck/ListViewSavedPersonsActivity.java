@@ -23,11 +23,8 @@ import java.util.List;
 public class ListViewSavedPersonsActivity extends BaseActivity {
     public static final String APP_TAG = "ListViewSavedPersonsActivityMyApp";
 
-
-
     private ListView listViewPersons;
     private Button bntStartTestNewPerson;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,10 +33,7 @@ public class ListViewSavedPersonsActivity extends BaseActivity {
         init();
     }
     private void init() {
-
-        reloadSavedPersons();
         displaySavedPersons();
-
 
         listViewPersons = findViewById(R.id.listViewPersons);
         bntStartTestNewPerson = findViewById(R.id.bntStartTestNewPerson);
@@ -48,7 +42,6 @@ public class ListViewSavedPersonsActivity extends BaseActivity {
         listViewPersons.setAdapter(savedPersonsAdapter);
 
         bntStartTestNewPerson.setOnClickListener(view -> gotoNextActivity(NameActivity.class));
-
         listViewPersons.setOnItemClickListener((adapterView, view, i, l) -> savedPersonsAdapter.next(EXTRA_PERSON, i));
     }
 

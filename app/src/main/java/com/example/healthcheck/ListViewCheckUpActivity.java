@@ -21,6 +21,7 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 
 public class ListViewCheckUpActivity extends BaseActivity {
@@ -28,9 +29,6 @@ public class ListViewCheckUpActivity extends BaseActivity {
     public static final String APP_TAG = "ListViewCheckUpActivityMyApp";
 
     private ListView listView;
-    private String[] topicName;
-    private int[] topicImage;
-    private int[] bgColors;
     private AlertDialog.Builder dialogBuilder;
     private AlertDialog dialog;
     private RatingBar ratingBar;
@@ -47,31 +45,25 @@ public class ListViewCheckUpActivity extends BaseActivity {
         getPersonByIntent();
         btnPopup = findViewById(R.id.btnPopup);
 
-        // rate the app once
         sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
+        // rate the app once
         if(sharedPref.getFloat("ratingValue", -1.0f) == -1.0f){
             createDialog();
         }
-
 
         listView = findViewById(R.id.listview);
 
         CheckUpAdapter checkUpAdapter = new CheckUpAdapter(this);
         listView.setAdapter(checkUpAdapter);
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                checkUpAdapter.next(EXTRA_PERSON, i, (Parcelable) person);
-            }
+        listView.setOnItemClickListener((adapterView, view, i, l) ->  {
+            checkUpAdapter.next(EXTRA_PERSON, i, (Parcelable) person);
         });
 
     }
 
     public void createDialog() {
         //pop up dialogue
-
         dialogBuilder = new AlertDialog.Builder(this);
         final View popUpRater = getLayoutInflater().inflate(R.layout.popup, null);
         btnPopup = popUpRater.findViewById(R.id.btnPopup);
@@ -81,19 +73,21 @@ public class ListViewCheckUpActivity extends BaseActivity {
         dialog = dialogBuilder.create();
         dialog.show();
 
-        btnPopup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        btnPopup.setOnClickListener(view ->  {
                 Log.i(APP_TAG, "valeur rating = "+ ratingBar.getRating());
                 float ratingValue = ratingBar.getRating();
                 sharedPref.edit().putFloat("ratingValue", ratingValue).commit();
                 dialog.dismiss();
-            }
         });
 
-        setCardiologistAdvices();
+        // get the cardiologist advices only the current language in device is french (the website is in french only)
+        if (Locale.getDefault().getDisplayLanguage().equals("fr"))
+            setCardiologistAdvices();
     }
 
+    /**
+     * Fetch the website to get all cardiologist advices and affect them to the person
+     */
     protected void setCardiologistAdvices() {
 
         Thread thread = new Thread(new Runnable() {
@@ -111,8 +105,10 @@ public class ListViewCheckUpActivity extends BaseActivity {
             }
         });
 
+
         thread.start();
         try {
+            // waiting for response
             thread.join();
             Elements advices = document.select("p.question-conseil");
             int qaIndex = 2; // Advices start from second activity
