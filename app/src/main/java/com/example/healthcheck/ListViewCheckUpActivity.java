@@ -60,6 +60,10 @@ public class ListViewCheckUpActivity extends BaseActivity {
             checkUpAdapter.next(EXTRA_PERSON, i, (Parcelable) person);
         });
 
+        // get the cardiologist advices only the current language in device is french (the website is in french only)
+        if (Locale.getDefault().getDisplayLanguage().equals("français"))
+            setCardiologistAdvices();
+
     }
 
     public void createDialog() {
@@ -79,10 +83,6 @@ public class ListViewCheckUpActivity extends BaseActivity {
                 sharedPref.edit().putFloat("ratingValue", ratingValue).commit();
                 dialog.dismiss();
         });
-
-        // get the cardiologist advices only the current language in device is french (the website is in french only)
-        if (Locale.getDefault().getDisplayLanguage().equals("fr"))
-            setCardiologistAdvices();
     }
 
     /**
@@ -104,7 +104,6 @@ public class ListViewCheckUpActivity extends BaseActivity {
                 }
             }
         });
-
 
         thread.start();
         try {

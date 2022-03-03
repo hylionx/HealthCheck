@@ -2,7 +2,6 @@ package com.example.healthcheck.data;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-
 import java.io.Serializable;
 
 public class QuestionAnswer implements Parcelable, Serializable {
@@ -11,10 +10,7 @@ public class QuestionAnswer implements Parcelable, Serializable {
     private String questionValue;
     private Integer answerIndex;
     private String answerValue;
-
     private String cardiologistAdvice = "";
-
-
 
     public QuestionAnswer(String questionID, String questionValue, Integer answerIndex, String answerValue) {
         this.questionID = questionID;
@@ -22,7 +18,6 @@ public class QuestionAnswer implements Parcelable, Serializable {
         this.answerValue = answerValue;
         this.answerIndex = answerIndex;
     }
-
 
     protected QuestionAnswer(Parcel in) {
         questionID = in.readString();
