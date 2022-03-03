@@ -42,7 +42,7 @@ public class MyStressManagementActivity extends BaseActivity {
         btnNextMyStressManagment.setOnClickListener(view -> gotoNextActivity(MyHygieneOfLifeActivity.class));
 
         getPersonByIntent();
-        btnNextMyStressManagment.performClick();
+        //btnNextMyStressManagment.performClick();
         animatePop(imgStressMngmt);
 
     }

@@ -48,7 +48,7 @@ public class MyHeartActivity extends BaseActivity {
 
 
         getPersonByIntent();
-        btnNextMyHeart.performClick();
+        //btnNextMyHeart.performClick();
 
         animatePop(myHeartImg);
 

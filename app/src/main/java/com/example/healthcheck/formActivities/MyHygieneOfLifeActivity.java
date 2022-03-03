@@ -43,7 +43,7 @@ public class MyHygieneOfLifeActivity extends BaseActivity {
         btnValidate.setOnClickListener(view -> gotoNextActivity(ChoiceNextActivity.class));
 
 
-        btnValidate.performClick();
+        //btnValidate.performClick();
         animatePop(imgHygieneOfLife);
 
     }

@@ -39,7 +39,7 @@ public class MyTobaccoConsumptionActivity extends BaseActivity {
         btnNextMyTobaccoConsumption.setOnClickListener(view -> gotoNextActivity(MyStressManagementActivity.class));
 
         getPersonByIntent();
-        btnNextMyTobaccoConsumption.performClick();
+        //btnNextMyTobaccoConsumption.performClick();
         animatePop(myTobaccoImg);
 
     }

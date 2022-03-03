@@ -47,7 +47,7 @@ public class MyDietActivity extends BaseActivity {
         getPersonByIntent();
 
         animatePop(myDietImg);
-        btnNextMyDiet.performClick();
+        //btnNextMyDiet.performClick();
     }
 
     @Override

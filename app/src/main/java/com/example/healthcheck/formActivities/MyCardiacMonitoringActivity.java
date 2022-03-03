@@ -45,7 +45,7 @@ public class MyCardiacMonitoringActivity extends BaseActivity {
         getPersonByIntent();
 
         animatePop(myCardiacMonitoringImg);
-        btnNextMyCardiacMonitoring.performClick();
+        //btnNextMyCardiacMonitoring.performClick();
 
     }
 

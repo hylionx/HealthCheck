@@ -41,7 +41,7 @@ public class MyPhysicalActivityActivity extends BaseActivity {
         btnNextMyPhysicalActivity.setOnClickListener(view -> gotoNextActivity(MyTobaccoConsumptionActivity.class));
 
         getPersonByIntent();
-        btnNextMyPhysicalActivity.performClick();
+        //btnNextMyPhysicalActivity.performClick();
         animatePop(myphysicalActivityImg);
     }
 
